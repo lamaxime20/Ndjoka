@@ -1,6 +1,7 @@
 import NavBar from '../components/navBar.jsx';
 import Footer from '../components/footer.jsx';
 import Accueil from './accueil.jsx';
+import Produits from './produits.jsx';
 import {
   HOME,
   PRODUITS,
@@ -22,11 +23,20 @@ function Principale({onglet}) {
         )
     }
 
+    if (onglet === PRODUITS) {
+        return (
+            <div className="principale-root">
+                <NavBar onglet={onglet} />
+                <Produits />
+                <Footer onglet={onglet} />
+            </div>
+        )
+    }
+
     return (
         <div className="principale-root">
             <NavBar onglet={onglet} />
             <main className="principale-main">
-                {onglet === PRODUITS && <h1>Produits</h1>}
                 {onglet === CONCESSIONNAIRES && <h1>Concessionnaires</h1>}
                 {onglet === INVESTISSEURS && <h1>Investisseurs</h1>}
                 {onglet === ACTUALITES && <h1>Actualités</h1>}
