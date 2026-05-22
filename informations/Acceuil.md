@@ -231,7 +231,6 @@ Petit texte
 
 Tout ce qu’il faut savoir avant de rejoindre Ndjoka.
 
-FAQ Concessionnaires
 Question
 
 Comment devenir concessionnaire Ndjoka ?
@@ -256,7 +255,6 @@ Réponse
 
 Stock à prix réduit, visibilité, accompagnement, formation et support commercial.
 
-FAQ Investisseurs
 Question
 
 Pourquoi investir dans Ndjoka ?

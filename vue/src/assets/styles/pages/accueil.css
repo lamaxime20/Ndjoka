@@ -228,7 +228,7 @@
 
 .accueilHero-description {
   max-width: 38.75rem;
-  color: rgba(43, 43, 43, 0.82);
+  color: var(--color-ink-900);
   font-size: clamp(1rem, 1.4vw, 1.125rem);
 }
 
@@ -1170,7 +1170,9 @@
   .accueilHero-content {
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4.4rem);
     max-width: 40rem;
     padding-top: 5rem;
   }
@@ -1337,6 +1339,10 @@
     align-items: start;
   }
 
+  .accueilPresence-value {
+    font-size: clamp(2.25rem, 3.5vw, 2.75rem);
+  }
+
   .accueilPresence-testimonials {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
@@ -1445,6 +1451,10 @@
   .accueilPresence-stats {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem 2rem;
+  }
+
+  .accueilPresence-value {
+    font-size: clamp(2.5rem, 3.8vw, 3.25rem);
   }
 
   .accueilPresence-testimonials {
