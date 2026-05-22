@@ -33,6 +33,8 @@ function Accueil() {
               ))}
             </div>
 
+            <div className="accueilHero-overlay" aria-hidden="true" />
+
             <div className="accueilHero-content">
               <h1 className="accueilHero-title">{HERO_CONTENT.title}</h1>
               <p className="accueilHero-description">{HERO_CONTENT.description}</p>
