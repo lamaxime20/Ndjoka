@@ -130,7 +130,7 @@ function Produits() {
               {PRODUITS_QUALITE.blocs.map((bloc) => (
                 <div className="produitsQualite-bloc" key={bloc.title}>
                   <span className="produitsQualite-icon" aria-hidden="true">
-                    <i className={bloc.icon}></i>
+                    <span className="material-symbols-outlined">{bloc.icon}</span>
                   </span>
                   <div className="produitsQualite-blocCopy">
                     <h3 className="produitsQualite-blocTitle">{bloc.title}</h3>
@@ -180,7 +180,7 @@ function Produits() {
             {PRODUITS_RESEAU.avantages.map((av) => (
               <article className="produitsReseau-item" key={av.title}>
                 <span className="produitsReseau-icon" aria-hidden="true">
-                  <i className={av.icon}></i>
+                  <span className="material-symbols-outlined">{av.icon}</span>
                 </span>
                 <div className="produitsReseau-itemCopy">
                   <h3 className="produitsReseau-itemTitle">{av.title}</h3>

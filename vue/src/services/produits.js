@@ -83,17 +83,17 @@ export const PRODUITS_QUALITE = {
     "Chez Ndjoka, les produits sont soigneusement emballés et conditionnés pour garantir une consommation propre et rassurante.",
   blocs: [
     {
-      icon: 'fa-solid fa-award',
+      icon: 'workspace_premium',
       title: 'Conditionnement professionnel',
       text: 'Des emballages propres et bien présentés pour inspirer confiance dès le premier regard.',
     },
     {
-      icon: 'fa-solid fa-shield-halved',
+      icon: 'verified_user',
       title: 'Production soignée',
       text: "Chaque produit est préparé avec une attention particulière portée à la qualité et à l'hygiène.",
     },
     {
-      icon: 'fa-solid fa-boxes-stacked',
+      icon: 'inventory_2',
       title: 'Produits prêts à être distribués',
       text: 'Des formats pratiques et adaptés à la vente, aux points de distribution et aux supermarchés.',
     },
@@ -107,22 +107,22 @@ export const PRODUITS_RESEAU = {
     'Ndjoka accompagne ses concessionnaires avec des produits déjà appréciés du marché et un support concret pour mieux vendre.',
   avantages: [
     {
-      icon: 'fa-solid fa-coins',
+      icon: 'payments',
       title: 'Stock accessible',
       text: 'Commencez avec un stock adapté à votre budget.',
     },
     {
-      icon: 'fa-solid fa-bullhorn',
+      icon: 'campaign',
       title: 'Visibilité pour votre point de vente',
       text: 'Ndjoka communique sur ses plateformes pour aider à écouler votre stock.',
     },
     {
-      icon: 'fa-solid fa-graduation-cap',
+      icon: 'school',
       title: 'Formation gratuite',
       text: 'Recevez des conseils réguliers pour mieux vendre les produits Ndjoka.',
     },
     {
-      icon: 'fa-solid fa-headset',
+      icon: 'support_agent',
       title: 'Accompagnement commercial',
       text: 'Nos équipes vous accompagnent dans vos préoccupations du quotidien.',
     },
