@@ -4,6 +4,7 @@ import Accueil from './accueil.jsx';
 import Produits from './produits.jsx';
 import Concessionnaires from './concessionnaires.jsx';
 import Investisseurs from './investisseurs.jsx';
+import APropos from './apropos.jsx';
 import {
   HOME,
   PRODUITS,
@@ -55,14 +56,21 @@ function Principale({onglet}) {
         )
     }
 
+    if (onglet === CONTACT) {
+        return (
+            <div className="principale-root">
+                <NavBar onglet={onglet} />
+                <APropos />
+                <Footer onglet={onglet} />
+            </div>
+        )
+    }
+
     return (
         <div className="principale-root">
             <NavBar onglet={onglet} />
             <main className="principale-main">
-                {onglet === CONCESSIONNAIRES && <h1>Concessionnaires</h1>}
-                {onglet === INVESTISSEURS && <h1>Investisseurs</h1>}
                 {onglet === ACTUALITES && <h1>Actualités</h1>}
-                {onglet === CONTACT && <h1>Contact</h1>}
             </main>
             <Footer onglet={onglet} />
         </div>
