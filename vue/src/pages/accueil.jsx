@@ -34,7 +34,6 @@ function Accueil() {
             </div>
 
             <div className="accueilHero-content">
-              <p className="accueilHero-eyebrow">Réseau agroalimentaire en expansion</p>
               <h1 className="accueilHero-title">{HERO_CONTENT.title}</h1>
               <p className="accueilHero-description">{HERO_CONTENT.description}</p>
 
