@@ -1,0 +1,822 @@
+.accueil-root {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.accueilHero-root {
+  position: relative;
+  min-height: 100vh;
+  padding: 7rem 0 3.5rem;
+}
+
+.accueilHero-shell {
+  width: var(--shell-width-wide);
+  margin-inline: auto;
+}
+
+.accueilHero-stage {
+  position: relative;
+  display: grid;
+  min-height: calc(100vh - 10rem);
+  padding: 1.25rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(242, 178, 51, 0.22), transparent 24%),
+    linear-gradient(135deg, rgba(31, 94, 59, 0.98), rgba(22, 56, 36, 0.95));
+  isolation: isolate;
+}
+
+.accueilHero-backdrop,
+.accueilHero-glow {
+  position: absolute;
+  pointer-events: none;
+  inset: auto;
+}
+
+.accueilHero-backdrop {
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.12), transparent 26%),
+    radial-gradient(circle at 82% 35%, rgba(242, 178, 51, 0.18), transparent 20%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 42%);
+}
+
+.accueilHero-glow {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  filter: blur(22px);
+  opacity: 0.7;
+  animation: accueilFloat 7.5s ease-in-out infinite;
+}
+
+.accueilHero-glow--primary {
+  top: 10%;
+  right: 16%;
+  background: rgba(242, 178, 51, 0.22);
+}
+
+.accueilHero-glow--secondary {
+  bottom: 10%;
+  left: 10%;
+  background: rgba(255, 255, 255, 0.08);
+  animation-delay: -3s;
+}
+
+.accueilHero-visual {
+  position: relative;
+  display: grid;
+  min-height: 30rem;
+}
+
+.accueilHero-media {
+  position: absolute;
+  margin: 0;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  animation: accueilRevealUp 720ms ease both;
+}
+
+.accueilHero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(22, 56, 36, 0.08), rgba(22, 56, 36, 0.38)),
+    radial-gradient(circle at center, transparent 28%, rgba(22, 56, 36, 0.08));
+}
+
+.accueilHero-media--chips {
+  top: 0;
+  left: 0;
+  width: min(66vw, 17rem);
+  transform: rotate(-5deg);
+}
+
+.accueilHero-media--drink {
+  top: 4.5rem;
+  right: 0;
+  width: min(52vw, 13rem);
+  transform: rotate(3deg);
+  animation-delay: 90ms;
+}
+
+.accueilHero-media--chinChin {
+  bottom: 0;
+  left: 1rem;
+  width: min(56vw, 14rem);
+  transform: rotate(-2deg);
+  animation-delay: 180ms;
+}
+
+.accueilHero-mediaImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.accueilHero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 1.2rem;
+  align-self: center;
+  max-width: 34rem;
+  margin-top: 14rem;
+  padding: 1.4rem 0 0.4rem;
+  color: var(--color-white);
+  animation: accueilRevealUp 620ms ease both;
+}
+
+.accueilHero-eyebrow,
+.accueilSection-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 2rem;
+  padding-inline: 0.9rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.86);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accueilSection-eyebrow {
+  background: rgba(31, 94, 59, 0.08);
+  color: var(--color-primary-800);
+}
+
+.accueilSection-eyebrow--light {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.accueilHero-title {
+  color: var(--color-white);
+  font-size: clamp(3.5rem, 13vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.accueilHero-description,
+.accueilSection-description,
+.accueilProducts-description,
+.accueilBenefits-description,
+.accueilPresence-label,
+.accueilPresence-quoteText,
+.accueilFaq-answer {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.accueilHero-description {
+  max-width: 34rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.accueilHero-actions,
+.accueilProducts-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.accueilButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 3.25rem;
+  padding: 0.95rem 1.35rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 600;
+  transition:
+    transform 360ms ease,
+    background-color 360ms ease,
+    color 360ms ease,
+    box-shadow 360ms ease,
+    border-color 360ms ease;
+}
+
+.accueilButton--primary {
+  background: #d98c2b;
+  color: var(--color-white);
+  box-shadow: 0 14px 28px rgba(217, 140, 43, 0.24);
+}
+
+.accueilButton--primary:hover,
+.accueilButton--primary:focus-visible {
+  transform: translateY(-2px);
+  background: var(--color-accent-500);
+  box-shadow: 0 18px 32px rgba(242, 178, 51, 0.24);
+}
+
+.accueilButton--secondary {
+  border: 1px solid rgba(31, 94, 59, 0.24);
+  color: var(--color-primary-800);
+  background: transparent;
+}
+
+.accueilButton--secondary:hover,
+.accueilButton--secondary:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(31, 94, 59, 0.42);
+  background: rgba(31, 94, 59, 0.05);
+}
+
+.accueilAbout-root,
+.accueilProducts-root,
+.accueilBenefits-root,
+.accueilFaq-root,
+.accueilFinal-root {
+  background: transparent;
+}
+
+.accueilAbout-shell,
+.accueilBenefits-shell,
+.accueilPresence-shell,
+.accueilFaq-shell {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.accueilAbout-copy,
+.accueilProducts-headingCopy,
+.accueilBenefits-heading,
+.accueilPresence-heading,
+.accueilFaq-heading,
+.accueilFinal-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.accueilSection-title {
+  max-width: 14ch;
+}
+
+.accueilSection-title--light,
+.accueilSection-description--light {
+  color: var(--color-white);
+}
+
+.accueilSection-description {
+  max-width: 42rem;
+  color: var(--color-ink-700);
+}
+
+.accueilAbout-media {
+  position: relative;
+  margin: 0;
+  min-height: 19rem;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(244, 231, 200, 0.46), rgba(255, 255, 255, 0.16));
+}
+
+.accueilAbout-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(22, 56, 36, 0.12));
+}
+
+.accueilAbout-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.accueilProducts-root {
+  background: linear-gradient(180deg, rgba(244, 231, 200, 0.28), transparent 40%);
+}
+
+.accueilProducts-shell {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.accueilProducts-heading {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.accueilProducts-showcase {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.accueilProducts-item {
+  display: grid;
+  gap: 1.15rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(31, 94, 59, 0.1);
+}
+
+.accueilProducts-media {
+  position: relative;
+  margin: 0;
+  min-height: 15rem;
+  border-radius: 1.7rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(242, 178, 51, 0.16), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(244, 231, 200, 0.42));
+}
+
+.accueilProducts-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+  transition: transform 420ms ease;
+}
+
+.accueilProducts-item:hover .accueilProducts-image,
+.accueilProducts-item:focus-within .accueilProducts-image {
+  transform: scale(1.05);
+}
+
+.accueilProducts-copy {
+  display: grid;
+  align-content: center;
+  gap: 0.8rem;
+}
+
+.accueilProducts-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 2rem;
+  padding-inline: 0.85rem;
+  border-radius: var(--radius-pill);
+  background: rgba(31, 94, 59, 0.08);
+  color: var(--color-primary-800);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.accueilProducts-title,
+.accueilBenefits-title,
+.accueilFaq-groupTitle {
+  color: var(--color-ink-900);
+  font-size: clamp(1.45rem, 4vw, 1.9rem);
+  font-weight: 600;
+}
+
+.accueilProducts-description,
+.accueilBenefits-description,
+.accueilPresence-label,
+.accueilFaq-answer {
+  color: var(--color-ink-700);
+}
+
+.accueilBenefits-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.accueilBenefits-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(31, 94, 59, 0.1);
+}
+
+.accueilBenefits-index {
+  min-width: 2.6rem;
+  color: var(--color-accent-600);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.accueilBenefits-copy {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.accueilPresence-root {
+  background:
+    radial-gradient(circle at top right, rgba(244, 231, 200, 0.56), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 42%);
+}
+
+.accueilPresence-stats {
+  display: grid;
+  gap: 1rem;
+}
+
+.accueilPresence-stat {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(31, 94, 59, 0.1);
+}
+
+.accueilPresence-value {
+  color: var(--color-primary-900);
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 6vw, 2.8rem);
+  font-weight: 700;
+}
+
+.accueilPresence-testimonials {
+  display: grid;
+  gap: 1rem;
+}
+
+.accueilPresence-quote {
+  margin: 0;
+  padding: 1.15rem 0 0;
+}
+
+.accueilPresence-quoteText {
+  color: var(--color-ink-900);
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 3.8vw, 1.5rem);
+  line-height: 1.55;
+}
+
+.accueilInvestors-root {
+  background: transparent;
+}
+
+.accueilInvestors-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.accueilInvestors-panel {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: clamp(2rem, 5vw, 3.2rem);
+  border-radius: 2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(242, 178, 51, 0.16), transparent 26%),
+    linear-gradient(135deg, rgba(22, 56, 36, 1), rgba(26, 26, 26, 0.96));
+}
+
+.accueilInvestors-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 38%);
+  pointer-events: none;
+}
+
+.accueilFaq-groups {
+  display: grid;
+  gap: 2rem;
+}
+
+.accueilFaq-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.accueilFaq-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.accueilFaq-item {
+  border-bottom: 1px solid rgba(31, 94, 59, 0.12);
+}
+
+.accueilFaq-trigger {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  text-align: left;
+}
+
+.accueilFaq-question {
+  color: var(--color-ink-900);
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.accueilFaq-icon {
+  color: var(--color-accent-600);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.accueilFaq-answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 320ms ease;
+}
+
+.accueilFaq-item--open .accueilFaq-answerWrap {
+  grid-template-rows: 1fr;
+}
+
+.accueilFaq-answer {
+  overflow: hidden;
+  padding-bottom: 0;
+  opacity: 0;
+  transition:
+    opacity 260ms ease,
+    padding-bottom 260ms ease;
+}
+
+.accueilFaq-item--open .accueilFaq-answer {
+  padding-bottom: 1rem;
+  opacity: 1;
+}
+
+.accueilFinal-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.accueilFinal-panel {
+  justify-items: start;
+  padding: clamp(2.2rem, 5vw, 3rem);
+  border-radius: 2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42)),
+    radial-gradient(circle at top right, rgba(242, 178, 51, 0.14), transparent 30%);
+}
+
+@keyframes accueilRevealUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accueilFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -0.8rem, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  .accueilHero-root {
+    padding-top: 6.5rem;
+  }
+
+  .accueilHero-stage {
+    min-height: auto;
+    border-radius: 1.6rem;
+  }
+
+  .accueilHero-content {
+    margin-top: 13rem;
+  }
+
+  .accueilButton {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .accueilHero-root {
+    padding-top: 8rem;
+  }
+
+  .accueilHero-stage {
+    min-height: 46rem;
+    padding: 1.8rem;
+  }
+
+  .accueilHero-visual {
+    min-height: 33rem;
+  }
+
+  .accueilHero-media--chips {
+    width: 16.5rem;
+  }
+
+  .accueilHero-media--drink {
+    top: 5rem;
+    width: 13rem;
+  }
+
+  .accueilHero-media--chinChin {
+    width: 14.5rem;
+  }
+
+  .accueilHero-content {
+    max-width: 37rem;
+    margin-top: 15rem;
+  }
+
+  .accueilAbout-shell,
+  .accueilPresence-shell {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .accueilProducts-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.4rem;
+  }
+
+  .accueilProducts-item {
+    padding: 1rem 0 0;
+  }
+
+  .accueilBenefits-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+
+  .accueilPresence-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accueilPresence-testimonials,
+  .accueilFaq-groups {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .accueilHero-stage {
+    min-height: 44rem;
+    padding: 2rem;
+  }
+
+  .accueilHero-visual {
+    min-height: 35rem;
+  }
+
+  .accueilHero-content {
+    max-width: 40rem;
+    margin-top: 11rem;
+    margin-left: 3rem;
+  }
+
+  .accueilAbout-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.92fr);
+    align-items: center;
+  }
+
+  .accueilProducts-heading,
+  .accueilPresence-shell {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .accueilProducts-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .accueilProducts-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem 2rem;
+  }
+
+  .accueilProducts-item {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+    gap: 1.4rem;
+    border-bottom: none;
+  }
+
+  .accueilProducts-item--wide {
+    grid-column: span 2;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .accueilBenefits-shell {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .accueilFaq-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .accueilHero-stage {
+    min-height: 48rem;
+    padding: 2rem 2.25rem;
+  }
+
+  .accueilHero-visual {
+    min-height: 38rem;
+  }
+
+  .accueilHero-media--chips {
+    width: 20rem;
+  }
+
+  .accueilHero-media--drink {
+    top: 5.6rem;
+    width: 15rem;
+  }
+
+  .accueilHero-media--chinChin {
+    left: 2rem;
+    width: 17rem;
+  }
+
+  .accueilHero-content {
+    max-width: 42rem;
+    margin-top: 10rem;
+    margin-left: 4.5rem;
+  }
+
+  .accueilHero-actions,
+  .accueilProducts-actions {
+    flex-direction: row;
+  }
+
+  .accueilAbout-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(28rem, 0.95fr);
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .accueilProducts-heading {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .accueilProducts-actions {
+    justify-content: flex-end;
+  }
+
+  .accueilProducts-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 2.2rem;
+  }
+
+  .accueilProducts-item {
+    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 1.4rem;
+    border-bottom: none;
+  }
+
+  .accueilProducts-item--wide {
+    grid-column: span 2;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+  }
+
+  .accueilBenefits-shell {
+    grid-template-columns: minmax(0, 0.64fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .accueilBenefits-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+  }
+
+  .accueilPresence-shell {
+    grid-template-columns: minmax(0, 0.84fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .accueilPresence-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.8rem;
+  }
+
+  .accueilPresence-testimonials,
+  .accueilFaq-groups {
+    grid-column: 1 / -1;
+  }
+
+  .accueilFaq-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.4rem;
+  }
+}
