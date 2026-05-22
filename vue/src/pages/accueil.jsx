@@ -157,14 +157,6 @@ function Accueil() {
               </article>
             ))}
           </div>
-
-          <div className="accueilPresence-testimonials">
-            {PRESENCE_CONTENT.testimonials.map((testimonial) => (
-              <blockquote className="accueilPresence-quote" key={testimonial}>
-                <p className="accueilPresence-quoteText">“{testimonial}”</p>
-              </blockquote>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -198,9 +190,6 @@ function Accueil() {
           <div className="accueilFaq-groups">
             {FAQ_CONTENT.groups.map((group, groupIndex) => (
               <section className="accueilFaq-group" key={group.title} aria-labelledby={`faq-group-${groupIndex}`}>
-                <h3 className="accueilFaq-groupTitle" id={`faq-group-${groupIndex}`}>
-                  {group.title}
-                </h3>
                 <div className="accueilFaq-list">
                   {group.items.map((item, itemIndex) => {
                     const itemId = `faq-${groupIndex}-${itemIndex}`;

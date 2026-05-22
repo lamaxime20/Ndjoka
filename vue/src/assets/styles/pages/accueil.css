@@ -297,72 +297,136 @@
 }
 
 .accueilProducts-root {
-  background: linear-gradient(180deg, rgba(244, 231, 200, 0.28), transparent 40%);
+  position: relative;
+  padding-block: 5rem;
+  overflow: clip;
+  background: linear-gradient(180deg, rgba(244, 231, 200, 0.16), transparent 34%);
+}
+
+.accueilProducts-root::before,
+.accueilProducts-root::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  opacity: 0.38;
+  animation: accueilDrift 16s ease-in-out infinite;
+}
+
+.accueilProducts-root::before {
+  top: 14%;
+  left: -6rem;
+  width: 18rem;
+  height: 18rem;
+  background: rgba(242, 178, 51, 0.12);
+}
+
+.accueilProducts-root::after {
+  right: -8rem;
+  bottom: 12%;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(31, 94, 59, 0.1);
+  animation-delay: -6s;
 }
 
 .accueilProducts-shell {
   display: grid;
-  gap: 2.4rem;
+  gap: 5rem;
 }
 
 .accueilProducts-heading {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
+  justify-items: center;
+  text-align: center;
+  animation: accueilRevealEditorial 700ms ease both;
 }
 
 .accueilProducts-showcase {
   display: grid;
-  gap: 1.25rem;
+  gap: 4.5rem;
 }
 
 .accueilProducts-item {
+  position: relative;
   display: grid;
-  gap: 1.15rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(31, 94, 59, 0.1);
+  gap: 1.6rem;
+  padding: 0;
+  animation: accueilRevealEditorial 700ms ease both;
+}
+
+.accueilProducts-item:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.accueilProducts-item:nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.accueilProducts-item:nth-child(4) {
+  animation-delay: 320ms;
 }
 
 .accueilProducts-media {
   position: relative;
   margin: 0;
-  min-height: 15rem;
-  border-radius: 1.7rem;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(242, 178, 51, 0.16), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(244, 231, 200, 0.42));
+  min-height: 20rem;
+}
+
+.accueilProducts-media::before,
+.accueilProducts-media::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.accueilProducts-media::before {
+  inset: 18% 8% 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 178, 51, 0.18), transparent 62%);
+  filter: blur(26px);
+}
+
+.accueilProducts-media::after {
+  inset: 10% 14%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 94, 59, 0.1), transparent 68%);
+  filter: blur(30px);
 }
 
 .accueilProducts-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 1.5rem;
-  transition: transform 420ms ease;
+  padding: 1rem;
+  filter: drop-shadow(0 28px 44px rgba(31, 75, 63, 0.14));
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .accueilProducts-item:hover .accueilProducts-image,
 .accueilProducts-item:focus-within .accueilProducts-image {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.02);
 }
 
 .accueilProducts-copy {
   display: grid;
   align-content: center;
-  gap: 0.8rem;
+  gap: 1.05rem;
 }
 
 .accueilProducts-badge {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  min-height: 2rem;
-  padding-inline: 0.85rem;
+  min-height: 2.5rem;
+  padding: 0.625rem 1.125rem;
   border-radius: var(--radius-pill);
-  background: rgba(31, 94, 59, 0.08);
+  background: #e9dfc8;
   color: var(--color-primary-800);
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
 }
 
@@ -370,7 +434,7 @@
 .accueilBenefits-title,
 .accueilFaq-groupTitle {
   color: var(--color-ink-900);
-  font-size: clamp(1.45rem, 4vw, 1.9rem);
+  font-size: clamp(2rem, 6vw, 2.625rem);
   font-weight: 600;
 }
 
@@ -383,53 +447,123 @@
 
 .accueilBenefits-list {
   display: grid;
-  gap: 1rem;
+  gap: 3.75rem;
 }
 
 .accueilBenefits-item {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(31, 94, 59, 0.1);
+  gap: 1.3rem;
+  align-items: start;
+  padding: 0 0 1rem;
+  animation: accueilRevealEditorial 700ms ease both;
+}
+
+.accueilBenefits-item:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.accueilBenefits-item:nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.accueilBenefits-item:nth-child(4) {
+  animation-delay: 260ms;
+}
+
+.accueilBenefits-item:nth-child(5) {
+  animation-delay: 340ms;
+}
+
+.accueilBenefits-item:nth-child(6) {
+  animation-delay: 420ms;
+}
+
+.accueilBenefits-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.25rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(31, 94, 59, 0.28), rgba(31, 94, 59, 0));
+  transition: width 500ms ease;
+}
+
+.accueilBenefits-item:hover::after,
+.accueilBenefits-item:focus-within::after {
+  width: 6.5rem;
 }
 
 .accueilBenefits-index {
-  min-width: 2.6rem;
-  color: var(--color-accent-600);
+  min-width: 5.8rem;
+  color: rgba(31, 94, 59, 0.08);
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: clamp(4.5rem, 12vw, 7.5rem);
   font-weight: 700;
+  line-height: 0.9;
 }
 
 .accueilBenefits-copy {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.75rem;
 }
 
 .accueilPresence-root {
+  position: relative;
+  padding-block: 5rem;
+  overflow: clip;
   background:
-    radial-gradient(circle at top right, rgba(244, 231, 200, 0.56), transparent 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 42%);
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.08), transparent 18%),
+    radial-gradient(circle at 82% 28%, rgba(242, 178, 51, 0.1), transparent 22%),
+    linear-gradient(180deg, #1f4b3f 0%, #183d34 100%);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.accueilPresence-root .accueilSection-eyebrow,
+.accueilPresence-root .accueilSection-title,
+.accueilPresence-root .accueilSection-description,
+.accueilPresence-root .accueilPresence-value,
+.accueilPresence-root .accueilPresence-label,
+.accueilPresence-root .accueilPresence-quoteText {
+  color: var(--color-white);
+}
+
+.accueilPresence-root .accueilSection-eyebrow {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .accueilPresence-stats {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .accueilPresence-stat {
   display: grid;
-  gap: 0.45rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(31, 94, 59, 0.1);
+  gap: 0.7rem;
+  padding: 0;
+  animation: accueilRevealEditorial 700ms ease both;
+}
+
+.accueilPresence-stat:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.accueilPresence-stat:nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.accueilPresence-stat:nth-child(4) {
+  animation-delay: 320ms;
 }
 
 .accueilPresence-value {
-  color: var(--color-primary-900);
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 6vw, 2.8rem);
+  font-size: clamp(2.8rem, 10vw, 4.5rem);
   font-weight: 700;
+  line-height: 0.95;
 }
 
 .accueilPresence-testimonials {
@@ -439,17 +573,27 @@
 
 .accueilPresence-quote {
   margin: 0;
-  padding: 1.15rem 0 0;
+  padding: 1.65rem 1.5rem;
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  transition: transform 350ms ease, background-color 350ms ease;
+}
+
+.accueilPresence-quote:hover,
+.accueilPresence-quote:focus-within {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .accueilPresence-quoteText {
-  color: var(--color-ink-900);
   font-family: var(--font-heading);
   font-size: clamp(1.15rem, 3.8vw, 1.5rem);
   line-height: 1.55;
 }
 
 .accueilInvestors-root {
+  padding-block: 5rem;
   background: transparent;
 }
 
@@ -461,13 +605,16 @@
 .accueilInvestors-panel {
   position: relative;
   display: grid;
-  gap: 1rem;
-  padding: clamp(2rem, 5vw, 3.2rem);
+  gap: 1.35rem;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 5vw, 4rem);
   border-radius: 2rem;
   overflow: hidden;
   background:
-    radial-gradient(circle at top right, rgba(242, 178, 51, 0.16), transparent 26%),
-    linear-gradient(135deg, rgba(22, 56, 36, 1), rgba(26, 26, 26, 0.96));
+    radial-gradient(circle at 50% 60%, rgba(242, 178, 51, 0.18), transparent 22%),
+    linear-gradient(135deg, #1f5e3b 0%, #163824 100%);
+  animation: accueilRevealSoft 700ms ease both;
 }
 
 .accueilInvestors-panel::after {
@@ -490,11 +637,17 @@
 
 .accueilFaq-list {
   display: grid;
-  gap: 0.6rem;
+  gap: 0;
 }
 
 .accueilFaq-item {
   border-bottom: 1px solid rgba(31, 94, 59, 0.12);
+  transition: opacity 320ms ease;
+}
+
+.accueilFaq-item:hover,
+.accueilFaq-item:focus-within {
+  opacity: 0.88;
 }
 
 .accueilFaq-trigger {
@@ -503,15 +656,15 @@
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
-  padding: 0.95rem 0;
+  padding: 1.75rem 0;
   text-align: left;
 }
 
 .accueilFaq-question {
   color: var(--color-ink-900);
   font-family: var(--font-heading);
-  font-size: 1.02rem;
-  font-weight: 600;
+  font-size: clamp(1.1rem, 2vw, 1.375rem);
+  font-weight: 500;
 }
 
 .accueilFaq-icon {
@@ -524,7 +677,7 @@
 .accueilFaq-answerWrap {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 320ms ease;
+  transition: grid-template-rows 400ms ease;
 }
 
 .accueilFaq-item--open .accueilFaq-answerWrap {
@@ -536,12 +689,12 @@
   padding-bottom: 0;
   opacity: 0;
   transition:
-    opacity 260ms ease,
-    padding-bottom 260ms ease;
+    opacity 320ms ease,
+    padding-bottom 320ms ease;
 }
 
 .accueilFaq-item--open .accueilFaq-answer {
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
   opacity: 1;
 }
 
@@ -551,12 +704,136 @@
 }
 
 .accueilFinal-panel {
-  justify-items: start;
-  padding: clamp(2.2rem, 5vw, 3rem);
-  border-radius: 2rem;
+  position: relative;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  border-radius: 0;
+  overflow: clip;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42)),
-    radial-gradient(circle at top right, rgba(242, 178, 51, 0.14), transparent 30%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 50% 72%, rgba(217, 140, 43, 0.16), transparent 24%);
+  animation: accueilRevealEditorial 700ms ease both;
+}
+
+.accueilFinal-panel::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  width: min(30rem, 74vw);
+  height: min(30rem, 74vw);
+  border-radius: 50%;
+  background: rgba(242, 178, 51, 0.14);
+  filter: blur(56px);
+  transform: translateX(-50%);
+  animation: accueilDrift 15s ease-in-out infinite;
+}
+
+.accueilFinal-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.accueilFinal-panel .accueilSection-title {
+  max-width: 13ch;
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
+}
+
+.accueilFinal-panel .accueilSection-description {
+  max-width: 32.5rem;
+}
+
+.accueilProducts-headingCopy .accueilSection-title,
+.accueilProducts-headingCopy .accueilSection-description,
+.accueilPresence-heading .accueilSection-title,
+.accueilPresence-heading .accueilSection-description,
+.accueilInvestors-panel .accueilSection-title,
+.accueilInvestors-panel .accueilSection-description,
+.accueilFaq-heading .accueilSection-title,
+.accueilFaq-heading .accueilSection-description {
+  margin-inline: auto;
+}
+
+.accueilProducts-headingCopy .accueilSection-title {
+  max-width: 43.75rem;
+}
+
+.accueilInvestors-panel .accueilSection-description {
+  max-width: 38.75rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.accueilProducts-headingCopy .accueilSection-description {
+  max-width: 32.5rem;
+}
+
+.accueilProducts-actions {
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.accueilProducts-actions .accueilButton--primary,
+.accueilFinal-panel .accueilButton--primary {
+  box-shadow: 0 18px 34px rgba(217, 140, 43, 0.24);
+}
+
+.accueilBenefits-root,
+.accueilFaq-root,
+.accueilFinal-root {
+  padding-block: 5rem;
+}
+
+.accueilBenefits-root {
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(31, 94, 59, 0.04), transparent 16%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 100%);
+}
+
+.accueilBenefits-heading .accueilSection-title {
+  max-width: 40.625rem;
+}
+
+.accueilBenefits-heading .accueilSection-description {
+  max-width: 32.5rem;
+}
+
+.accueilPresence-heading,
+.accueilFaq-heading {
+  justify-items: center;
+  text-align: center;
+}
+
+.accueilPresence-heading .accueilSection-title {
+  max-width: 43rem;
+}
+
+.accueilPresence-heading .accueilSection-description {
+  max-width: 34rem;
+}
+
+.accueilFaq-root {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.accueilFaq-shell {
+  width: min(88%, 53.125rem);
+  margin-inline: auto;
+}
+
+.accueilFaq-heading {
+  gap: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.accueilFaq-heading .accueilSection-description {
+  max-width: 32rem;
+}
+
+.accueilFinal-root {
+  background: #f6f1e7;
 }
 
 @keyframes accueilRevealUp {
@@ -571,6 +848,30 @@
   }
 }
 
+@keyframes accueilRevealEditorial {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accueilRevealSoft {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 @keyframes accueilFloat {
   0%,
   100% {
@@ -579,6 +880,17 @@
 
   50% {
     transform: translate3d(0, -0.8rem, 0);
+  }
+}
+
+@keyframes accueilDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 0);
   }
 }
 
@@ -598,6 +910,67 @@
 
   .accueilButton {
     width: 100%;
+  }
+
+  .accueilProducts-root,
+  .accueilBenefits-root,
+  .accueilPresence-root,
+  .accueilInvestors-root,
+  .accueilFaq-root,
+  .accueilFinal-root {
+    padding-block: 5rem;
+  }
+
+  .accueilProducts-shell,
+  .accueilBenefits-shell,
+  .accueilPresence-shell {
+    gap: 3rem;
+  }
+
+  .accueilProducts-showcase {
+    gap: 3.5rem;
+  }
+
+  .accueilProducts-media {
+    min-height: 20rem;
+  }
+
+  .accueilProducts-title {
+    font-size: 2rem;
+  }
+
+  .accueilBenefits-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .accueilBenefits-index {
+    justify-self: center;
+    min-width: 0;
+    font-size: 4.5rem;
+  }
+
+  .accueilPresence-heading,
+  .accueilPresence-stats,
+  .accueilPresence-testimonials {
+    text-align: center;
+  }
+
+  .accueilPresence-value,
+  .accueilPresence-label {
+    justify-self: center;
+  }
+
+  .accueilFaq-trigger {
+    padding-block: 1.4rem;
+  }
+
+  .accueilFaq-question {
+    font-size: 1rem;
+  }
+
+  .accueilFinal-panel .accueilSection-title {
+    font-size: 2.625rem;
   }
 }
 
@@ -633,33 +1006,85 @@
     margin-top: 15rem;
   }
 
-  .accueilAbout-shell,
-  .accueilPresence-shell {
+  .accueilAbout-shell {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
   }
 
+  .accueilProducts-root,
+  .accueilBenefits-root,
+  .accueilPresence-root,
+  .accueilInvestors-root,
+  .accueilFaq-root,
+  .accueilFinal-root {
+    padding-block: 6.25rem;
+  }
+
+  .accueilProducts-shell,
+  .accueilBenefits-shell,
+  .accueilPresence-shell {
+    gap: 4rem;
+  }
+
   .accueilProducts-showcase {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.4rem;
+    gap: 3.75rem;
   }
 
   .accueilProducts-item {
-    padding: 1rem 0 0;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .accueilProducts-media {
+    width: 100%;
+    min-height: 26.25rem;
+  }
+
+  .accueilProducts-image {
+    padding: 1.25rem;
+  }
+
+  .accueilProducts-copy {
+    justify-items: center;
+  }
+
+  .accueilProducts-description {
+    max-width: 26.25rem;
+  }
+
+  .accueilBenefits-index {
+    min-width: 4.75rem;
+    font-size: 5.625rem;
   }
 
   .accueilBenefits-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.5rem;
+    gap: 3rem;
+  }
+
+  .accueilPresence-shell {
+    gap: 3rem;
   }
 
   .accueilPresence-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 2.25rem;
   }
 
-  .accueilPresence-testimonials,
-  .accueilFaq-groups {
-    grid-column: 1 / -1;
+  .accueilPresence-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .accueilInvestors-panel .accueilSection-title {
+    font-size: clamp(2.5rem, 5vw, 3.4rem);
+  }
+
+  .accueilFaq-shell {
+    width: min(88%, 53.125rem);
+  }
+
+  .accueilFinal-panel .accueilSection-title {
+    font-size: clamp(3.25rem, 7vw, 4rem);
   }
 }
 
@@ -684,41 +1109,65 @@
     align-items: center;
   }
 
-  .accueilProducts-heading,
-  .accueilPresence-shell {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
+  .accueilProducts-root,
+  .accueilBenefits-root,
+  .accueilPresence-root,
+  .accueilInvestors-root,
+  .accueilFaq-root,
+  .accueilFinal-root {
+    padding-block: 8.75rem;
+  }
+
+  .accueilProducts-showcase {
+    gap: 5rem;
+  }
+
+  .accueilProducts-item {
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.9fr);
+    align-items: center;
+    gap: 4.5rem;
+  }
+
+  .accueilProducts-item:nth-child(even) .accueilProducts-media {
+    order: 2;
+  }
+
+  .accueilProducts-item:nth-child(even) .accueilProducts-copy {
+    order: 1;
+  }
+
+  .accueilProducts-media {
+    min-height: 32rem;
   }
 
   .accueilProducts-actions {
     flex-direction: row;
-    justify-content: flex-end;
   }
 
-  .accueilProducts-showcase {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.8rem 2rem;
+  .accueilBenefits-list {
+    gap: 5.625rem;
   }
 
-  .accueilProducts-item {
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
-    gap: 1.4rem;
-    border-bottom: none;
+  .accueilPresence-shell {
+    gap: 4rem;
   }
 
-  .accueilProducts-item--wide {
-    grid-column: span 2;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  }
-
-  .accueilBenefits-shell {
-    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  .accueilPresence-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: start;
   }
 
-  .accueilFaq-groups {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
+  .accueilPresence-testimonials {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .accueilInvestors-panel .accueilSection-title {
+    max-width: 51.25rem;
+  }
+
+  .accueilFaq-shell {
+    width: min(88%, 53.125rem);
   }
 }
 
@@ -763,60 +1212,69 @@
     gap: 4rem;
   }
 
-  .accueilProducts-heading {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-  }
-
-  .accueilProducts-actions {
-    justify-content: flex-end;
-  }
-
-  .accueilProducts-showcase {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem 2.2rem;
+  .accueilProducts-root,
+  .accueilBenefits-root,
+  .accueilPresence-root,
+  .accueilInvestors-root,
+  .accueilFaq-root,
+  .accueilFinal-root {
+    padding-block: 8.75rem;
   }
 
   .accueilProducts-item {
-    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.88fr);
     align-items: center;
-    gap: 1.4rem;
-    border-bottom: none;
+    gap: 7.5rem;
   }
 
-  .accueilProducts-item--wide {
-    grid-column: span 2;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+  .accueilProducts-item:nth-child(even) .accueilProducts-media {
+    order: 2;
   }
 
-  .accueilBenefits-shell {
-    grid-template-columns: minmax(0, 0.64fr) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: start;
+  .accueilProducts-item:nth-child(even) .accueilProducts-copy {
+    order: 1;
+  }
+
+  .accueilProducts-media {
+    min-height: 32.5rem;
+  }
+
+  .accueilProducts-showcase {
+    gap: 6rem;
+  }
+
+  .accueilProducts-actions {
+    flex-direction: row;
+    margin-top: 1.25rem;
+  }
+
+  .accueilBenefits-heading .accueilSection-title {
+    max-width: 40.625rem;
   }
 
   .accueilBenefits-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 2rem;
+    gap: 5.625rem;
   }
 
   .accueilPresence-shell {
-    grid-template-columns: minmax(0, 0.84fr) minmax(0, 1fr);
-    gap: 3rem;
+    gap: 5rem;
   }
 
   .accueilPresence-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 1.8rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem 2rem;
   }
 
-  .accueilPresence-testimonials,
-  .accueilFaq-groups {
-    grid-column: 1 / -1;
+  .accueilPresence-testimonials {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
   }
 
-  .accueilFaq-groups {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.4rem;
+  .accueilInvestors-panel .accueilSection-title {
+    max-width: 51.25rem;
+  }
+
+  .accueilFaq-shell {
+    width: min(88%, 53.125rem);
   }
 }
