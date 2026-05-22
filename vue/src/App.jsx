@@ -1,8 +1,12 @@
-import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HOME, PRODUITS } from './pages/principale.jsx'
-import { CONCESSIONNAIRES, INVESTISSEURS } from './pages/principale.jsx'
-import { ACTUALITES, CONTACT } from './pages/principale.jsx'
+import {
+  HOME,
+  PRODUITS,
+  CONCESSIONNAIRES,
+  INVESTISSEURS,
+  ACTUALITES,
+  CONTACT,
+} from './services/navigation.js'
 import Principale from './pages/principale.jsx'
 import './App.css'
 

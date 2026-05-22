@@ -1,0 +1,12 @@
+.principale-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.principale-main {
+  flex: 1;
+  width: var(--shell-width);
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 7vw, 4.5rem);
+}

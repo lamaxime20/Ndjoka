@@ -1,11 +1,11 @@
 # Graph Report - D:\Desktop\Lamaxime's Projects\Ndjoka  (2026-05-22)
 
 ## Corpus Check
-- 7 files · ~2,329,694 words
+- 8 files · ~2,330,443 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 11 nodes · 4 edges · 7 communities detected
+- 13 nodes · 5 edges · 8 communities detected
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -17,6 +17,7 @@
 - [[_COMMUNITY_Community 4|Community 4]]
 - [[_COMMUNITY_Community 5|Community 5]]
 - [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -26,7 +27,7 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 1 - "Community 1"
@@ -53,10 +54,12 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
+### Community 7 - "Community 7"
+Cohesion: 1.0
+Nodes (0): 
+
 ## Knowledge Gaps
-- **Thin community `Community 0`** (2 nodes): `App()`, `App.jsx`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 1`** (2 nodes): `footer.jsx`, `Footer()`
+- **Thin community `Community 1`** (2 nodes): `App()`, `App.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 2`** (2 nodes): `navBar.jsx`, `NavBar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -67,6 +70,8 @@ Nodes (0):
 - **Thin community `Community 5`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 6`** (1 nodes): `main.jsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 7`** (1 nodes): `navigation.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions

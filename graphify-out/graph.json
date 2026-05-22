@@ -27,16 +27,16 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\App.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_app_jsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "app.jsx"
     },
     {
       "label": "App()",
       "file_type": "code",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\App.jsx",
-      "source_location": "L9",
+      "source_location": "L13",
       "id": "app_app",
-      "community": 0,
+      "community": 1,
       "norm_label": "app()"
     },
     {
@@ -54,16 +54,25 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_footer_jsx",
-      "community": 1,
+      "community": 0,
       "norm_label": "footer.jsx"
+    },
+    {
+      "label": "SocialIcon()",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
+      "source_location": "L11",
+      "id": "footer_socialicon",
+      "community": 0,
+      "norm_label": "socialicon()"
     },
     {
       "label": "Footer()",
       "file_type": "code",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
-      "source_location": "L1",
+      "source_location": "L39",
       "id": "footer_footer",
-      "community": 1,
+      "community": 0,
       "norm_label": "footer()"
     },
     {
@@ -79,7 +88,7 @@
       "label": "NavBar()",
       "file_type": "code",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\navBar.jsx",
-      "source_location": "L6",
+      "source_location": "L10",
       "id": "navbar_navbar",
       "community": 2,
       "norm_label": "navbar()"
@@ -97,10 +106,19 @@
       "label": "Principale()",
       "file_type": "code",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\principale.jsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "id": "principale_principale",
       "community": 3,
       "norm_label": "principale()"
+    },
+    {
+      "label": "navigation.js",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\navigation.js",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_navigation_js",
+      "community": 7,
+      "norm_label": "navigation.js"
     }
   ],
   "links": [
@@ -108,7 +126,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\App.jsx",
-      "source_location": "L9",
+      "source_location": "L13",
       "weight": 1.0,
       "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_app_jsx",
       "_tgt": "app_app",
@@ -120,7 +138,19 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
-      "source_location": "L1",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_footer_jsx",
+      "_tgt": "footer_socialicon",
+      "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_footer_jsx",
+      "target": "footer_socialicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
+      "source_location": "L39",
       "weight": 1.0,
       "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_footer_jsx",
       "_tgt": "footer_footer",
@@ -132,7 +162,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\navBar.jsx",
-      "source_location": "L6",
+      "source_location": "L10",
       "weight": 1.0,
       "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_navbar_jsx",
       "_tgt": "navbar_navbar",
@@ -144,7 +174,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\principale.jsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_principale_jsx",
       "_tgt": "principale_principale",

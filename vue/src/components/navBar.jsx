@@ -1,82 +1,79 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/Logo_Ndjoka.svg';
-import { HOME, PRODUITS } from '../pages/principale.jsx';
-import { CONCESSIONNAIRES, INVESTISSEURS } from '../pages/principale.jsx';
-import { ACTUALITES, CONTACT } from '../pages/principale.jsx';
+import {
+  NAV_ITEMS,
+  NAVBAR_CTA,
+} from '../services/navigation.js';
+import '../assets/styles/components/navBar.css';
 
-function NavBar({onglet}) {
-    return (
-        <nav className="navBar-root">
+function NavBar({ onglet }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="navBar-root">
+      <div className="navBar-shell">
+        <nav className="navBar-panel" aria-label="Navigation principale">
+          <Link className="navBar-brand" to="/" aria-label="Ndjoka, retour à l'accueil">
             <img
-                className="navBar-logo"
-                src={logo}
-                alt="logo_ndjoka"
+              className="navBar-brandMark"
+              src={logo}
+              alt="Logo Ndjoka"
             />
-            <ul className="navBar-onglets">
-                <li 
-                    className={`navbBar-onglet ${onglet === HOME ? 'navBar-onglet-selected' : ''}`}
-                >
-                    <a
-                        href='/'
-                    >
-                        Home
-                    </a>
-                </li>
-                <li 
-                    className={`navbBar-onglet ${onglet === PRODUITS ? 'navBar-onglet-selected' : ''}`}
-                >
-                    <a
-                        href='/produits'
-                    >
-                        Produits
-                    </a>
-                </li>
-                <li 
-                    className={`navbBar-onglet ${onglet === CONCESSIONNAIRES ? 'navBar-onglet-selected' : ''}`}
-                >
-                    <a
-                        href='/concessionnaires'
-                    >
-                        Concessionnaires
-                    </a>
-                </li>
-                <li 
-                    className={`navbBar-onglet ${onglet === INVESTISSEURS ? 'navBar-onglet-selected' : ''}`}
-                >
-                    <a
-                        href='/investisseurs'
-                    >
-                        Investisseurs
-                    </a>
-                </li>
-                <li 
-                    className={`navbBar-onglet ${onglet === ACTUALITES ? 'navBar-onglet-selected' : ''}`}
-                >
-                    <a
-                        href='/actualites'
-                    >
-                        Actualites
-                    </a>
-                </li>
-                <li 
-                    className={`navbBar-onglet ${onglet === CONTACT ? 'navBar-onglet-selected' : ''}`}
-                >
-                    <a
-                        href='/contact'
-                    >
-                        Contact
-                    </a>
-                </li>
-            </ul>
-            <a
-                className="navBar-button"
-                href='https://wa.me/237683184360'
+          </Link>
+
+          <button
+            className="navBar-toggle"
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls="navBar-menu"
+            aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            onClick={() => setIsMenuOpen((previousState) => !previousState)}
+          >
+            <span className="navBar-toggleLine" aria-hidden="true" />
+          </button>
+
+          <div
+            id="navBar-menu"
+            className={`navBar-menu ${isMenuOpen ? 'navBar-menu--open' : ''}`}
+          >
+            <div className="navBar-nav">
+              <ul className="navBar-links">
+                {NAV_ITEMS.map((item) => {
+                  const isActive = onglet === item.key;
+
+                  return (
+                    <li className="navBar-linkItem" key={item.key}>
+                      <Link
+                        className={`navBar-link ${isActive ? 'navBar-link--active' : ''}`}
+                        to={item.path}
+                        aria-current={isActive ? 'page' : undefined}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <div className="navBar-actions">
+              <a
+                className="navBar-cta"
+                href={NAVBAR_CTA.href}
                 target="_blank"
                 rel="noopener noreferrer"
-            >
-                Nous contacter
-            </a>
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {NAVBAR_CTA.label}
+              </a>
+            </div>
+          </div>
         </nav>
-    )
+      </div>
+    </header>
+  );
 }
 
 export default NavBar;
