@@ -17,7 +17,9 @@ import '../assets/styles/pages/investisseurs.css';
 function Investisseurs() {
   const heroBgRef = useRef(null);
   const timelineRef = useRef(null);
+  const faqListRef = useRef(null);
   const [openFaq, setOpenFaq] = useState(null);
+  const [faqVisible, setFaqVisible] = useState(false);
   const [villesCount, villesRef] = useCountUp(INVEST_STATS.count.value, 2000);
 
   useEffect(() => {
@@ -66,6 +68,22 @@ function Investisseurs() {
         }
       },
       { threshold: 0.25 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = faqListRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFaqVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -267,10 +285,10 @@ function Investisseurs() {
               Tout ce qu'il faut savoir
             </h2>
           </header>
-          <div className="investFaq-list">
+          <div className={`investFaq-list${faqVisible ? ' investFaq-list--visible' : ''}`} ref={faqListRef}>
             {INVEST_FAQ.map((item, i) => (
               <div
-                className={`investFaq-item invest-animate invest-animate--d${(i % 3) + 1}${openFaq === i ? ' investFaq-item--open' : ''}`}
+                className={`investFaq-item investFaq-item--idx${i}${openFaq === i ? ' investFaq-item--open' : ''}`}
                 key={item.question}
               >
                 <button
