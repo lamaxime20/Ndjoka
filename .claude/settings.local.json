@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\Desktop\\\\Lamaxime's Projects\\\\Ndjoka\\\\vue\\\\src\" -Directory)",
+      "Bash(Select-Object Name)"
+    ]
+  }
+}

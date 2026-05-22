@@ -1,0 +1,939 @@
+/* ================================================================
+   INVESTISSEURS — mobile-first stylesheet
+   Premium corporate investor page — Ndjoka
+   ================================================================ */
+
+/* ── Root ──────────────────────────────────────────────────────── */
+.invest-root {
+  overflow-x: hidden;
+  background: #F8F6F1;
+  color: #1D1D1D;
+}
+
+/* ── Scroll-triggered animations ───────────────────────────────── */
+.invest-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.invest-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.invest-animate--d1 { transition-delay: 0.08s; }
+.invest-animate--d2 { transition-delay: 0.18s; }
+.invest-animate--d3 { transition-delay: 0.28s; }
+.invest-animate--d4 { transition-delay: 0.38s; }
+
+/* Vision items get a scale + translate entry */
+.investVision-root .invest-animate {
+  transform: translateY(40px) scale(0.98);
+}
+
+.investVision-root .invest-animate.is-visible {
+  transform: translateY(0) scale(1);
+}
+
+/* ── Shared section headings ────────────────────────────────────── */
+.invest-root .investSection-heading {
+  text-align: center;
+  max-width: 56rem;
+  margin-inline: auto;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.invest-root .investSection-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #D4A017;
+  margin-bottom: 1.25rem;
+}
+
+.invest-root .investSection-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.875rem, 4vw, 3.375rem);
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #1D1D1D;
+  margin: 0 0 1.25rem;
+}
+
+.invest-root .investSection-title--light {
+  color: #FFFFFF;
+}
+
+.invest-root .investSection-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  line-height: 1.9;
+  color: #5E5E5E;
+  max-width: 45rem;
+  margin-inline: auto;
+}
+
+.invest-root .investSection-desc--light {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* ── Shared CTA buttons ─────────────────────────────────────────── */
+.invest-root .investCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.25rem;
+  height: 3.625rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap;
+}
+
+.invest-root .investCta--primary {
+  background: #D4A017;
+  color: #111111;
+  border: none;
+}
+
+.invest-root .investCta--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(212, 160, 23, 0.25);
+}
+
+.invest-root .investCta--ghost {
+  background: transparent;
+  color: #1D1D1D;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.invest-root .investCta--ghost:hover {
+  background: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+}
+
+.invest-root .investCta--gold {
+  position: relative;
+  background: #D4A017;
+  color: #111111;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(212, 160, 23, 0.15);
+}
+
+.invest-root .investCta--gold:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(212, 160, 23, 0.28);
+}
+
+.invest-root .investCta--gold::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-15deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.invest-root .investCta--gold:hover::after {
+  opacity: 1;
+  animation: investShimmer 0.65s ease-in-out;
+}
+
+@keyframes investShimmer {
+  0%   { transform: translateX(-200%) skewX(-15deg); }
+  100% { transform: translateX(400%)  skewX(-15deg); }
+}
+
+/* ================================================================
+   HERO
+   ================================================================ */
+.investHero-root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #111111;
+}
+
+.investHero-bg {
+  position: absolute;
+  inset: -10%;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.08);
+  will-change: transform;
+}
+
+.investHero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.45) 55%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+  z-index: 1;
+}
+
+.investHero-shell {
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(7rem, 14vw, 10rem);
+  padding-bottom: clamp(6rem, 10vw, 9rem);
+}
+
+.investHero-copy {
+  max-width: 38.75rem;
+  animation: investHeroFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+@keyframes investHeroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.investHero-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #D4A017;
+  margin-bottom: 1.5rem;
+}
+
+.investHero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.125rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin: 0 0 1.75rem;
+}
+
+.investHero-desc {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 35rem;
+  margin: 0 0 3rem;
+}
+
+.investHero-ctaWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.investHero-ctaWrap::before {
+  content: '';
+  position: absolute;
+  inset: -1rem -1.5rem;
+  background: radial-gradient(ellipse, rgba(212, 160, 23, 0.22) 0%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.investHero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14rem;
+  background: linear-gradient(to bottom, transparent, #F8F6F1);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ================================================================
+   OPPORTUNITÉ D'INVESTISSEMENT
+   ================================================================ */
+.investOpportunite-root {
+  background: #F8F6F1;
+  padding-top: clamp(5rem, 10vw, 8.75rem);
+  padding-bottom: clamp(5rem, 10vw, 8.75rem);
+}
+
+.investOpportunite-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.75rem;
+}
+
+.investOpportunite-bloc {
+  position: relative;
+  padding-left: 1.75rem;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investOpportunite-bloc:hover {
+  transform: translateY(-6px);
+}
+
+.investOpportunite-dot {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #D4A017;
+  flex-shrink: 0;
+}
+
+.investOpportunite-title {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1D1D1D;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.investOpportunite-text {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #5E5E5E;
+  margin: 0;
+}
+
+.investOpportunite-line {
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 22px;
+  width: 1px;
+  height: 0;
+  background: rgba(212, 160, 23, 0.3);
+  transition: height 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+}
+
+.investOpportunite-bloc.is-visible .investOpportunite-line {
+  height: calc(100% - 22px);
+}
+
+@media (min-width: 769px) {
+  .investOpportunite-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem 6rem;
+  }
+}
+
+/* ================================================================
+   COMMENT ÇA FONCTIONNE — TIMELINE
+   ================================================================ */
+.investProcess-root {
+  background: #F3F1EB;
+  padding-top: clamp(5rem, 10vw, 8.75rem);
+  padding-bottom: clamp(5rem, 10vw, 8.75rem);
+}
+
+/* Mobile: vertical layout */
+.investProcess-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.25rem;
+}
+
+.investProcess-line {
+  position: absolute;
+  left: 28px;
+  top: 56px;
+  width: 1px;
+  height: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(212, 160, 23, 0.45),
+    rgba(212, 160, 23, 0.08)
+  );
+  transition: height 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investProcess-timeline.is-active .investProcess-line {
+  height: calc(100% - 56px);
+}
+
+.investProcess-step {
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.investProcess-num {
+  position: absolute;
+  left: -4px;
+  top: -10px;
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(212, 160, 23, 0.1);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: color 0.5s ease;
+}
+
+.investProcess-step:hover .investProcess-num {
+  color: rgba(212, 160, 23, 0.2);
+}
+
+.investProcess-stepTitle {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1D1D1D;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+  transition: color 0.4s ease;
+}
+
+.investProcess-step:hover .investProcess-stepTitle {
+  color: #D4A017;
+}
+
+.investProcess-stepText {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #5E5E5E;
+  margin: 0;
+  max-width: 22rem;
+}
+
+/* Desktop: horizontal timeline */
+@media (min-width: 1025px) {
+  .investProcess-timeline {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .investProcess-line {
+    left: 72px;
+    top: 54px;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      rgba(212, 160, 23, 0.45),
+      rgba(212, 160, 23, 0.1)
+    );
+    transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .investProcess-timeline.is-active .investProcess-line {
+    width: calc(100% - 144px);
+    height: 1px;
+  }
+
+  .investProcess-step {
+    flex: 1;
+    padding-left: 0;
+    padding-top: 6.5rem;
+    text-align: center;
+  }
+
+  .investProcess-num {
+    position: absolute;
+    left: 50%;
+    top: -1rem;
+    transform: translateX(-50%);
+    font-size: 7.5rem;
+  }
+
+  .investProcess-stepText {
+    max-width: 13.5rem;
+    margin-inline: auto;
+  }
+}
+
+/* ================================================================
+   PRODUITS NDJOKA
+   ================================================================ */
+.investProduits-root {
+  background: #FCFBF8;
+  padding-top: clamp(5rem, 10vw, 8.75rem);
+  padding-bottom: clamp(5rem, 10vw, 8.75rem);
+}
+
+.investProduits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.investProduit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investProduit-item:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.investProduit-visual {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  overflow: visible;
+}
+
+.investProduit-img {
+  width: 100%;
+  height: clamp(12rem, 20vw, 20rem);
+  object-fit: contain;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.1));
+  transition: filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investProduit-item:hover .investProduit-img {
+  filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.18));
+}
+
+.investProduit-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1D1D1D;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.investProduit-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #777777;
+  margin: 0;
+  max-width: 14rem;
+}
+
+.investProduits-cta {
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .investProduits-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem 2rem;
+  }
+}
+
+/* ================================================================
+   CHIFFRES & EXPANSION
+   ================================================================ */
+.investStats-root {
+  background: #111111;
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(5rem, 10vw, 8.75rem);
+  padding-bottom: clamp(5rem, 10vw, 8.75rem);
+}
+
+.investStats-root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 18% 28%, rgba(212, 160, 23, 0.045) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 72%, rgba(212, 160, 23, 0.04)  0%, transparent 55%);
+  pointer-events: none;
+}
+
+.investStats-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.investStats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.investStat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.investStat-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(3.25rem, 7vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #D4A017;
+}
+
+.investStat-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D4A017;
+  opacity: 0.65;
+}
+
+.investStat-label {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.investStats-temoignages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.investStats-temoignage {
+  margin: 0;
+}
+
+.investStats-quote {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+@media (min-width: 769px) {
+  .investStats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+  }
+
+  .investStats-temoignages {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .investStats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem 5rem;
+  }
+}
+
+/* ================================================================
+   VISION FUTURE
+   ================================================================ */
+.investVision-root {
+  position: relative;
+  background: linear-gradient(180deg, #F8F6F1 0%, #EEE7D6 100%);
+  overflow: hidden;
+  padding-top: clamp(5rem, 10vw, 8.75rem);
+  padding-bottom: clamp(5rem, 10vw, 8.75rem);
+}
+
+.investVision-root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212, 160, 23, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 160, 23, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+}
+
+.investVision-root::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -8%;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(212, 160, 23, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.investVision-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.investVision-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.investVision-item {
+  position: relative;
+  padding-top: 1.75rem;
+}
+
+.investVision-accent {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: #D4A017;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investVision-item:hover .investVision-accent {
+  width: 4rem;
+}
+
+.investVision-itemTitle {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1D1D1D;
+  margin: 0 0 0.625rem;
+  letter-spacing: -0.02em;
+}
+
+.investVision-itemText {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #5E5E5E;
+  margin: 0;
+}
+
+@media (min-width: 769px) {
+  .investVision-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.75rem 5.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .investVision-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 3.5rem;
+  }
+}
+
+/* ================================================================
+   FAQ
+   ================================================================ */
+.investFaq-root {
+  background: #F8F6F1;
+  padding-top: clamp(5rem, 10vw, 8.75rem);
+  padding-bottom: clamp(5rem, 10vw, 8.75rem);
+}
+
+.investFaq-shell {
+  max-width: 51.25rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.investFaq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.investFaq-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investFaq-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.investFaq-item:hover {
+  transform: translateX(4px);
+}
+
+.investFaq-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.625rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: clamp(0.9375rem, 1.5vw, 1rem);
+  font-weight: 500;
+  color: #1D1D1D;
+  transition: color 0.4s ease;
+}
+
+.investFaq-btn:hover {
+  color: #D4A017;
+}
+
+.investFaq-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: #D4A017;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investFaq-item--open .investFaq-icon {
+  transform: rotate(45deg);
+}
+
+.investFaq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.investFaq-item--open .investFaq-answer {
+  grid-template-rows: 1fr;
+}
+
+.investFaq-answerInner {
+  overflow: hidden;
+}
+
+.investFaq-answerInner p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #5E5E5E;
+  padding-bottom: 1.625rem;
+  margin: 0;
+}
+
+/* ================================================================
+   CTA FINAL
+   ================================================================ */
+.investFinal-root {
+  background: #111111;
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(5rem, 12vw, 10rem);
+  padding-bottom: clamp(5rem, 12vw, 10rem);
+}
+
+.investFinal-root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(212, 160, 23, 0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.investFinal-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 42.5rem;
+  margin-inline: auto;
+}
+
+.investFinal-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.875rem, 4.5vw, 3.375rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin: 0 0 1.5rem;
+}
+
+.investFinal-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 1.5vw, 1rem);
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0 0 3rem;
+}
+
+/* ================================================================
+   RESPONSIVE — BREAKPOINTS
+   ================================================================ */
+
+/* Mobiles & Smartwatches */
+@media (max-width: 480px) {
+  .investHero-title {
+    font-size: 2rem;
+  }
+
+  .investHero-copy {
+    max-width: 100%;
+  }
+
+  .investProcess-step {
+    padding-left: 3.75rem;
+  }
+
+  .investProcess-num {
+    font-size: 4rem;
+    top: -6px;
+  }
+
+  .investProduits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 0.875rem;
+  }
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .investProcess-timeline {
+    flex-direction: column;
+  }
+}
+
+/* Desktops & grands écrans */
+@media (min-width: 1201px) {
+  .investHero-title {
+    font-size: 4.5rem;
+  }
+
+  .investProcess-num {
+    font-size: 7.5rem;
+  }
+
+  .investOpportunite-grid {
+    gap: 4rem 7rem;
+  }
+}

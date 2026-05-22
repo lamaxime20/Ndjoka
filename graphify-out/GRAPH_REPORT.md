@@ -1,12 +1,12 @@
 # Graph Report - D:\Desktop\Lamaxime's Projects\Ndjoka  (2026-05-22)
 
 ## Corpus Check
-- 10 files · ~2,332,022 words
+- 17 files · ~2,651,293 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 16 nodes · 6 edges · 10 communities detected
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 28 nodes · 13 edges · 15 communities detected
+- Extraction: 85% EXTRACTED · 15% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -20,20 +20,31 @@
 - [[_COMMUNITY_Community 7|Community 7]]
 - [[_COMMUNITY_Community 8|Community 8]]
 - [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
 
 ## God Nodes (most connected - your core abstractions)
+1. `useCountUp()` - 3 edges
+2. `Concessionnaires()` - 2 edges
+3. `Investisseurs()` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
-- None detected - all connections are within the same source files.
+- `Concessionnaires()` --calls--> `useCountUp()`  [INFERRED]
+  D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\pages\concessionnaires.jsx → D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\utils\useCountUp.js
+- `Investisseurs()` --calls--> `useCountUp()`  [INFERRED]
+  D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\pages\investisseurs.jsx → D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\utils\useCountUp.js
 
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.33
+Nodes (3): Concessionnaires(), Investisseurs(), useCountUp()
 
 ### Community 1 - "Community 1"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 2 - "Community 2"
@@ -68,25 +79,56 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
+### Community 10 - "Community 10"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 11 - "Community 11"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 12 - "Community 12"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 13 - "Community 13"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 14 - "Community 14"
+Cohesion: 1.0
+Nodes (0): 
+
 ## Knowledge Gaps
-- **Thin community `Community 1`** (2 nodes): `App()`, `App.jsx`
+- **Thin community `Community 2`** (2 nodes): `App()`, `App.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 2`** (2 nodes): `navBar.jsx`, `NavBar()`
+- **Thin community `Community 3`** (2 nodes): `navBar.jsx`, `NavBar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 3`** (2 nodes): `Accueil()`, `accueil.jsx`
+- **Thin community `Community 4`** (2 nodes): `Accueil()`, `accueil.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 4`** (2 nodes): `principale.jsx`, `Principale()`
+- **Thin community `Community 5`** (2 nodes): `principale.jsx`, `Principale()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 5`** (1 nodes): `eslint.config.js`
+- **Thin community `Community 6`** (2 nodes): `produits.jsx`, `Produits()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 6`** (1 nodes): `vite.config.js`
+- **Thin community `Community 7`** (2 nodes): `produits.js`, `buildCommandeWhatsAppUrl()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 7`** (1 nodes): `main.jsx`
+- **Thin community `Community 8`** (1 nodes): `eslint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 8`** (1 nodes): `accueil.js`
+- **Thin community `Community 9`** (1 nodes): `vite.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 9`** (1 nodes): `navigation.js`
+- **Thin community `Community 10`** (1 nodes): `main.jsx`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 11`** (1 nodes): `accueil.js`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 12`** (1 nodes): `concessionnaires.js`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 13`** (1 nodes): `investisseurs.js`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 14`** (1 nodes): `navigation.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
-_Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges._
+_Questions this graph is uniquely positioned to answer:_
+
+- **Are the 2 inferred relationships involving `useCountUp()` (e.g. with `Concessionnaires()` and `Investisseurs()`) actually correct?**
+  _`useCountUp()` has 2 INFERRED edges - model-reasoned connections that need verification._

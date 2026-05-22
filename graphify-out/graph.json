@@ -9,7 +9,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\eslint.config.js",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_eslint_config_js",
-      "community": 5,
+      "community": 8,
       "norm_label": "eslint.config.js"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\vite.config.js",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_vite_config_js",
-      "community": 6,
+      "community": 9,
       "norm_label": "vite.config.js"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\App.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_app_jsx",
-      "community": 1,
+      "community": 2,
       "norm_label": "app.jsx"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\App.jsx",
       "source_location": "L13",
       "id": "app_app",
-      "community": 1,
+      "community": 2,
       "norm_label": "app()"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\main.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_main_jsx",
-      "community": 7,
+      "community": 10,
       "norm_label": "main.jsx"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_footer_jsx",
-      "community": 0,
+      "community": 1,
       "norm_label": "footer.jsx"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
       "source_location": "L11",
       "id": "footer_socialicon",
-      "community": 0,
+      "community": 1,
       "norm_label": "socialicon()"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\footer.jsx",
       "source_location": "L39",
       "id": "footer_footer",
-      "community": 0,
+      "community": 1,
       "norm_label": "footer()"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\navBar.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_components_navbar_jsx",
-      "community": 2,
+      "community": 3,
       "norm_label": "navbar.jsx"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\components\\navBar.jsx",
       "source_location": "L10",
       "id": "navbar_navbar",
-      "community": 2,
+      "community": 3,
       "norm_label": "navbar()"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\accueil.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_accueil_jsx",
-      "community": 3,
+      "community": 4,
       "norm_label": "accueil.jsx"
     },
     {
@@ -108,8 +108,44 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\accueil.jsx",
       "source_location": "L16",
       "id": "accueil_accueil",
-      "community": 3,
+      "community": 4,
       "norm_label": "accueil()"
+    },
+    {
+      "label": "concessionnaires.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\concessionnaires.jsx",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_concessionnaires_jsx",
+      "community": 0,
+      "norm_label": "concessionnaires.jsx"
+    },
+    {
+      "label": "Concessionnaires()",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\concessionnaires.jsx",
+      "source_location": "L17",
+      "id": "concessionnaires_concessionnaires",
+      "community": 0,
+      "norm_label": "concessionnaires()"
+    },
+    {
+      "label": "investisseurs.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\investisseurs.jsx",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_investisseurs_jsx",
+      "community": 0,
+      "norm_label": "investisseurs.jsx"
+    },
+    {
+      "label": "Investisseurs()",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\investisseurs.jsx",
+      "source_location": "L17",
+      "id": "investisseurs_investisseurs",
+      "community": 0,
+      "norm_label": "investisseurs()"
     },
     {
       "label": "principale.jsx",
@@ -117,17 +153,35 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\principale.jsx",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_principale_jsx",
-      "community": 4,
+      "community": 5,
       "norm_label": "principale.jsx"
     },
     {
       "label": "Principale()",
       "file_type": "code",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\principale.jsx",
-      "source_location": "L14",
+      "source_location": "L17",
       "id": "principale_principale",
-      "community": 4,
+      "community": 5,
       "norm_label": "principale()"
+    },
+    {
+      "label": "produits.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\produits.jsx",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_produits_jsx",
+      "community": 6,
+      "norm_label": "produits.jsx"
+    },
+    {
+      "label": "Produits()",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\produits.jsx",
+      "source_location": "L23",
+      "id": "produits_produits",
+      "community": 6,
+      "norm_label": "produits()"
     },
     {
       "label": "accueil.js",
@@ -135,8 +189,26 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\accueil.js",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_accueil_js",
-      "community": 8,
+      "community": 11,
       "norm_label": "accueil.js"
+    },
+    {
+      "label": "concessionnaires.js",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\concessionnaires.js",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_concessionnaires_js",
+      "community": 12,
+      "norm_label": "concessionnaires.js"
+    },
+    {
+      "label": "investisseurs.js",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\investisseurs.js",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_investisseurs_js",
+      "community": 13,
+      "norm_label": "investisseurs.js"
     },
     {
       "label": "navigation.js",
@@ -144,8 +216,44 @@
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\navigation.js",
       "source_location": "L1",
       "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_navigation_js",
-      "community": 9,
+      "community": 14,
       "norm_label": "navigation.js"
+    },
+    {
+      "label": "produits.js",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\produits.js",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_produits_js",
+      "community": 7,
+      "norm_label": "produits.js"
+    },
+    {
+      "label": "buildCommandeWhatsAppUrl()",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\produits.js",
+      "source_location": "L157",
+      "id": "produits_buildcommandewhatsappurl",
+      "community": 7,
+      "norm_label": "buildcommandewhatsappurl()"
+    },
+    {
+      "label": "useCountUp.js",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\utils\\useCountUp.js",
+      "source_location": "L1",
+      "id": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_utils_usecountup_js",
+      "community": 0,
+      "norm_label": "usecountup.js"
+    },
+    {
+      "label": "useCountUp()",
+      "file_type": "code",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\utils\\useCountUp.js",
+      "source_location": "L3",
+      "id": "usecountup_usecountup",
+      "community": 0,
+      "norm_label": "usecountup()"
     }
   ],
   "links": [
@@ -212,13 +320,97 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\concessionnaires.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_concessionnaires_jsx",
+      "_tgt": "concessionnaires_concessionnaires",
+      "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_concessionnaires_jsx",
+      "target": "concessionnaires_concessionnaires",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\concessionnaires.jsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "concessionnaires_concessionnaires",
+      "_tgt": "usecountup_usecountup",
+      "source": "concessionnaires_concessionnaires",
+      "target": "usecountup_usecountup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\investisseurs.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_investisseurs_jsx",
+      "_tgt": "investisseurs_investisseurs",
+      "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_investisseurs_jsx",
+      "target": "investisseurs_investisseurs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\investisseurs.jsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "investisseurs_investisseurs",
+      "_tgt": "usecountup_usecountup",
+      "source": "investisseurs_investisseurs",
+      "target": "usecountup_usecountup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\principale.jsx",
-      "source_location": "L14",
+      "source_location": "L17",
       "weight": 1.0,
       "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_principale_jsx",
       "_tgt": "principale_principale",
       "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_principale_jsx",
       "target": "principale_principale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\pages\\produits.jsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_produits_jsx",
+      "_tgt": "produits_produits",
+      "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_pages_produits_jsx",
+      "target": "produits_produits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\services\\produits.js",
+      "source_location": "L157",
+      "weight": 1.0,
+      "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_produits_js",
+      "_tgt": "produits_buildcommandewhatsappurl",
+      "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_services_produits_js",
+      "target": "produits_buildcommandewhatsappurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Desktop\\Lamaxime's Projects\\Ndjoka\\vue\\src\\utils\\useCountUp.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_utils_usecountup_js",
+      "_tgt": "usecountup_usecountup",
+      "source": "d_desktop_lamaxime_s_projects_ndjoka_vue_src_utils_usecountup_js",
+      "target": "usecountup_usecountup",
       "confidence_score": 1.0
     }
   ],
