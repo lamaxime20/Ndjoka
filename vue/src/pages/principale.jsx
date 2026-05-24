@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import NavBar from '../components/navBar.jsx';
 import Footer from '../components/footer.jsx';
 import Accueil from './accueil.jsx';
@@ -13,9 +14,13 @@ import {
   ACTUALITES,
   CONTACT,
 } from '../services/navigation.js';
+import { applySeo } from '../services/seo.js';
 import '../assets/styles/pages/principale.css';
 
 function Principale({onglet}) {
+    useEffect(() => {
+        applySeo(onglet);
+    }, [onglet]);
     if (onglet === HOME) {
         return (
             <div className="principale-root">
