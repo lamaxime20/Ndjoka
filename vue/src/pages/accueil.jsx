@@ -79,7 +79,6 @@ function Accueil() {
         <div className="accueilProducts-shell shell">
           <div className="accueilProducts-heading">
             <div className="accueilProducts-headingCopy">
-              <p className="accueilSection-eyebrow">Produits</p>
               <h2 className="accueilSection-title" id="accueil-products-title">
                 {PRODUCT_INTRO.title}
               </h2>
