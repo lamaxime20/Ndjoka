@@ -688,6 +688,7 @@
     radial-gradient(circle at 50% 60%, rgba(242, 178, 51, 0.18), transparent 22%),
     linear-gradient(135deg, #1f5e3b 0%, #163824 100%);
   animation: accueilRevealSoft 700ms ease both;
+  will-change: transform, opacity;
 }
 
 .accueilInvestors-panel::after {
@@ -960,12 +961,12 @@
 @keyframes accueilRevealSoft {
   from {
     opacity: 0;
-    filter: blur(12px);
+    transform: translateY(24px) scale(0.98);
   }
 
   to {
     opacity: 1;
-    filter: blur(0);
+    transform: translateY(0) scale(1);
   }
 }
 

@@ -30,18 +30,25 @@ export const HERO_CONTENT = {
       src: chipsHeroImage,
       alt: 'Sachet de chips de plantain Ndjoka',
       className: 'accueilHero-media accueilHero-media--chips',
+      width: 780,
+      height: 780,
     },
     {
       key: 'drink',
       src: drinkHeroImage,
       alt: 'Boisson Ndjoka rafraîchissante',
       className: 'accueilHero-media accueilHero-media--drink',
+      width: 774,
+      height: 780,
+      priority: true,
     },
     {
       key: 'chin-chin',
       src: chinChinHeroImage,
       alt: 'Croquettes chin chin Ndjoka',
       className: 'accueilHero-media accueilHero-media--chinChin',
+      width: 774,
+      height: 780,
     },
   ],
 };
@@ -83,6 +90,8 @@ export const PRODUCT_ITEMS = [
     image: natureImage,
     alt: 'Sachet Ndjoka de chips plantain nature',
     tone: 'nature',
+    width: 768,
+    height: 911,
   },
   {
     name: 'Chips Plantain Sucrées',
@@ -92,6 +101,8 @@ export const PRODUCT_ITEMS = [
     image: sucreeImage,
     alt: 'Sachet Ndjoka de chips plantain sucrées',
     tone: 'sucree',
+    width: 768,
+    height: 911,
   },
   {
     name: 'Chips Plantain Épicées',
@@ -101,6 +112,8 @@ export const PRODUCT_ITEMS = [
     image: epiceeImage,
     alt: 'Sachet Ndjoka de chips plantain épicées',
     tone: 'epicee',
+    width: 768,
+    height: 911,
   },
   {
     name: 'Croquettes Chin Chin',
@@ -110,6 +123,8 @@ export const PRODUCT_ITEMS = [
     image: chinChinProductImage,
     alt: 'Produit Ndjoka chin chin bientôt disponible',
     tone: 'chinChin',
+    width: 774,
+    height: 780,
   },
 ];
 

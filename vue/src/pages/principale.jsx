@@ -1,11 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import NavBar from '../components/navBar.jsx';
 import Footer from '../components/footer.jsx';
-import Accueil from './accueil.jsx';
-import Produits from './produits.jsx';
-import Concessionnaires from './concessionnaires.jsx';
-import Investisseurs from './investisseurs.jsx';
-import APropos from './apropos.jsx';
 import {
   HOME,
   PRODUITS,
@@ -17,69 +12,40 @@ import {
 import { applySeo } from '../services/seo.js';
 import '../assets/styles/pages/principale.css';
 
-function Principale({onglet}) {
+const Accueil = lazy(() => import('./accueil.jsx'));
+const Produits = lazy(() => import('./produits.jsx'));
+const Concessionnaires = lazy(() => import('./concessionnaires.jsx'));
+const Investisseurs = lazy(() => import('./investisseurs.jsx'));
+const APropos = lazy(() => import('./apropos.jsx'));
+
+function PageContent({ onglet }) {
+    if (onglet === HOME) return <Accueil />;
+    if (onglet === PRODUITS) return <Produits />;
+    if (onglet === CONCESSIONNAIRES) return <Concessionnaires />;
+    if (onglet === INVESTISSEURS) return <Investisseurs />;
+    if (onglet === CONTACT) return <APropos />;
+    if (onglet === ACTUALITES) return (
+        <main className="principale-main">
+            <h1>Actualités</h1>
+        </main>
+    );
+    return null;
+}
+
+function Principale({ onglet }) {
     useEffect(() => {
         applySeo(onglet);
     }, [onglet]);
-    if (onglet === HOME) {
-        return (
-            <div className="principale-root">
-                <NavBar onglet={onglet} />
-                <Accueil />
-                <Footer onglet={onglet} />
-            </div>
-        )
-    }
-
-    if (onglet === PRODUITS) {
-        return (
-            <div className="principale-root">
-                <NavBar onglet={onglet} />
-                <Produits />
-                <Footer onglet={onglet} />
-            </div>
-        )
-    }
-
-    if (onglet === CONCESSIONNAIRES) {
-        return (
-            <div className="principale-root">
-                <NavBar onglet={onglet} />
-                <Concessionnaires />
-                <Footer onglet={onglet} />
-            </div>
-        )
-    }
-
-    if (onglet === INVESTISSEURS) {
-        return (
-            <div className="principale-root">
-                <NavBar onglet={onglet} />
-                <Investisseurs />
-                <Footer onglet={onglet} />
-            </div>
-        )
-    }
-
-    if (onglet === CONTACT) {
-        return (
-            <div className="principale-root">
-                <NavBar onglet={onglet} />
-                <APropos />
-                <Footer onglet={onglet} />
-            </div>
-        )
-    }
 
     return (
         <div className="principale-root">
             <NavBar onglet={onglet} />
-            <main className="principale-main">
-                {onglet === ACTUALITES && <h1>Actualités</h1>}
-            </main>
+            <Suspense fallback={null}>
+                <PageContent onglet={onglet} />
+            </Suspense>
             <Footer onglet={onglet} />
         </div>
-    )
+    );
 }
 
 export default Principale;

@@ -64,6 +64,7 @@ function Produits() {
               className="produitsHero-image"
               src={PRODUITS_HERO.image.src}
               alt={PRODUITS_HERO.image.alt}
+              fetchPriority="high"
             />
           </figure>
         </div>
@@ -89,7 +90,14 @@ function Produits() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <figure className="produitsItem-visual">
-                  <img className="produitsItem-image" src={item.image} alt={item.alt} />
+                  <img
+                    className="produitsItem-image"
+                    src={item.image}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    loading="lazy"
+                  />
                 </figure>
                 <div className="produitsItem-copy">
                   <div className="produitsItem-badges">
@@ -147,16 +155,25 @@ function Produits() {
                 className="produitsQualite-img produitsQualite-img--back"
                 src={PRODUITS_ITEMS[0].image}
                 alt=""
+                width={PRODUITS_ITEMS[0].width}
+                height={PRODUITS_ITEMS[0].height}
+                loading="lazy"
               />
               <img
                 className="produitsQualite-img produitsQualite-img--mid"
                 src={PRODUITS_ITEMS[2].image}
                 alt=""
+                width={PRODUITS_ITEMS[2].width}
+                height={PRODUITS_ITEMS[2].height}
+                loading="lazy"
               />
               <img
                 className="produitsQualite-img produitsQualite-img--front"
                 src={PRODUITS_ITEMS[1].image}
                 alt=""
+                width={PRODUITS_ITEMS[1].width}
+                height={PRODUITS_ITEMS[1].height}
+                loading="lazy"
               />
             </div>
           </figure>

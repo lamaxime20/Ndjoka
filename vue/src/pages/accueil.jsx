@@ -28,7 +28,14 @@ function Accueil() {
             <div className="accueilHero-visual" aria-hidden="true">
               {HERO_CONTENT.media.map((media) => (
                 <figure className={media.className} key={media.key}>
-                  <img className="accueilHero-mediaImage" src={media.src} alt="" />
+                  <img
+                    className="accueilHero-mediaImage"
+                    src={media.src}
+                    alt=""
+                    width={media.width}
+                    height={media.height}
+                    fetchPriority={media.priority ? 'high' : 'auto'}
+                  />
                 </figure>
               ))}
             </div>
@@ -70,6 +77,9 @@ function Accueil() {
               className="accueilAbout-image"
               src={ABOUT_CONTENT.image.src}
               alt={ABOUT_CONTENT.image.alt}
+              width={903}
+              height={700}
+              loading="lazy"
             />
           </figure>
         </div>
@@ -102,7 +112,14 @@ function Accueil() {
                 key={product.name}
               >
                 <figure className="accueilProducts-media">
-                  <img className="accueilProducts-image" src={product.image} alt={product.alt} />
+                  <img
+                    className="accueilProducts-image"
+                    src={product.image}
+                    alt={product.alt}
+                    width={product.width}
+                    height={product.height}
+                    loading="lazy"
+                  />
                 </figure>
                 <div className="accueilProducts-copy">
                   <p className="accueilProducts-badge">{product.badge}</p>

@@ -19,6 +19,8 @@ function NavBar({ onglet }) {
               className="navBar-brandMark"
               src={logo}
               alt="Logo Ndjoka"
+              width="1682"
+              height="1048"
             />
           </Link>
 

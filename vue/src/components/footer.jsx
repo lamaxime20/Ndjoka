@@ -47,6 +47,8 @@ function Footer({ onglet }) {
                 className="footer-logo"
                 src={logo}
                 alt="Logo Ndjoka"
+                width="1682"
+                height="1048"
               />
             </Link>
             <p className="footer-description">{FOOTER_DESCRIPTION}</p>
