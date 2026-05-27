@@ -153,6 +153,11 @@
   text-align: center;
 }
 
+.lamaxime {
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+}
+
 @media (max-width: 480px) {
   .footer-shell {
     padding-block-start: 2.7rem;

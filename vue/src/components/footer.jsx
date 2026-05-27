@@ -115,7 +115,7 @@ function Footer({ onglet }) {
         </div>
 
         <div className="footer-bottom">
-          <p className="footer-copy">© 2026 Ndjoka — Tous droits réservés.</p>
+          <p className="footer-copy">© 2026 Ndjoka — Créé par <a className="lamaxime" href="https://lamaxime.vercel.app/">Lamaxime </a>  Tous droits réservés.</p>
         </div>
       </div>
     </footer>
