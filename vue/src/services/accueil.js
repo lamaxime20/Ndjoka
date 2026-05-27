@@ -1,11 +1,11 @@
-import chipsHeroImage from '../assets/images/accueil/hero/chips.png';
-import drinkHeroImage from '../assets/images/accueil/hero/Boissons.png';
-import chinChinHeroImage from '../assets/images/accueil/hero/chin_chin.png';
-import aboutImage from '../assets/images/accueil/about/equipe_ndjoka.jpg';
-import natureImage from '../assets/images/accueil/produits/ndjoka_nature.jpg';
-import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.jpg';
-import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.jpg';
-import chinChinProductImage from '../assets/images/accueil/hero/chin_chin.png';
+import chipsHeroImage from '../assets/images/accueil/hero/chips.webp';
+import drinkHeroImage from '../assets/images/accueil/hero/Boissons.webp';
+import chinChinHeroImage from '../assets/images/accueil/hero/chin_chin.webp';
+import aboutImage from '../assets/images/accueil/about/equipe_ndjoka.webp';
+import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
+import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
+import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
+import chinChinProductImage from '../assets/images/accueil/hero/chin_chin.webp';
 import {
   CONCESSIONNAIRES,
   INVESTISSEURS,

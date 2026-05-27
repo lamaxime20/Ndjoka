@@ -1,8 +1,8 @@
-import natureImage from '../assets/images/accueil/produits/ndjoka_nature.jpg';
-import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.jpg';
-import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.jpg';
-import chinChinImage from '../assets/images/Produits/chins_chins.jpg';
-import heroGroupImage from '../assets/images/Produits/Produits_Ndjoka.jpg';
+import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
+import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
+import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
+import chinChinImage from '../assets/images/Produits/chins_chins.webp';
+import heroGroupImage from '../assets/images/Produits/Produits_Ndjoka.webp';
 import { CONCESSIONNAIRES, CONTACT } from './navigation.js';
 
 export const PRODUITS_HERO = {

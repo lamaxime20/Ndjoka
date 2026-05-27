@@ -1,9 +1,9 @@
-import heroImage from '../assets/images/concessionnaires/hero.jpg';
-import pointDeVentesImage from '../assets/images/concessionnaires/point_de_ventes.jpg';
-import natureImage from '../assets/images/accueil/produits/ndjoka_nature.jpg';
-import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.jpg';
-import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.jpg';
-import chinChinImage from '../assets/images/Produits/chins_chins.jpg';
+import heroImage from '../assets/images/concessionnaires/hero.webp';
+import pointDeVentesImage from '../assets/images/concessionnaires/point_de_ventes.webp';
+import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
+import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
+import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
+import chinChinImage from '../assets/images/Produits/chins_chins.webp';
 
 const WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +

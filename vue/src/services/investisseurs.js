@@ -1,8 +1,8 @@
-import heroImage from '../assets/images/investisseurs/hero.jpg';
-import natureImage from '../assets/images/accueil/produits/ndjoka_nature.jpg';
-import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.jpg';
-import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.jpg';
-import chinChinImage from '../assets/images/Produits/chins_chins.jpg';
+import heroImage from '../assets/images/investisseurs/hero.webp';
+import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
+import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
+import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
+import chinChinImage from '../assets/images/Produits/chins_chins.webp';
 
 export const INVEST_WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +

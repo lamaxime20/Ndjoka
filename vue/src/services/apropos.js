@@ -1,14 +1,14 @@
-import heroImage from '../assets/images/contacts/hero.jpg';
-import supermarcheImage from '../assets/images/contacts/produits_ndjoka_supermarche.jpg';
-import dgImage from '../assets/images/contacts/equipe_ndjoka/Directeur_general.png';
-import dgaImage from '../assets/images/contacts/equipe_ndjoka/Directeur_General_Adjoint.png';
-import productionImage from '../assets/images/contacts/equipe_ndjoka/Directeur_de_production.png';
-import financierImage from '../assets/images/contacts/equipe_ndjoka/Directeur_Financier.png';
-import marketingImage from '../assets/images/contacts/equipe_ndjoka/Directrice_Marketing_et_Com.png';
-import juridiqueImage from '../assets/images/contacts/equipe_ndjoka/Directeur_Juridique_et_Fiscale.png';
-import ventesImage from '../assets/images/contacts/equipe_ndjoka/Responsable_des_ventes.png';
-import financieresImage from '../assets/images/contacts/equipe_ndjoka/Directrice_des_affaires_financieres.png';
-import assistanteImage from '../assets/images/contacts/equipe_ndjoka/Assistante_de_direction.png';
+import heroImage from '../assets/images/contacts/hero.webp';
+import supermarcheImage from '../assets/images/contacts/produits_ndjoka_supermarche.webp';
+import dgImage from '../assets/images/contacts/equipe_ndjoka/Directeur_general.webp';
+import dgaImage from '../assets/images/contacts/equipe_ndjoka/Directeur_General_Adjoint.webp';
+import productionImage from '../assets/images/contacts/equipe_ndjoka/Directeur_de_production.webp';
+import financierImage from '../assets/images/contacts/equipe_ndjoka/Directeur_Financier.webp';
+import marketingImage from '../assets/images/contacts/equipe_ndjoka/Directrice_Marketing_et_Com.webp';
+import juridiqueImage from '../assets/images/contacts/equipe_ndjoka/Directeur_Juridique_et_Fiscale.webp';
+import ventesImage from '../assets/images/contacts/equipe_ndjoka/Responsable_des_ventes.webp';
+import financieresImage from '../assets/images/contacts/equipe_ndjoka/Directrice_des_affaires_financieres.webp';
+import assistanteImage from '../assets/images/contacts/equipe_ndjoka/Assistante_de_direction.webp';
 
 export const APROPOS_WHATSAPP_URL =
   'https://wa.me/237656188416?text=' +
