@@ -1,12 +1,12 @@
-# Graph Report - D:\Desktop\Lamaxime's Projects\Ndjoka  (2026-05-24)
+# Graph Report - D:\Desktop\Lamaxime's Projects\Ndjoka  (2026-06-14)
 
 ## Corpus Check
-- 20 files · ~3,294,022 words
+- 20 files · ~3,369,901 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 35 nodes · 19 edges · 18 communities detected
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
+- 37 nodes · 21 edges · 18 communities detected
+- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -58,7 +58,7 @@ Cohesion: 0.67
 Nodes (0): 
 
 ### Community 3 - "Community 3"
-Cohesion: 1.0
+Cohesion: 0.67
 Nodes (0): 
 
 ### Community 4 - "Community 4"
@@ -118,23 +118,21 @@ Cohesion: 1.0
 Nodes (0): 
 
 ## Knowledge Gaps
-- **Thin community `Community 3`** (2 nodes): `App()`, `App.jsx`
+- **Thin community `Community 4`** (2 nodes): `vite.config.js`, `manualChunks()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 4`** (2 nodes): `navBar.jsx`, `NavBar()`
+- **Thin community `Community 5`** (2 nodes): `App()`, `App.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 5`** (2 nodes): `Accueil()`, `accueil.jsx`
+- **Thin community `Community 6`** (2 nodes): `navBar.jsx`, `NavBar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 6`** (2 nodes): `APropos()`, `apropos.jsx`
+- **Thin community `Community 7`** (2 nodes): `Accueil()`, `accueil.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 7`** (2 nodes): `principale.jsx`, `Principale()`
+- **Thin community `Community 8`** (2 nodes): `APropos()`, `apropos.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 8`** (2 nodes): `produits.jsx`, `Produits()`
+- **Thin community `Community 9`** (2 nodes): `produits.jsx`, `Produits()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 9`** (2 nodes): `produits.js`, `buildCommandeWhatsAppUrl()`
+- **Thin community `Community 10`** (2 nodes): `produits.js`, `buildCommandeWhatsAppUrl()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (1 nodes): `eslint.config.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (1 nodes): `vite.config.js`
+- **Thin community `Community 11`** (1 nodes): `eslint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 12`** (1 nodes): `main.jsx`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
