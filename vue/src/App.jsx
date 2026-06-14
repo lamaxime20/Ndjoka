@@ -4,7 +4,7 @@ import {
   PRODUITS,
   CONCESSIONNAIRES,
   INVESTISSEURS,
-  ACTUALITES,
+  POINTS_VENTE,
   CONTACT,
 } from './services/navigation.js'
 import Principale from './pages/principale.jsx'
@@ -20,7 +20,7 @@ function App() {
                     <Route path='/produits' element={<Principale onglet={PRODUITS} />} />
                     <Route path='/concessionnaires' element={<Principale onglet={CONCESSIONNAIRES} />} />
                     <Route path='/investisseurs' element={<Principale onglet={INVESTISSEURS} />} />
-                    <Route path='/actualites' element={<Principale onglet={ACTUALITES} />} />
+                    <Route path='/nos-points-de-vente' element={<Principale onglet={POINTS_VENTE} />} />
                     <Route path='/contact' element={<Principale onglet={CONTACT} />} />
                 </Routes>
             </Router>

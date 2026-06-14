@@ -35,11 +35,11 @@ export const SEO_CONFIG = {
     image: OG_IMAGE,
     robots: 'index,follow',
   },
-  actualites: {
-    title: 'Réseau de distribution Ndjoka | Trouver un distributeur',
+  'nos-points-de-vente': {
+    title: 'Nos points de vente Ndjoka | Réseau de distribution et distributeurs',
     description:
-      "Découvrez le réseau de distribution Ndjoka présent dans plus de 10 pays. Trouvez un distributeur près de chez vous et rejoignez une marque agroalimentaire africaine en pleine expansion.",
-    url: `${BASE_URL}/actualites`,
+      "Découvrez les points de vente Ndjoka présents dans plus de 10 pays. Trouvez un distributeur près de chez vous et rejoignez une marque agroalimentaire africaine en pleine expansion.",
+    url: `${BASE_URL}/nos-points-de-vente`,
     image: OG_IMAGE,
     robots: 'index,follow',
   },

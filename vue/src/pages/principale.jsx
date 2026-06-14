@@ -6,7 +6,7 @@ import {
   PRODUITS,
   CONCESSIONNAIRES,
   INVESTISSEURS,
-  ACTUALITES,
+  POINTS_VENTE,
   CONTACT,
 } from '../services/navigation.js';
 import { applySeo } from '../services/seo.js';
@@ -25,7 +25,7 @@ function PageContent({ onglet }) {
     if (onglet === CONCESSIONNAIRES) return <Concessionnaires />;
     if (onglet === INVESTISSEURS) return <Investisseurs />;
     if (onglet === CONTACT) return <APropos />;
-    if (onglet === ACTUALITES) return (
+    if (onglet === POINTS_VENTE) return (
         <PointDistributions />
     );
     return null;
@@ -48,4 +48,4 @@ function Principale({ onglet }) {
 }
 
 export default Principale;
-export {HOME, PRODUITS, CONCESSIONNAIRES, INVESTISSEURS, ACTUALITES, CONTACT};
+export {HOME, PRODUITS, CONCESSIONNAIRES, INVESTISSEURS, POINTS_VENTE, CONTACT};

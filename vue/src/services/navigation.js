@@ -2,7 +2,7 @@ export const HOME = 'home';
 export const PRODUITS = 'produits';
 export const CONCESSIONNAIRES = 'concessionnaires';
 export const INVESTISSEURS = 'investisseurs';
-export const ACTUALITES = 'actualites';
+export const POINTS_VENTE = 'nos-points-de-vente';
 export const CONTACT = 'contact';
 
 export const NAV_ITEMS = [
@@ -10,7 +10,7 @@ export const NAV_ITEMS = [
   { key: PRODUITS, label: 'Produits', path: '/produits' },
   { key: CONCESSIONNAIRES, label: 'Concessionnaires', path: '/concessionnaires' },
   { key: INVESTISSEURS, label: 'Investisseurs', path: '/investisseurs' },
-  { key: ACTUALITES, label: 'Actualités', path: '/actualites' },
+  { key: POINTS_VENTE, label: 'Nos points de vente', path: '/nos-points-de-vente' },
   { key: CONTACT, label: 'Contact', path: '/contact' },
 ];
 
