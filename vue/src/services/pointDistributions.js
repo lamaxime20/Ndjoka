@@ -100,7 +100,6 @@ export const MAP_CONTINENTS = [
   },
 ];
 
-// Positions des pays dans le SVG (cx, cy en coordonnées 1000×500)
 export const PD_PAYS = [
   {
     id: 'cameroun',
@@ -109,9 +108,36 @@ export const PD_PAYS = [
     cx: 467,
     cy: 242,
     distributeurs: [
-      { nom: 'Ndjoka Yaoundé', ville: 'Yaoundé', tel: '+237 683 18 43 60', adresse: 'Centre-ville, Yaoundé, Cameroun' },
-      { nom: 'Ndjoka Douala', ville: 'Douala', tel: '+237 683 18 43 60', adresse: 'Bonanjo, Douala, Cameroun' },
-      { nom: 'Ndjoka Bafoussam', ville: 'Bafoussam', tel: '+237 683 18 43 60', adresse: 'Marché central, Bafoussam, Cameroun' },
+      // Yaoundé
+      { nom: 'StartUp Academy – Mvog-Ada', ville: 'Yaoundé', tel: '(+237) 6 56 05 46 25', adresse: 'Mvog-Ada, Yaoundé, Cameroun' },
+      { nom: 'Vitrine StartUp – NRC, Route Bastos', ville: 'Yaoundé', tel: '(+237) 6 56 18 84 16', adresse: 'Immeuble Y Building, Route Bastos, Yaoundé, Cameroun' },
+      { nom: 'Boulangerie Merlo – Ekie', ville: 'Yaoundé', tel: '(+237) 6 95 62 48 73', adresse: 'Ekie, face station Gulfin, Yaoundé, Cameroun' },
+      { nom: 'Supermarché SOPARCAM', ville: 'Yaoundé', tel: '(+237) 6 95 62 48 73', adresse: 'Carrefour Messassi, Yaoundé, Cameroun' },
+      { nom: 'Chez Mr Solde – Elig-Essono', ville: 'Yaoundé', tel: '(+237) 6 52 11 84 85', adresse: 'Elig-Essono, Yaoundé, Cameroun' },
+      // Douala
+      { nom: 'StartUp Academy – Elissam Motors', ville: 'Douala', tel: '(+237) 6 90 12 49 51', adresse: 'Rue Ancien Number One, Elissam Motors, Douala, Cameroun' },
+      { nom: 'Akwa Douala Bercy – Immeuble Kamako', ville: 'Douala', tel: '(+237) 6 90 12 49 51', adresse: 'Immeuble Kamako, 4è étage porte 403, Akwa, Douala, Cameroun' },
+      { nom: 'Bonamousadi – face École Publique', ville: 'Douala', tel: '+237 6 95 27 12 06', adresse: 'Bonamousadi, face École Publique, Douala, Cameroun' },
+      { nom: 'Supermarché CASH & CARRY MARKET', ville: 'Douala', tel: '', adresse: 'Face Hôtel Somatel Bali, Douala, Cameroun' },
+      { nom: 'Boulangerie Meno – Rond Point Deïdo', ville: 'Douala', tel: '', adresse: 'Rond Point Deïdo, Douala, Cameroun' },
+      // Dschang
+      { nom: 'StartUp Academy – Marché Foto', ville: 'Dschang', tel: '(+237) 6 76 85 19 16', adresse: 'Marché Foto, face Église Saint Mathias, Dschang, Cameroun' },
+      { nom: 'Boulangeries Mbouoh – Avenue des Banques', ville: 'Dschang', tel: '(+237) 6 97 49 75 39', adresse: 'Avenue des Banques, Dschang, Cameroun' },
+      { nom: 'Boutique EM Shop', ville: 'Dschang', tel: '(+237) 6 97 66 06 59', adresse: 'Derrière la Place de Fête, Dschang, Cameroun' },
+      { nom: 'Restaurant FASA – Campus Université de Dschang', ville: 'Dschang', tel: '(+237) 6 98 81 00 31', adresse: 'Campus Université de Dschang, Dschang, Cameroun' },
+      // Bafoussam
+      { nom: 'Supérette SOCROPAL', ville: 'Bafoussam', tel: '(+237) 6 99 06 02 47', adresse: 'Bafoussam, Cameroun' },
+      { nom: 'Supermarché LE POINT PLUS', ville: 'Bafoussam', tel: '', adresse: 'Rond Point BIAO, Bafoussam, Cameroun' },
+      { nom: 'Supermarché YATCH CENTER', ville: 'Bafoussam', tel: '', adresse: 'Face Agence CCA, Bafoussam, Cameroun' },
+      // Autres villes
+      { nom: 'Centre Ville – face siège CEPOM', ville: 'Bangangté', tel: '', adresse: 'Centre Ville, Bangangté, Cameroun' },
+      { nom: 'G6 Chilling – Tarred Malingo Moliyko', ville: 'Buéa', tel: '(+237) 6 77 95 05 26', adresse: 'Tarred Malingo Moliyko, Buéa, Cameroun' },
+      { nom: 'Quartier Administratif – à côté du Sénat', ville: 'Kribi', tel: '', adresse: 'Quartier Administratif, Kribi, Cameroun' },
+      { nom: 'Boulangerie Merlo', ville: 'Foumbot', tel: '', adresse: 'Foumbot, Cameroun' },
+      { nom: 'Yademe – face Gendarmerie', ville: 'Bertoua', tel: '(+237) 6 77 57 43 05', adresse: '2ème entrée, Bertoua, Cameroun' },
+      { nom: 'Point de distribution', ville: 'Ngaoundéré', tel: '(+237) 6 95 65 72 96', adresse: 'Ngaoundéré, Cameroun' },
+      { nom: 'Further Market', ville: 'Mbouda', tel: '(+237) 6 91 10 16 20', adresse: 'Mbouda, Cameroun' },
+      { nom: 'Boulangerie Jovi', ville: 'Bandjoun', tel: '', adresse: 'À quelques km de Bafoussam, Bandjoun, Cameroun' },
     ],
   },
   {
@@ -121,7 +147,9 @@ export const PD_PAYS = [
     cx: 447,
     cy: 234,
     distributeurs: [
-      { nom: 'Ndjoka Lomé', ville: 'Lomé', tel: '+237 683 18 43 60', adresse: 'Lomé, Togo' },
+      { nom: 'Distributeur 1', ville: 'Lomé', tel: '(+228) 96 37 93 67', adresse: 'Lomé, Togo' },
+      { nom: 'Distributeur 2', ville: 'Lomé', tel: '(+228) 97 19 51 85', adresse: 'Lomé, Togo' },
+      { nom: 'Distributeur 3', ville: 'Lomé', tel: '(+228) 91 25 63 85', adresse: 'Lomé, Togo' },
     ],
   },
   {
@@ -131,7 +159,7 @@ export const PD_PAYS = [
     cx: 465,
     cy: 262,
     distributeurs: [
-      { nom: 'Ndjoka Libreville', ville: 'Libreville', tel: '+237 683 18 43 60', adresse: 'Libreville, Gabon' },
+      { nom: 'Distributeur', ville: 'Libreville', tel: '(+241) 02 88 56 30', adresse: 'Libreville, Gabon' },
     ],
   },
   {
@@ -141,7 +169,8 @@ export const PD_PAYS = [
     cx: 436,
     cy: 237,
     distributeurs: [
-      { nom: "Ndjoka Abidjan", ville: 'Abidjan', tel: '+237 683 18 43 60', adresse: "Abidjan, Côte d'Ivoire" },
+      { nom: 'Distributeur 1', ville: 'Abidjan', tel: '(+225) 07 04 64 02 03', adresse: "Abidjan, Côte d'Ivoire" },
+      { nom: 'Distributeur 2', ville: 'Abidjan', tel: '(+225) 07 78 48 91 72', adresse: "Abidjan, Côte d'Ivoire" },
     ],
   },
   {
@@ -151,7 +180,8 @@ export const PD_PAYS = [
     cx: 473,
     cy: 213,
     distributeurs: [
-      { nom: "Ndjoka N'Djaména", ville: "N'Djaména", tel: '+237 683 18 43 60', adresse: "N'Djaména, Tchad" },
+      { nom: 'Arusha Market', ville: "N'Djamena", tel: '(+235) 69 69 69 85', adresse: "N'Djamena, Tchad" },
+      { nom: 'La Tchadienne', ville: "N'Djamena", tel: '(+235) 22 52 70 35', adresse: "N'Djamena, Tchad" },
     ],
   },
   {
@@ -161,7 +191,7 @@ export const PD_PAYS = [
     cx: 494,
     cy: 141,
     distributeurs: [
-      { nom: 'Ndjoka Deutschland', ville: 'Berlin', tel: '+237 683 18 43 60', adresse: 'Berlin, Allemagne' },
+      { nom: 'Distributeur', ville: 'Berlin', tel: '(+49) 176 8317 3491', adresse: 'Berlin, Allemagne' },
     ],
   },
   {
@@ -171,7 +201,8 @@ export const PD_PAYS = [
     cx: 475,
     cy: 136,
     distributeurs: [
-      { nom: 'Ndjoka Belgique', ville: 'Bruxelles', tel: '+237 683 18 43 60', adresse: 'Bruxelles, Belgique' },
+      { nom: 'Distributeur 1', ville: 'Bruxelles', tel: '(+32) 489 98 38 30', adresse: 'Bruxelles, Belgique' },
+      { nom: 'Distributeur 2', ville: 'Bruxelles', tel: '(+32) 496 44 13 62', adresse: 'Bruxelles, Belgique' },
     ],
   },
   {
@@ -181,7 +212,7 @@ export const PD_PAYS = [
     cx: 292,
     cy: 132,
     distributeurs: [
-      { nom: 'Ndjoka Canada', ville: 'Montréal', tel: '+237 683 18 43 60', adresse: 'Montréal, Québec, Canada' },
+      { nom: 'Africa Mart', ville: 'Toronto', tel: '+1 (416) 454-9483', adresse: '651 McCowan Road, Scarborough, Toronto, Canada' },
     ],
   },
   {
@@ -191,7 +222,7 @@ export const PD_PAYS = [
     cx: 580,
     cy: 108,
     distributeurs: [
-      { nom: 'Ndjoka Russie', ville: 'Moscou', tel: '+237 683 18 43 60', adresse: 'Moscou, Russie' },
+      { nom: 'Distributeur', ville: 'Moscou', tel: '+7 999 836-46-33', adresse: 'Moscou, Russie' },
     ],
   },
   {
@@ -201,7 +232,7 @@ export const PD_PAYS = [
     cx: 582,
     cy: 210,
     distributeurs: [
-      { nom: 'Ndjoka UAE', ville: 'Dubaï', tel: '+237 683 18 43 60', adresse: 'Dubaï, Émirats Arabes Unis' },
+      { nom: 'Distributeur', ville: 'Dubaï', tel: '(+971) 58 229 4761', adresse: 'Dubaï, Émirats Arabes Unis' },
     ],
   },
 ];

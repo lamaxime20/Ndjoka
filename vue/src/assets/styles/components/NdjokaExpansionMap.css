@@ -1,0 +1,394 @@
+/* ═══════════════════════════════════════════════════════
+   NDJOKA EXPANSION MAP
+   Composant carte mondiale interactive D3.js
+═══════════════════════════════════════════════════════ */
+
+/* ── Section ─────────────────────────────────────────── */
+
+.nem-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FAF8F3 0%, #F4E7C8 100%);
+  padding: 80px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── En-tête ─────────────────────────────────────────── */
+
+.nem-header {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.nem-badge {
+  display: inline-block;
+  background: #1F5E3B;
+  color: #F4E7C8;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.nem-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 48px);
+  color: #1A1A1A;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.nem-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: #5E9B6B;
+  line-height: 1.6;
+}
+
+/* ── Stats ───────────────────────────────────────────── */
+
+.nem-stats {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 48px;
+  border: 1px solid #D9D9D9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+.nem-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 44px;
+  position: relative;
+}
+
+.nem-stat + .nem-stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #D9D9D9;
+}
+
+.nem-stat-value {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #F2B233;
+  line-height: 1;
+}
+
+.nem-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  margin-top: 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ── Conteneur carte ─────────────────────────────────── */
+
+.nem-container {
+  position: relative;
+  width: min(80%, 1100px);
+  margin: 0 auto;
+}
+
+.nem-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ── Points pays ─────────────────────────────────────── */
+
+.nem-dot-group {
+  cursor: pointer;
+  outline: none;
+}
+
+.nem-dot-group:focus-visible .nem-dot {
+  stroke: #F2B233;
+  stroke-width: 3;
+}
+
+@keyframes nemPulse {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  50%  { transform: scale(1.4); opacity: 0.25; }
+  100% { transform: scale(1);   opacity: 0.8; }
+}
+
+.nem-pulse {
+  animation: nemPulse 2.5s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* ── Tooltip desktop ─────────────────────────────────── */
+
+.nem-tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  background: rgba(31, 94, 59, 0.96);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(242, 178, 51, 0.3);
+  padding: 20px 24px;
+  min-width: 240px;
+  max-width: 300px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  animation: nemTipIn 350ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes nemTipIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Décalage latéral selon côté */
+.nem-tooltip--right {
+  transform: translateX(16px) translateY(-50%);
+}
+
+.nem-tooltip--left {
+  transform: translateX(calc(-100% - 16px)) translateY(-50%);
+}
+
+/* Décalage vertical si le point est bas */
+.nem-tooltip--up.nem-tooltip--right {
+  transform: translateX(16px) translateY(calc(-100% - 8px));
+}
+
+.nem-tooltip--up.nem-tooltip--left {
+  transform: translateX(calc(-100% - 16px)) translateY(calc(-100% - 8px));
+}
+
+/* ── Contenu tooltip ─────────────────────────────────── */
+
+.nem-tip-country {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #F2B233;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.nem-tip-flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nem-tip-zone {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(244, 231, 200, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nem-tip-sep {
+  height: 1px;
+  background: rgba(242, 178, 51, 0.2);
+  margin: 12px 0;
+}
+
+.nem-tip-count {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.nem-tip-count-val {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #FAF8F3;
+  line-height: 1;
+}
+
+.nem-tip-count-lbl {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(244, 231, 200, 0.7);
+}
+
+.nem-tip-cities {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nem-tip-city-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #F4E7C8;
+  margin-bottom: 2px;
+}
+
+.nem-tip-city-point {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: rgba(244, 231, 200, 0.7);
+  margin-bottom: 2px;
+}
+
+.nem-tip-city-phone {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #F2B233;
+  text-decoration: none;
+}
+
+.nem-tip-city-phone:hover {
+  text-decoration: underline;
+}
+
+.nem-tip-more {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-style: italic;
+  color: rgba(244, 231, 200, 0.5);
+  margin-top: 2px;
+}
+
+/* ── Overlay mobile ──────────────────────────────────── */
+
+.nem-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  backdrop-filter: blur(2px);
+  animation: nemOverlayIn 200ms ease both;
+}
+
+@keyframes nemOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Bottom sheet mobile ─────────────────────────────── */
+
+.nem-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 74, 46, 0.98);
+  border-radius: 20px 20px 0 0;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 12px 24px 32px;
+  z-index: 201;
+  animation: nemSheetUp 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes nemSheetUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+.nem-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: rgba(244, 231, 200, 0.3);
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+
+.nem-sheet-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: rgba(244, 231, 200, 0.7);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 200ms, background 200ms;
+}
+
+.nem-sheet-close:hover {
+  color: #F4E7C8;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .nem-section {
+    padding: 60px 4%;
+  }
+
+  .nem-stats {
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .nem-stat {
+    padding: 14px 24px;
+  }
+
+  .nem-stat + .nem-stat::before {
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+  }
+
+  .nem-stat-value {
+    font-size: 40px;
+  }
+
+  .nem-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nem-container {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .nem-container {
+    width: 88%;
+  }
+}
+
+@media (min-width: 1201px) {
+  .nem-container {
+    width: 80%;
+    max-width: 1100px;
+  }
+}

@@ -5,33 +5,24 @@ import {
   PD_CONTACT_URL,
   PD_HERO,
   PD_RESEAU,
-  PD_MAP_DATA,
-  MAP_CONTINENTS,
-  PD_PAYS,
   PD_SEARCH,
   PD_AVANTAGES,
   PD_VISION,
   PD_FINAL,
   searchDistributeurs,
 } from '../services/pointDistributions.js';
+import NdjokaExpansionMap from '../components/NdjokaExpansionMap.jsx';
 import '../assets/styles/pages/pointDistributions.css';
 
 function PointDistributions() {
   // ── Refs ──────────────────────────────────────────────────────
   const heroImageRef = useRef(null);
-  const mapSectionRef = useRef(null);
   const avantagesRef = useRef(null);
   const visionRef = useRef(null);
 
   // ── Stats counters ─────────────────────────────────────────────
   const [villes, villesRef] = useCountUp(15, 1200);
   const [pays, paysRef] = useCountUp(10, 1400);
-
-  // ── Map state ─────────────────────────────────────────────────
-  const [mapVisible, setMapVisible] = useState(false);
-  const [activeCountry, setActiveCountry] = useState(null);
-  const [tooltipPos, setTooltipPos] = useState({ x: 50, y: 50, flipLeft: false });
-  const mapContainerRef = useRef(null);
 
   // ── Search ────────────────────────────────────────────────────
   const [searchQuery, setSearchQuery] = useState('');
@@ -66,23 +57,6 @@ function PointDistributions() {
     return () => observer.disconnect();
   }, []);
 
-  // ── Map reveal observer ───────────────────────────────────────
-  useEffect(() => {
-    const el = mapSectionRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setMapVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   // ── Hero parallax (desktop) ───────────────────────────────────
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -96,42 +70,6 @@ function PointDistributions() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  // ── Close map tooltip when clicking outside ───────────────────
-  useEffect(() => {
-    function onClickOutside(e) {
-      if (!mapContainerRef.current) return;
-      if (!mapContainerRef.current.contains(e.target)) {
-        setActiveCountry(null);
-      }
-    }
-    document.addEventListener('mousedown', onClickOutside);
-    return () => document.removeEventListener('mousedown', onClickOutside);
-  }, []);
-
-  // ── Map interactions ──────────────────────────────────────────
-  function handleDotClick(country, e) {
-    e.stopPropagation();
-    if (activeCountry?.id === country.id) {
-      setActiveCountry(null);
-      return;
-    }
-    if (mapContainerRef.current) {
-      const rect = mapContainerRef.current.getBoundingClientRect();
-      const dotRect = e.currentTarget.getBoundingClientRect();
-      const xPct = ((dotRect.left + dotRect.width / 2 - rect.left) / rect.width) * 100;
-      const yPct = ((dotRect.top - rect.top) / rect.height) * 100;
-      setTooltipPos({ x: xPct, y: yPct, flipLeft: xPct > 65 });
-    }
-    setActiveCountry(country);
-  }
-
-  function handleDotKeyDown(country, e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleDotClick(country, e);
-    }
-  }
 
   return (
     <main className="pd-root">
@@ -245,171 +183,7 @@ function PointDistributions() {
       {/* ═══════════════════════════════════════════════════════
           SECTION 3 — CARTE D'EXPANSION
       ═══════════════════════════════════════════════════════ */}
-      <section
-        className="pdMap-root"
-        aria-labelledby="pd-map-title"
-        ref={mapSectionRef}
-      >
-        <div className="pdMap-shell shell">
-          <div className="pdMap-header pdAnimate">
-            <span className="pdMap-badge">{PD_MAP_DATA.badge}</span>
-            <h2 className="pdMap-title" id="pd-map-title">{PD_MAP_DATA.title}</h2>
-            <p className="pdMap-desc">{PD_MAP_DATA.description}</p>
-            <p className="pdMap-subtext">{PD_MAP_DATA.subtext}</p>
-          </div>
-
-          <div className="pdMap-container" ref={mapContainerRef}>
-            {/* SVG World Map */}
-            <svg
-              className={`pdMap-svg${mapVisible ? ' pdMap-svg--visible' : ''}`}
-              viewBox="0 0 1000 500"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-label="Carte mondiale de présence Ndjoka"
-              role="img"
-            >
-              {/* Continent fills */}
-              <g className="pdMap-continents">
-                {MAP_CONTINENTS.map((c, i) => (
-                  <path
-                    key={c.id}
-                    className="pdMap-continent"
-                    d={c.d}
-                    style={{ animationDelay: `${i * 80}ms` }}
-                  />
-                ))}
-              </g>
-
-              {/* Country dots */}
-              {PD_PAYS.map((country, i) => (
-                <g
-                  key={country.id}
-                  className={`pdMap-dotGroup${activeCountry?.id === country.id ? ' pdMap-dotGroup--active' : ''}${mapVisible ? ' pdMap-dotGroup--visible' : ''}`}
-                  style={{ '--dot-delay': `${900 + i * 100}ms` }}
-                  onClick={(e) => handleDotClick(country, e)}
-                  onKeyDown={(e) => handleDotKeyDown(country, e)}
-                  role="button"
-                  tabIndex={0}
-                  aria-label={`${country.pays} — ${country.distributeurs.length} distributeur(s)`}
-                  aria-pressed={activeCountry?.id === country.id}
-                >
-                  {/* Pulse ring */}
-                  <circle
-                    className="pdMap-dotPulse"
-                    cx={country.cx}
-                    cy={country.cy}
-                    r={10}
-                    fill="none"
-                    stroke="rgba(242,178,51,0.4)"
-                    strokeWidth={1.5}
-                    style={{ animationDelay: `${i * 200}ms` }}
-                  />
-                  {/* Main dot */}
-                  <circle
-                    className="pdMap-dot"
-                    cx={country.cx}
-                    cy={country.cy}
-                    r={5}
-                    fill="#F2B233"
-                  />
-                  {/* Country label (desktop) */}
-                  <text
-                    className="pdMap-dotLabel"
-                    x={country.cx}
-                    y={country.cy - 12}
-                    textAnchor="middle"
-                  >
-                    {country.pays}
-                  </text>
-                </g>
-              ))}
-            </svg>
-
-            {/* Desktop floating tooltip */}
-            {activeCountry && (
-              <div
-                className={`pdMap-tooltip${tooltipPos.flipLeft ? ' pdMap-tooltip--left' : ''}`}
-                style={{
-                  left: `${tooltipPos.x}%`,
-                  top: `${tooltipPos.y}%`,
-                }}
-                role="region"
-                aria-label={`Distributeurs au ${activeCountry.pays}`}
-              >
-                <p className="pdMap-tooltipPays">{activeCountry.pays}</p>
-                <p className="pdMap-tooltipContinent">{activeCountry.continent}</p>
-                <ul className="pdMap-tooltipList">
-                  {activeCountry.distributeurs.map((d, i) => (
-                    <li key={i} className="pdMap-tooltipItem">
-                      <span className="pdMap-tooltipNom">{d.nom}</span>
-                      <span className="pdMap-tooltipVille">{d.ville}</span>
-                      <a
-                        href={`tel:${d.tel.replace(/\s/g, '')}`}
-                        className="pdMap-tooltipTel"
-                        aria-label={`Appeler ${d.nom}`}
-                      >
-                        {d.tel}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  className="pdMap-tooltipClose"
-                  onClick={() => setActiveCountry(null)}
-                  aria-label="Fermer"
-                >
-                  <span className="material-symbols-outlined" aria-hidden="true">close</span>
-                </button>
-              </div>
-            )}
-
-            {/* Mobile bottom sheet overlay */}
-            {activeCountry && (
-              <div
-                className="pdMap-sheetOverlay"
-                onClick={() => setActiveCountry(null)}
-                aria-hidden="true"
-              />
-            )}
-
-            {/* Mobile bottom sheet */}
-            {activeCountry && (
-              <div
-                className="pdMap-sheet"
-                role="dialog"
-                aria-modal="true"
-                aria-label={`Distributeurs au ${activeCountry.pays}`}
-              >
-                <div className="pdMap-sheetHandle" aria-hidden="true" />
-                <button
-                  className="pdMap-sheetClose"
-                  onClick={() => setActiveCountry(null)}
-                  aria-label="Fermer"
-                >
-                  <span className="material-symbols-outlined" aria-hidden="true">close</span>
-                </button>
-                <p className="pdMap-sheetPays">{activeCountry.pays}</p>
-                <p className="pdMap-sheetContinent">{activeCountry.continent}</p>
-                <div className="pdMap-sheetItems">
-                  {activeCountry.distributeurs.map((d, i) => (
-                    <div key={i} className="pdMap-sheetItem">
-                      <p className="pdMap-sheetNom">{d.nom}</p>
-                      <p className="pdMap-sheetVille">{d.ville}</p>
-                      <p className="pdMap-sheetAdresse">{d.adresse}</p>
-                      <a
-                        href={`tel:${d.tel.replace(/\s/g, '')}`}
-                        className="pdMap-sheetTel"
-                        aria-label={`Appeler ${d.nom}`}
-                      >
-                        {d.tel}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      <NdjokaExpansionMap />
 
       {/* ═══════════════════════════════════════════════════════
           SECTION 4 — TROUVER UN DISTRIBUTEUR
