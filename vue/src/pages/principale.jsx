@@ -17,6 +17,7 @@ const Produits = lazy(() => import('./produits.jsx'));
 const Concessionnaires = lazy(() => import('./concessionnaires.jsx'));
 const Investisseurs = lazy(() => import('./investisseurs.jsx'));
 const APropos = lazy(() => import('./apropos.jsx'));
+const PointDistributions = lazy(() => import('./pointDistributions.jsx'));
 
 function PageContent({ onglet }) {
     if (onglet === HOME) return <Accueil />;
@@ -25,9 +26,7 @@ function PageContent({ onglet }) {
     if (onglet === INVESTISSEURS) return <Investisseurs />;
     if (onglet === CONTACT) return <APropos />;
     if (onglet === ACTUALITES) return (
-        <main className="principale-main">
-            <h1>Actualités</h1>
-        </main>
+        <PointDistributions />
     );
     return null;
 }

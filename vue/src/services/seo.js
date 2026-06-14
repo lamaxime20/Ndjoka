@@ -36,9 +36,9 @@ export const SEO_CONFIG = {
     robots: 'index,follow',
   },
   actualites: {
-    title: 'Actualités Ndjoka | Marque agroalimentaire africaine',
+    title: 'Réseau de distribution Ndjoka | Trouver un distributeur',
     description:
-      "Suivez les dernières actualités de Ndjoka : nouveaux produits, expansion du réseau de distribution, événements et ambitions de la marque agroalimentaire africaine.",
+      "Découvrez le réseau de distribution Ndjoka présent dans plus de 10 pays. Trouvez un distributeur près de chez vous et rejoignez une marque agroalimentaire africaine en pleine expansion.",
     url: `${BASE_URL}/actualites`,
     image: OG_IMAGE,
     robots: 'index,follow',

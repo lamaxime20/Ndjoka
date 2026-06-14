@@ -1,0 +1,1845 @@
+/* ============================================================
+   POINTS DE DISTRIBUTION — mobile-first stylesheet
+   Philosophie : documentaire interactif, expansion réelle,
+   40% vide, typographie comme élément visuel.
+   ============================================================ */
+
+/* ── Utilitaires d'animation globale ─────────────────────────── */
+.pdAnimate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms);
+}
+
+.pdAnimate--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Page root ────────────────────────────────────────────────── */
+.pd-root {
+  overflow-x: hidden;
+}
+
+/* ── CTAs partagés ────────────────────────────────────────────── */
+.pdCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.pdCta--gold {
+  background: var(--color-accent-500);
+  color: var(--color-primary-900);
+  box-shadow: 0 4px 20px rgba(242, 178, 51, 0.32);
+}
+
+.pdCta--gold:hover {
+  background: var(--color-accent-600);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(242, 178, 51, 0.48);
+}
+
+.pdCta--ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.pdCta--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.38);
+  transform: translateY(-1px);
+}
+
+.pdCta--lg {
+  padding: 1.125rem 2.25rem;
+  font-size: 1.0625rem;
+}
+
+/* ============================================================
+   SECTION 1 — HERO
+   ============================================================ */
+.pdHero-root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* Image plein écran sur mobile */
+.pdHero-mediaBg {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+.pdHero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.08);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Overlay vert dégradé (mobile uniquement) */
+.pdHero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 94, 59, 0.82) 0%,
+    rgba(31, 94, 59, 0.55) 45%,
+    rgba(31, 94, 59, 0.82) 100%
+  );
+}
+
+.pdHero-layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+}
+
+.pdHero-leftPanel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: clamp(6rem, 14vw, 9rem) 4% clamp(5rem, 10vw, 7rem);
+}
+
+.pdHero-content {
+  width: 92%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.pdHero-rightPanel {
+  display: none;
+}
+
+/* Badge */
+.pdHero-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+  margin-bottom: 1.25rem;
+}
+
+/* Titre mot par mot */
+.pdHero-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 7vw, 3.5rem);
+  line-height: 0.97;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
+}
+
+.pdHero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pdWordReveal 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-fill-mode: both;
+}
+
+@keyframes pdWordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pdHero-desc {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.25rem;
+  max-width: 38ch;
+}
+
+.pdHero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.pdHero-ctas .pdCta {
+  width: 100%;
+  height: 60px;
+  font-size: 1rem;
+}
+
+/* Scroll indicator */
+.pdHero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdHero-scrollLine {
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: pdScrollBreathe 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes pdScrollBreathe {
+  0%, 100% { opacity: 0.25; transform: scaleY(0.7); }
+  50%       { opacity: 0.9;  transform: scaleY(1);   }
+}
+
+/* ============================================================
+   SECTION 2 — FORCE DU RÉSEAU
+   ============================================================ */
+.pdReseau-root {
+  background: var(--color-secondary-100);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.pdReseau-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.pdReseau-header {
+  text-align: center;
+  margin-bottom: clamp(3.5rem, 8vw, 7rem);
+}
+
+.pdReseau-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+  margin-bottom: 1rem;
+}
+
+.pdReseau-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-ink-900);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+.pdReseau-desc {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-ink-500);
+  line-height: 1.75;
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+/* Stats — les chiffres sont les héros */
+.pdReseau-stats {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 8vw, 5rem);
+}
+
+.pdReseau-stat {
+  text-align: center;
+}
+
+.pdReseau-statVal {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(4.5rem, 15vw, 7rem);
+  line-height: 0.9;
+  color: var(--color-primary-800);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.pdReseau-statVal--text {
+  font-size: clamp(2.8rem, 10vw, 5rem);
+}
+
+.pdReseau-statSuffix {
+  font-size: 0.62em;
+  color: var(--color-accent-500);
+}
+
+.pdReseau-statLabel {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: var(--color-ink-500);
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   SECTION 3 — CARTE D'EXPANSION
+   ============================================================ */
+.pdMap-root {
+  background: linear-gradient(160deg, var(--color-secondary-100) 0%, var(--color-secondary-200) 100%);
+  min-height: 100vh;
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.pdMap-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.pdMap-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.pdMap-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+  margin-bottom: 1rem;
+}
+
+.pdMap-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-ink-900);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.875rem;
+}
+
+.pdMap-desc {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-ink-500);
+  line-height: 1.75;
+  max-width: 50ch;
+  margin-inline: auto;
+  margin-bottom: 0.375rem;
+}
+
+.pdMap-subtext {
+  font-size: 0.9rem;
+  color: var(--color-ink-500);
+  font-style: italic;
+}
+
+/* Carte container */
+.pdMap-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+/* SVG monde */
+.pdMap-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.pdMap-continents {
+  opacity: 0;
+  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pdMap-svg--visible .pdMap-continents {
+  opacity: 1;
+}
+
+.pdMap-continent {
+  fill: rgba(244, 231, 200, 0.55);
+  stroke: rgba(210, 195, 165, 0.5);
+  stroke-width: 0.8;
+  opacity: 0;
+  animation: none;
+}
+
+.pdMap-svg--visible .pdMap-continent {
+  animation: pdContinentReveal 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pdContinentReveal {
+  from { opacity: 0; transform: scale(0.97); transform-origin: center; }
+  to   { opacity: 1; transform: scale(1);    transform-origin: center; }
+}
+
+/* Dots pays */
+.pdMap-dotGroup {
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 400ms cubic-bezier(0.22, 1, 0.36, 1) var(--dot-delay, 900ms);
+}
+
+.pdMap-dotGroup--visible {
+  opacity: 1;
+}
+
+.pdMap-dot {
+  fill: var(--color-accent-500);
+  transition: r 200ms ease, fill 200ms ease;
+  transform-origin: center;
+}
+
+.pdMap-dotGroup:hover .pdMap-dot,
+.pdMap-dotGroup--active .pdMap-dot {
+  fill: var(--color-accent-600);
+  r: 7;
+}
+
+.pdMap-dotGroup:focus-visible {
+  outline: none;
+}
+
+.pdMap-dotGroup:focus-visible .pdMap-dot {
+  fill: var(--color-accent-600);
+  r: 8;
+}
+
+/* Pulse animation */
+.pdMap-dotPulse {
+  transform-origin: center;
+  animation: pdDotPulse 2.8s ease-in-out infinite;
+  animation-delay: var(--dot-delay, 0ms);
+}
+
+@keyframes pdDotPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  60%       { transform: scale(2.4); opacity: 0;  }
+}
+
+/* Label pays (masqué sur mobile, visible sur desktop) */
+.pdMap-dotLabel {
+  font-family: var(--font-body);
+  font-size: 8px;
+  fill: var(--color-ink-700);
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.pdMap-dotGroup:hover .pdMap-dotLabel,
+.pdMap-dotGroup--active .pdMap-dotLabel {
+  opacity: 1;
+}
+
+/* Tooltip desktop */
+.pdMap-tooltip {
+  position: absolute;
+  background: var(--color-white, #ffffff);
+  border: 1px solid rgba(217, 217, 217, 0.8);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  min-width: 200px;
+  max-width: 240px;
+  box-shadow: 0 12px 40px rgba(26, 26, 26, 0.14);
+  z-index: 20;
+  transform: translateX(-50%) translateY(calc(-100% - 14px));
+  pointer-events: all;
+  display: none;
+}
+
+.pdMap-tooltip--left {
+  transform: translateX(-80%) translateY(calc(-100% - 14px));
+}
+
+.pdMap-tooltipPays {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-ink-900);
+  margin-bottom: 0.125rem;
+}
+
+.pdMap-tooltipContinent {
+  font-size: 0.7rem;
+  color: var(--color-accent-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.875rem;
+}
+
+.pdMap-tooltipList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pdMap-tooltipItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pdMap-tooltipItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pdMap-tooltipNom {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-ink-900);
+}
+
+.pdMap-tooltipVille {
+  font-size: 0.76rem;
+  color: var(--color-ink-500);
+}
+
+.pdMap-tooltipTel {
+  font-size: 0.8rem;
+  color: var(--color-primary-700);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.pdMap-tooltipTel:hover {
+  color: var(--color-primary-800);
+}
+
+.pdMap-tooltipClose {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.pdMap-tooltipClose:hover {
+  background: rgba(26, 26, 26, 0.06);
+  color: var(--color-ink-900);
+}
+
+.pdMap-tooltipClose .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+/* Sheet mobile (masqué sur desktop) */
+.pdMap-sheetOverlay {
+  display: none;
+}
+
+.pdMap-sheet {
+  display: none;
+}
+
+/* ============================================================
+   SECTION 4 — TROUVER UN DISTRIBUTEUR
+   ============================================================ */
+.pdSearch-root {
+  background: #ffffff;
+  min-height: 100vh;
+  padding-block: clamp(5rem, 12vw, 9rem);
+  display: flex;
+  align-items: flex-start;
+}
+
+.pdSearch-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+  width: 100%;
+  max-width: min(100% - 2rem, 78rem);
+}
+
+.pdSearch-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.pdSearch-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+  margin-bottom: 1rem;
+}
+
+.pdSearch-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-ink-900);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.875rem;
+}
+
+.pdSearch-desc {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-ink-500);
+  line-height: 1.75;
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+/* Search input */
+.pdSearch-inputWrap {
+  position: relative;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.pdSearch-inputIcon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-ink-500);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.pdSearch-input {
+  width: 100%;
+  height: 64px;
+  background: #ffffff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0 3.5rem 0 3.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink-900);
+  box-shadow: 0 2px 16px rgba(26, 26, 26, 0.06), 0 0 0 1px rgba(217, 217, 217, 0.7);
+  transition: box-shadow 200ms ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pdSearch-input:focus {
+  outline: none;
+  box-shadow: 0 4px 24px rgba(26, 26, 26, 0.1), 0 0 0 2px var(--color-accent-500);
+}
+
+.pdSearch-input::placeholder {
+  color: rgba(102, 102, 102, 0.7);
+}
+
+.pdSearch-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.pdSearch-clear {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem;
+  border-radius: 50%;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.pdSearch-clear:hover {
+  background: rgba(26, 26, 26, 0.06);
+  color: var(--color-ink-900);
+}
+
+/* Results */
+.pdSearch-results {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.pdSearch-count {
+  font-size: 0.8rem;
+  color: var(--color-ink-500);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.pdSearch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pdSearch-result {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  animation: pdResultFade 150ms ease forwards;
+}
+
+.pdSearch-result:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+@keyframes pdResultFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+.pdSearch-resultHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.375rem;
+}
+
+.pdSearch-resultNom {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-ink-900);
+}
+
+.pdSearch-resultPays {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent-500);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.pdSearch-resultVille {
+  font-size: 0.9rem;
+  color: var(--color-ink-700);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.pdSearch-resultAdresse {
+  font-size: 0.85rem;
+  color: var(--color-ink-500);
+  margin-bottom: 0.625rem;
+}
+
+.pdSearch-resultTel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.9rem;
+  color: var(--color-primary-700);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.pdSearch-resultTel:hover {
+  color: var(--color-primary-800);
+}
+
+.pdSearch-resultTel .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.pdSearch-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pdSearch-emptyLabel {
+  font-size: 1rem;
+  color: var(--color-ink-700);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.pdSearch-emptyHint {
+  font-size: 0.875rem;
+  color: var(--color-ink-500);
+}
+
+/* ============================================================
+   SECTION 5 — POURQUOI REJOINDRE
+   ============================================================ */
+.pdAvantages-root {
+  background: var(--color-primary-800);
+  min-height: 100vh;
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.pdAvantages-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.pdAvantages-layout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 7vw, 5rem);
+}
+
+/* LEFT */
+.pdAvantages-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pdAvantages-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+}
+
+.pdAvantages-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.375rem);
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.pdAvantages-desc {
+  font-size: clamp(1rem, 1.5vw, 1.0625rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+}
+
+.pdAvantages-visual {
+  margin: 0.5rem 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.pdAvantages-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+.pdAvantages-cta {
+  align-self: flex-start;
+}
+
+/* RIGHT — avantages */
+.pdAvantages-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pdAvantage-item {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 40vh;
+  justify-content: center;
+}
+
+.pdAvantage-item:last-child {
+  border-bottom: none;
+}
+
+.pdAvantage-iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pdAvantage-icon {
+  font-size: 2rem;
+  color: rgba(242, 178, 51, 0.75);
+}
+
+.pdAvantage-titre {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.pdAvantage-texte {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+  max-width: 42ch;
+}
+
+/* ============================================================
+   SECTION 6 — LA VISION
+   ============================================================ */
+.pdVision-root {
+  background: linear-gradient(160deg, var(--color-secondary-200) 0%, var(--color-secondary-100) 100%);
+  min-height: 120vh;
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.pdVision-shell {
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.pdVision-header {
+  text-align: center;
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pdVision-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+}
+
+.pdVision-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-ink-900);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  max-width: 30ch;
+  text-align: center;
+}
+
+/* Timeline mobile */
+.pdVision-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+/* Ligne verticale dorée (masquée sur mobile) */
+.pdVision-line {
+  display: none;
+}
+
+/* Piliers */
+.pdVision-pilier {
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+  border-bottom: 1px solid rgba(210, 195, 165, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pdVision-pilier:last-child {
+  border-bottom: none;
+}
+
+/* Dot sur la timeline (masqué sur mobile) */
+.pdVision-pilierDot {
+  display: none;
+}
+
+.pdVision-pilierTitre {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  color: var(--color-ink-900);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.pdVision-pilierTexte {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.0625rem);
+  color: var(--color-ink-500);
+  line-height: 1.8;
+  max-width: 50ch;
+}
+
+/* Animations spéciales des piliers (mobile: slide from bottom) */
+.pdVision-pilier.pdAnimate {
+  transform: translateY(24px);
+}
+
+/* Produits à venir */
+.pdVision-avenir {
+  padding-top: clamp(2rem, 6vw, 4rem);
+  border-top: 2px solid var(--color-accent-500);
+}
+
+.pdVision-avenirHeader {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.pdVision-avenirTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  color: var(--color-ink-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.pdVision-avenirText {
+  font-size: clamp(0.95rem, 1.5vw, 1.0625rem);
+  color: var(--color-ink-500);
+  line-height: 1.75;
+  max-width: 50ch;
+  margin-bottom: 0.5rem;
+}
+
+.pdVision-avenirSubtitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+}
+
+.pdVision-avenirGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.pdVision-avenirItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.pdVision-avenirVisual {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.pdVision-avenirImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: saturate(0.45) opacity(0.72);
+  transition: filter 400ms ease;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.pdVision-avenirItem:hover .pdVision-avenirImage {
+  filter: saturate(0.6) opacity(0.85);
+}
+
+.pdVision-avenirCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pdVision-avenirBadge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-500);
+}
+
+.pdVision-avenirNom {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-ink-900);
+  line-height: 1.2;
+}
+
+.pdVision-avenirDesc {
+  font-size: 0.8rem;
+  color: var(--color-ink-500);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   SECTION 7 — CTA FINAL
+   ============================================================ */
+.pdFinal-root {
+  position: relative;
+  background: var(--color-primary-900);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+/* Radial gradient discret */
+.pdFinal-radial {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    rgba(31, 94, 59, 0.4) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.pdFinal-shell {
+  position: relative;
+  z-index: 1;
+  width: var(--shell-width);
+  margin-inline: auto;
+}
+
+.pdFinal-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pdFinal-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+}
+
+.pdFinal-desc {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 50ch;
+}
+
+.pdFinal-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.875rem;
+  width: 100%;
+  max-width: 340px;
+}
+
+.pdFinal-ctaGlow {
+  animation: pdCtaGlow 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes pdCtaGlow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(242, 178, 51, 0.3); }
+  50%       { box-shadow: 0 6px 40px rgba(242, 178, 51, 0.58), 0 0 70px rgba(242, 178, 51, 0.12); }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobiles & Smartwatches (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .pdHero-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .pdHero-title {
+    font-size: clamp(2.2rem, 11vw, 2.8rem);
+  }
+
+  .pdReseau-statVal {
+    font-size: clamp(4rem, 18vw, 5.5rem);
+  }
+
+  .pdVision-avenirGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Tablettes (769px – 1024px)
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pdHero-title {
+    font-size: clamp(3rem, 6vw, 4rem);
+  }
+
+  .pdReseau-stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .pdReseau-stat {
+    flex: 0 0 auto;
+  }
+
+  .pdMap-tooltip {
+    display: block;
+  }
+
+  .pdMap-sheetOverlay {
+    display: none;
+  }
+
+  .pdMap-sheet {
+    display: none;
+  }
+
+  .pdAvantages-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .pdAvantages-left {
+    flex: 0 0 44%;
+  }
+
+  .pdAvantages-right {
+    flex: 1;
+  }
+
+  .pdFinal-ctas {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  .pdFinal-ctas .pdCta {
+    flex: 0 0 auto;
+    min-width: 200px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Ordinateurs portables (1025px – 1200px)
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Hero split */
+  .pdHero-mediaBg {
+    inset: 0 0 0 44%;
+  }
+
+  .pdHero-overlay {
+    display: none;
+  }
+
+  .pdHero-layout {
+    min-height: 100vh;
+  }
+
+  .pdHero-leftPanel {
+    width: 44%;
+    min-height: 100vh;
+    background: var(--color-primary-800);
+    align-items: center;
+    padding: clamp(5rem, 8vw, 8rem) clamp(2.5rem, 4vw, 5rem);
+  }
+
+  .pdHero-content {
+    max-width: 520px;
+    margin: 0;
+  }
+
+  .pdHero-rightPanel {
+    display: block;
+    width: 56%;
+    flex-shrink: 0;
+  }
+
+  .pdHero-ctas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+
+  .pdHero-ctas .pdCta {
+    width: auto;
+    flex: 0 0 auto;
+    min-width: 200px;
+  }
+
+  /* Stats flottantes */
+  .pdReseau-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .pdReseau-stat:nth-child(2) {
+    margin-top: 4rem;
+  }
+
+  .pdReseau-stat:nth-child(3) {
+    margin-top: 2rem;
+  }
+
+  /* Map tooltip visible */
+  .pdMap-tooltip {
+    display: block;
+  }
+
+  .pdMap-sheetOverlay,
+  .pdMap-sheet {
+    display: none;
+  }
+
+  /* Avantages sticky */
+  .pdAvantages-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3.5rem;
+  }
+
+  .pdAvantages-left {
+    flex: 0 0 42%;
+    position: sticky;
+    top: calc(5rem + 2rem);
+    height: fit-content;
+  }
+
+  .pdAvantages-right {
+    flex: 1;
+  }
+
+  .pdAvantage-item {
+    min-height: 50vh;
+    justify-content: center;
+  }
+
+  /* Vision timeline alternée */
+  .pdVision-timeline {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .pdVision-line {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent 0%, var(--color-accent-500) 8%, var(--color-accent-500) 92%, transparent 100%);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .pdVision-pilier {
+    display: grid;
+    grid-template-columns: 1fr 3rem 1fr;
+    align-items: center;
+    border-bottom: none;
+    padding: 2.5rem 0;
+    gap: 0;
+  }
+
+  .pdVision-pilier--left {
+    grid-template-areas: "copy dot empty";
+  }
+
+  .pdVision-pilier--right {
+    grid-template-areas: "empty dot copy";
+  }
+
+  .pdVision-pilierDot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: dot;
+    z-index: 2;
+  }
+
+  .pdVision-pilierDotInner {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-accent-500);
+    box-shadow: 0 0 0 4px rgba(242, 178, 51, 0.2);
+  }
+
+  .pdVision-pilierCopy {
+    grid-area: copy;
+  }
+
+  .pdVision-pilier--left .pdVision-pilierCopy {
+    text-align: right;
+    padding-right: 1.5rem;
+  }
+
+  .pdVision-pilier--right .pdVision-pilierCopy {
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+
+  .pdVision-pilier--left .pdVision-pilierTexte {
+    margin-left: auto;
+  }
+
+  /* Vision animate alternée */
+  .pdVision-pilier--left.pdAnimate {
+    transform: translateX(-24px);
+  }
+
+  .pdVision-pilier--right.pdAnimate {
+    transform: translateX(24px);
+  }
+
+  .pdVision-pilier.pdAnimate--in {
+    transform: translateX(0);
+  }
+
+  /* Avenir grid */
+  .pdVision-avenirGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Final CTA horizontal */
+  .pdFinal-ctas {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
+    max-width: none;
+  }
+
+  .pdFinal-ctas .pdCta {
+    min-width: 240px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Desktops & Écrans larges (≥ 1201px)
+   ============================================================ */
+@media (min-width: 1201px) {
+  /* Hero split plein écran */
+  .pdHero-mediaBg {
+    inset: 0 0 0 45%;
+  }
+
+  .pdHero-overlay {
+    display: none;
+  }
+
+  .pdHero-layout {
+    min-height: 100vh;
+    align-items: stretch;
+  }
+
+  .pdHero-leftPanel {
+    width: 45%;
+    flex-shrink: 0;
+    min-height: 100vh;
+    background: var(--color-primary-800);
+    align-items: center;
+    padding: clamp(5rem, 7vw, 9rem) clamp(3rem, 5vw, 7rem) clamp(5rem, 7vw, 9rem)
+      max(calc((100vw - 1320px) / 2 + 3rem), 3rem);
+  }
+
+  .pdHero-content {
+    max-width: 580px;
+    margin: 0;
+  }
+
+  .pdHero-title {
+    font-size: clamp(3.2rem, 5vw, 4.5rem);
+  }
+
+  .pdHero-rightPanel {
+    display: block;
+    flex: 1;
+  }
+
+  .pdHero-ctas {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .pdHero-ctas .pdCta {
+    width: auto;
+    height: 60px;
+    min-width: 220px;
+  }
+
+  /* Stats flottantes — design asymétrique */
+  .pdReseau-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-items: start;
+    padding-inline: 2rem;
+  }
+
+  .pdReseau-statVal {
+    font-size: clamp(5rem, 9vw, 7.5rem);
+  }
+
+  .pdReseau-stat:nth-child(1) { margin-top: 0; }
+  .pdReseau-stat:nth-child(2) { margin-top: 5rem; }
+  .pdReseau-stat:nth-child(3) { margin-top: 2.5rem; }
+
+  /* Map */
+  .pdMap-tooltip {
+    display: block;
+  }
+
+  .pdMap-dotLabel {
+    font-size: 9px;
+  }
+
+  .pdMap-sheetOverlay,
+  .pdMap-sheet {
+    display: none;
+  }
+
+  /* Avantages sticky + scrolling */
+  .pdAvantages-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .pdAvantages-left {
+    position: sticky;
+    top: calc(5rem + 2rem);
+    height: fit-content;
+  }
+
+  .pdAvantage-item {
+    min-height: 60vh;
+    justify-content: center;
+    padding: 4rem 0;
+  }
+
+  .pdAvantage-titre {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+
+  /* Vision timeline alternée grande */
+  .pdVision-timeline {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  .pdVision-line {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent 0%, var(--color-accent-500) 8%, var(--color-accent-500) 92%, transparent 100%);
+    transform: translateX(-50%);
+  }
+
+  .pdVision-pilier {
+    display: grid;
+    grid-template-columns: 1fr 3.5rem 1fr;
+    align-items: center;
+    border-bottom: none;
+    padding: 3.5rem 0;
+    gap: 0;
+  }
+
+  .pdVision-pilier--left {
+    grid-template-areas: "copy dot empty";
+  }
+
+  .pdVision-pilier--right {
+    grid-template-areas: "empty dot copy";
+  }
+
+  .pdVision-pilierDot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: dot;
+    z-index: 2;
+  }
+
+  .pdVision-pilierDotInner {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-accent-500);
+    box-shadow: 0 0 0 5px rgba(242, 178, 51, 0.22);
+  }
+
+  .pdVision-pilierCopy {
+    grid-area: copy;
+  }
+
+  .pdVision-pilier--left .pdVision-pilierCopy {
+    text-align: right;
+    padding-right: 2rem;
+  }
+
+  .pdVision-pilier--right .pdVision-pilierCopy {
+    text-align: left;
+    padding-left: 2rem;
+  }
+
+  .pdVision-pilier--left .pdVision-pilierTexte {
+    margin-left: auto;
+  }
+
+  .pdVision-pilier--left.pdAnimate {
+    transform: translateX(-24px);
+  }
+
+  .pdVision-pilier--right.pdAnimate {
+    transform: translateX(24px);
+  }
+
+  .pdVision-pilier.pdAnimate--in {
+    transform: translateX(0) translateY(0);
+  }
+
+  .pdVision-avenirGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 600px;
+  }
+
+  /* Final */
+  .pdFinal-title {
+    font-size: clamp(3rem, 5vw, 4rem);
+  }
+
+  .pdFinal-ctas {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    width: auto;
+    max-width: none;
+  }
+
+  .pdFinal-ctas .pdCta {
+    min-width: 280px;
+  }
+
+  .pdFinal-ctas .pdCta--gold {
+    min-width: 320px;
+  }
+}
+
+/* ============================================================
+   MOBILE — Bottom sheet carte (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .pdMap-tooltip {
+    display: none;
+  }
+
+  .pdMap-sheetOverlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.45);
+    z-index: 40;
+    backdrop-filter: blur(2px);
+    animation: pdOverlayIn 250ms ease forwards;
+  }
+
+  @keyframes pdOverlayIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .pdMap-sheet {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-radius: 20px 20px 0 0;
+    z-index: 50;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 1.25rem 1.5rem 3rem;
+    animation: pdSheetUp 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes pdSheetUp {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0);    }
+  }
+
+  .pdMap-sheetHandle {
+    width: 40px;
+    height: 4px;
+    background: rgba(26, 26, 26, 0.15);
+    border-radius: 2px;
+    margin: 0 auto 1.25rem;
+  }
+
+  .pdMap-sheetClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(26, 26, 26, 0.06);
+    border: none;
+    cursor: pointer;
+    color: var(--color-ink-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    transition: background-color 180ms ease;
+  }
+
+  .pdMap-sheetClose:hover {
+    background: rgba(26, 26, 26, 0.1);
+  }
+
+  .pdMap-sheetClose .material-symbols-outlined {
+    font-size: 1.1rem;
+  }
+
+  .pdMap-sheetPays {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-ink-900);
+    margin-bottom: 0.25rem;
+  }
+
+  .pdMap-sheetContinent {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent-500);
+    margin-bottom: 1.5rem;
+  }
+
+  .pdMap-sheetItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pdMap-sheetItem {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .pdMap-sheetItem:last-child {
+    border-bottom: none;
+  }
+
+  .pdMap-sheetNom {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-ink-900);
+  }
+
+  .pdMap-sheetVille {
+    font-size: 0.875rem;
+    color: var(--color-ink-700);
+    font-weight: 500;
+  }
+
+  .pdMap-sheetAdresse {
+    font-size: 0.825rem;
+    color: var(--color-ink-500);
+  }
+
+  .pdMap-sheetTel {
+    display: inline-block;
+    margin-top: 0.375rem;
+    font-size: 0.925rem;
+    color: var(--color-primary-700);
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
