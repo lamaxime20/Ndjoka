@@ -1,7 +1,7 @@
 import heroImage from '../assets/images/points_distributions/hero.webp';
 import concessImage from '../assets/images/points_distributions/concessionnaire_ndjoka.webp';
-import chinChinPlaceholder from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import oseillePlaceholder from '../assets/images/accueil/produits/ndjoka_sucre.webp';
+import chinChinPlaceholder from '../assets/images/produits/chins_chins.webp';
+import oseillePlaceholder from '../assets/images/produits/canette_oseille.webp';
 
 export const PD_WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +

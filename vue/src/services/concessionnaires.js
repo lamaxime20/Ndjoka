@@ -3,9 +3,9 @@ import pointDeVentesImage from '../assets/images/concessionnaires/point_de_vente
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import kilichiImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
-import chinChinPlaceholder from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import oseillePlaceholder from '../assets/images/accueil/produits/ndjoka_sucre.webp';
+import kilichiImage from '../assets/images/produits/kilichi.webp';
+import chinChinPlaceholder from '../assets/images/produits/chins_chins.webp';
+import oseillePlaceholder from '../assets/images/produits/canette_oseille.webp';
 
 const WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +

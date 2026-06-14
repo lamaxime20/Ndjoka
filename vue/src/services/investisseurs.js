@@ -2,7 +2,7 @@ import heroImage from '../assets/images/investisseurs/hero.webp';
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import kilichiImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
+import kilichiImage from '../assets/images/produits/kilichi.webp';
 
 export const INVEST_WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +
