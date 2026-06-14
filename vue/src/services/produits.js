@@ -1,7 +1,7 @@
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import kilichiImage from '../assets/images/produits/kilichi.webp';
+import kilichiImage from '../assets/images/Produits/kilichi.webp';
 import heroGroupImage from '../assets/images/Produits/Produits_Ndjoka.webp';
 import { CONCESSIONNAIRES, CONTACT } from './navigation.js';
 

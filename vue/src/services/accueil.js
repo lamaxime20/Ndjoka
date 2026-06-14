@@ -1,11 +1,11 @@
 import chipsHeroImage from '../assets/images/accueil/hero/chips.webp';
 import epiceeHeroImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import kilichiHeroImage from '../assets/images/produits/kilichi.webp';
+import kilichiHeroImage from '../assets/images/Produits/kilichi.webp';
 import aboutImage from '../assets/images/accueil/about/equipe_ndjoka.webp';
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import kilichiImage from '../assets/images/produits/kilichi.webp';
+import kilichiImage from '../assets/images/Produits/kilichi.webp';
 import {
   CONCESSIONNAIRES,
   INVESTISSEURS,
