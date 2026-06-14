@@ -10,7 +10,7 @@ export const NAV_ITEMS = [
   { key: PRODUITS, label: 'Produits', path: '/produits' },
   { key: CONCESSIONNAIRES, label: 'Concessionnaires', path: '/concessionnaires' },
   { key: INVESTISSEURS, label: 'Investisseurs', path: '/investisseurs' },
-  { key: POINTS_VENTE, label: 'Nos points de vente', path: '/nos-points-de-vente' },
+  { key: POINTS_VENTE, label: 'Points de vente', path: '/nos-points-de-vente' },
   { key: CONTACT, label: 'Contact', path: '/contact' },
 ];
 

@@ -106,7 +106,7 @@ function PointDistributions() {
                     className="pdHero-word"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    {word}{' '}
+                    {word}
                   </span>
                 ))}
               </h1>

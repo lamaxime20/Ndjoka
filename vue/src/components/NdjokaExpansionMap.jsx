@@ -5,8 +5,8 @@ import '../assets/styles/components/NdjokaExpansionMap.css';
 
 const WORLD_URL = 'https://unpkg.com/world-atlas@2/countries-110m.json';
 
-const W = 1000;
-const H = 540;
+const W = 1400;
+const H = 714;
 
 const DISTRIBUTORS = {
   CM: {
@@ -260,7 +260,7 @@ export default function NdjokaExpansionMap() {
       .attr('role', 'img')
       .attr('aria-label', 'Carte de présence mondiale Ndjoka');
 
-    const projection = d3.geoNaturalEarth1().scale(153).translate([W / 2, H / 2]);
+    const projection = d3.geoNaturalEarth1().scale(218).translate([W / 2, H / 2 + 20]);
     const geoPath = d3.geoPath().projection(projection);
 
     d3.json(WORLD_URL).then((world) => {
@@ -297,7 +297,7 @@ export default function NdjokaExpansionMap() {
       Object.entries(DISTRIBUTORS).forEach(([code, data], i) => {
         const [px, py] = projection(data.coords);
         const isCM = code === 'CM';
-        const r = isCM ? 10 : 7;
+        const r = isCM ? 9 : 5;
 
         const g = dotsG
           .append('g')
@@ -308,10 +308,16 @@ export default function NdjokaExpansionMap() {
           .attr('role', 'button')
           .attr('aria-label', `Distributeurs en ${data.country}`);
 
+        // Zone de clic étendue — invisible mais capturable (44×44 px min pour mobile)
+        g.append('circle')
+          .attr('class', 'nem-hit')
+          .attr('r', 24)
+          .attr('fill', 'transparent');
+
         // Pulse ring
         g.append('circle')
           .attr('class', 'nem-pulse')
-          .attr('r', r * 2)
+          .attr('r', r * 2.4)
           .attr('fill', 'none')
           .attr('stroke', 'rgba(242,178,51,0.4)')
           .attr('stroke-width', '1.5');
@@ -322,7 +328,7 @@ export default function NdjokaExpansionMap() {
           .attr('r', r)
           .attr('fill', '#F2B233')
           .attr('stroke', '#1F5E3B')
-          .attr('stroke-width', '2');
+          .attr('stroke-width', '1.5');
 
         // Transition d'apparition
         g.transition()

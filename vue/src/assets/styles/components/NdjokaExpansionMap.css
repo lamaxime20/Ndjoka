@@ -107,7 +107,7 @@
 
 .nem-container {
   position: relative;
-  width: min(80%, 1100px);
+  width: min(98%, 1440px);
   margin: 0 auto;
 }
 
@@ -123,6 +123,10 @@
 .nem-dot-group {
   cursor: pointer;
   outline: none;
+}
+
+.nem-hit {
+  cursor: pointer;
 }
 
 .nem-dot-group:focus-visible .nem-dot {
@@ -345,12 +349,16 @@
 
 @media (max-width: 480px) {
   .nem-section {
-    padding: 60px 4%;
+    padding: 60px 0;
+  }
+
+  .nem-header {
+    padding: 0 4%;
   }
 
   .nem-stats {
     flex-direction: column;
-    width: 100%;
+    width: calc(100% - 32px);
     max-width: 260px;
   }
 
@@ -371,24 +379,46 @@
 
   .nem-container {
     width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nem-svg {
+    min-width: 560px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .nem-section {
+    padding: 60px 2%;
+  }
+
+  .nem-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nem-svg {
+    min-width: 700px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .nem-container {
-    width: 95%;
+    width: 100%;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
   .nem-container {
-    width: 88%;
+    width: 99%;
   }
 }
 
 @media (min-width: 1201px) {
   .nem-container {
-    width: 80%;
-    max-width: 1100px;
+    width: 98%;
+    max-width: 1440px;
   }
 }
