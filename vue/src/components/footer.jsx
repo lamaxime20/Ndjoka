@@ -9,12 +9,11 @@ import {
 import '../assets/styles/components/footer.css';
 
 function SocialIcon({ label }) {
-  if (label === 'Instagram') {
+  if (label === 'YouTube') {
     return (
       <svg className="footer-socialIcon" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" strokeWidth="1.7" />
-        <circle cx="17.2" cy="6.9" r="1" fill="currentColor" />
+        <rect x="2.5" y="5.5" width="19" height="13" rx="4.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M10 9.5l5 2.5-5 2.5V9.5z" fill="currentColor" />
       </svg>
     );
   }

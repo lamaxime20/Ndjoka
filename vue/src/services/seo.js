@@ -106,6 +106,27 @@ export function applySeo(key) {
 
   setCanonical(config.url);
 
+  setJsonLd('organization', {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Ndjoka',
+    url: BASE_URL,
+    logo: OG_IMAGE,
+    description:
+      'Ndjoka est une marque agroalimentaire africaine spécialisée dans la transformation et la distribution de produits alimentaires africains, notamment les chips de plantain et le Kilichi.',
+    sameAs: [
+      'https://youtube.com/@startupacademy237?si=-DlBa9gwkMR3YAui',
+      'https://www.facebook.com/share/19EXzED1ww/',
+      'https://www.linkedin.com/company/ndjokasarl/',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+237683184360',
+      contactType: 'customer service',
+      availableLanguage: ['French'],
+    },
+  });
+
   applySchemaPage(key, config);
 }
 

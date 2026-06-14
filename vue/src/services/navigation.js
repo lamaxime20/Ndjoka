@@ -37,15 +37,15 @@ export const FOOTER_CONTACTS = [
 
 export const FOOTER_SOCIALS = [
   {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/',
+    label: 'YouTube',
+    href: 'https://youtube.com/@startupacademy237?si=-DlBa9gwkMR3YAui',
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
+    href: 'https://www.linkedin.com/company/ndjokasarl/',
   },
   {
     label: 'Facebook',
-    href: 'https://www.facebook.com/',
+    href: 'https://www.facebook.com/share/19EXzED1ww/',
   },
 ];

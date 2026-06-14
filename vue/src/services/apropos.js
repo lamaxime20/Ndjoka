@@ -115,7 +115,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Pilote la vision globale de Ndjoka, le développement stratégique de la marque et son expansion progressive.",
       image: dgImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/daril.kandeu.3',
     },
     {
       name: 'Ruther Ford TSIMENE',
@@ -123,14 +123,14 @@ export const APROPOS_EQUIPE = {
       description:
         "Accompagne le développement opérationnel de Ndjoka et la coordination des activités de croissance.",
       image: dgaImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/rutherfordtsimene77',
     },
     {
       name: 'Gamaliel FEHANG',
       role: 'Directeur de Production',
       description: "Supervise la production et veille à la qualité des produits Ndjoka.",
       image: productionImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/gamaliel.fehang',
     },
     {
       name: 'Roger LONLA',
@@ -138,7 +138,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Assure le suivi financier et accompagne la structuration du développement de l'entreprise.",
       image: financierImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/Rogerlonla237',
     },
     {
       name: 'Saurelle NYOMA',
@@ -146,7 +146,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Développe l'image de marque, la communication et la visibilité de Ndjoka.",
       image: marketingImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/saurellenyoma',
     },
     {
       name: 'William KEMETIA',
@@ -154,7 +154,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Supervise les aspects juridiques, administratifs et fiscaux liés au développement de Ndjoka.",
       image: juridiqueImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/william.weston.904',
     },
     {
       name: 'Christian BILO',
@@ -162,7 +162,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Accompagne le réseau de distribution et le développement commercial des produits Ndjoka.",
       image: ventesImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/daubege.bilo',
     },
     {
       name: 'Anne Marie AKUDA',
@@ -170,7 +170,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Participe à la gestion financière et au suivi administratif des activités de la marque.",
       image: financieresImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/annemarie.akuda',
     },
     {
       name: 'Emilie MBARGA',
@@ -178,7 +178,7 @@ export const APROPOS_EQUIPE = {
       description:
         "Assure le suivi organisationnel et la coordination administrative des activités Ndjoka.",
       image: assistanteImage,
-      facebook: 'https://www.facebook.com/',
+      facebook: 'https://www.facebook.com/emilie.mbarga.98',
     },
   ],
 };
@@ -222,13 +222,13 @@ export const APROPOS_CONTACT = {
       icon: 'groups',
       label: 'Facebook',
       value: 'Page Facebook Ndjoka',
-      href: 'https://www.facebook.com/',
+      href: 'https://www.facebook.com/share/19EXzED1ww/',
     },
     {
       icon: 'work',
       label: 'LinkedIn',
       value: 'Page LinkedIn Ndjoka',
-      href: 'https://www.linkedin.com/',
+      href: 'https://www.linkedin.com/company/ndjokasarl/',
     },
     {
       icon: 'location_on',
