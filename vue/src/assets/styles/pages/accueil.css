@@ -61,11 +61,11 @@
 }
 
 .accueilHero-glow {
-  width: 19rem;
-  height: 19rem;
+  width: 26rem;
+  height: 26rem;
   border-radius: 50%;
-  filter: blur(52px);
-  opacity: 0.5;
+  filter: blur(72px);
+  opacity: 0.72;
   animation: accueilHeroDrift 13s ease-in-out infinite;
 }
 
@@ -90,7 +90,7 @@
 .accueilHero-media {
   position: absolute;
   margin: 0;
-  animation: accueilHeroAssetReveal 1000ms ease both;
+  animation: accueilHeroAssetReveal 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .accueilHero-media::after {
@@ -131,7 +131,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 24px 40px rgba(31, 75, 63, 0.14));
+  filter:
+    drop-shadow(0 28px 48px rgba(31, 75, 63, 0.22))
+    drop-shadow(0 6px 24px rgba(217, 140, 43, 0.18));
   animation: accueilHeroFloat 11s ease-in-out infinite;
 }
 
@@ -168,16 +170,17 @@
   padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
   text-align: center;
   color: var(--color-primary-900);
-  animation: accueilHeroTextReveal 900ms ease both;
+  animation: accueilHeroTextReveal 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 80ms;
 }
 
 .accueilHero-content::before {
   content: '';
   position: absolute;
-  inset: -8% -6%;
+  inset: -16% -12%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(246, 241, 231, 0.74), rgba(246, 241, 231, 0.3) 52%, transparent 78%);
-  filter: blur(24px);
+  background: radial-gradient(circle, rgba(246, 241, 231, 0.88), rgba(246, 241, 231, 0.42) 48%, transparent 74%);
+  filter: blur(32px);
   z-index: -1;
 }
 
@@ -213,6 +216,10 @@
   font-size: clamp(3.25rem, 9vw, 5.75rem);
   font-weight: 800;
   letter-spacing: -0.05em;
+  line-height: 0.96;
+  text-shadow:
+    0 2px 32px rgba(31, 75, 63, 0.12),
+    0 0 80px rgba(217, 140, 43, 0.08);
 }
 
 .accueilHero-description,
@@ -256,10 +263,10 @@
   font-size: 0.96rem;
   font-weight: 600;
   transition:
-    transform 360ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
     background-color 360ms ease,
     color 360ms ease,
-    box-shadow 360ms ease,
+    box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color 360ms ease;
 }
 
@@ -271,9 +278,9 @@
 
 .accueilButton--primary:hover,
 .accueilButton--primary:focus-visible {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.01);
   background: var(--color-accent-500);
-  box-shadow: 0 18px 32px rgba(242, 178, 51, 0.24);
+  box-shadow: 0 22px 44px rgba(242, 178, 51, 0.36);
 }
 
 .accueilButton--secondary {
@@ -284,7 +291,7 @@
 
 .accueilButton--secondary:hover,
 .accueilButton--secondary:focus-visible {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: rgba(31, 94, 59, 0.42);
   background: rgba(31, 94, 59, 0.05);
 }
@@ -292,7 +299,8 @@
 .accueilHero-actions .accueilButton--primary {
   min-height: 3.65rem;
   padding-inline: 1.85rem;
-  box-shadow: 0 18px 34px rgba(217, 140, 43, 0.24);
+  box-shadow: 0 20px 44px rgba(217, 140, 43, 0.32);
+  letter-spacing: 0.01em;
 }
 
 .accueilHero-actions .accueilButton--secondary {
@@ -925,24 +933,28 @@
 @keyframes accueilHeroTextReveal {
   from {
     opacity: 0;
-    transform: translateY(26px);
+    transform: translateY(38px) scale(0.96);
+    filter: blur(4px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
 @keyframes accueilHeroAssetReveal {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(44px) scale(0.9);
+    filter: blur(6px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
@@ -984,22 +996,26 @@
 @keyframes accueilHeroFloat {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-14px) scale(1.018);
   }
 }
 
 @keyframes accueilHeroDrift {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 
-  50% {
-    transform: translate3d(0, -12px, 0);
+  33% {
+    transform: translate3d(8px, -14px, 0) scale(1.06);
+  }
+
+  66% {
+    transform: translate3d(-5px, -6px, 0) scale(0.96);
   }
 }
 
