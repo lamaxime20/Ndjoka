@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import {
   HOME,
   PRODUITS,
@@ -10,11 +11,22 @@ import {
 import Principale from './pages/principale.jsx'
 import './App.css'
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
+
 function App() {
 
     return (
         <div className='app-root'>
             <Router>
+                <ScrollToTop />
                 <Routes>
                     <Route path='/' element={<Principale onglet={HOME} />} />
                     <Route path='/produits' element={<Principale onglet={PRODUITS} />} />
