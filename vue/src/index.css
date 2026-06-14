@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Poppins-Fallback';
+  src: local('Arial'), local('Helvetica Neue');
+  ascent-override: 93%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 112%;
+}
+
+@font-face {
+  font-family: 'Inter-Fallback';
+  src: local('Arial'), local('Helvetica Neue');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
 :root {
   --color-primary-900: #163824;
   --color-primary-800: #1f5e3b;
@@ -42,8 +60,8 @@
   --color-footer-accent-border: rgba(242, 178, 51, 0.32);
   --color-footer-accent-glow: rgba(242, 178, 51, 0.36);
 
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Poppins', 'Poppins-Fallback', sans-serif;
+  --font-body: 'Inter', 'Inter-Fallback', sans-serif;
 
   --shadow-soft: 0 18px 40px rgba(22, 56, 36, 0.08);
   --shadow-card: 0 12px 32px rgba(26, 26, 26, 0.08);

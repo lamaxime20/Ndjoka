@@ -39,7 +39,7 @@ function Principale({ onglet }) {
     return (
         <div className="principale-root">
             <NavBar onglet={onglet} />
-            <Suspense fallback={null}>
+            <Suspense fallback={<div className="principale-suspenseFallback" />}>
                 <PageContent onglet={onglet} />
             </Suspense>
             <Footer onglet={onglet} />

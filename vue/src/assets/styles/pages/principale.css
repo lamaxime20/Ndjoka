@@ -4,6 +4,10 @@
   min-height: 100vh;
 }
 
+.principale-suspenseFallback {
+  min-height: 100svh;
+}
+
 .principale-main {
   flex: 1;
   width: var(--shell-width);
