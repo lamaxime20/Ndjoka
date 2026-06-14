@@ -7,6 +7,8 @@ import {
   CONCESS_STAT_COUNT,
   CONCESS_STATS,
   CONCESS_TEMOIGNAGES,
+  CONCESS_VISION,
+  CONCESS_AVENIR,
   CONCESS_INVEST,
   CONCESS_FAQ,
   CONCESS_FINAL,
@@ -16,6 +18,7 @@ import '../assets/styles/pages/concessionnaires.css';
 
 function Concessionnaires() {
   const heroBgRef = useRef(null);
+  const visionRef = useRef(null);
   const [openFaq, setOpenFaq] = useState(null);
   const [villesCount, villesRef] = useCountUp(CONCESS_STAT_COUNT.value);
 
@@ -29,6 +32,36 @@ function Concessionnaires() {
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) {
+      document.querySelectorAll('.concessVision-animate').forEach((el) =>
+        el.classList.add('concessVision-animate--visible')
+      );
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('concessVision-animate--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const targets = visionRef.current
+      ? visionRef.current.querySelectorAll('.concessVision-animate')
+      : [];
+    targets.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   function toggleFaq(i) {
@@ -58,6 +91,7 @@ function Concessionnaires() {
               href={CONCESS_WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
             >
               Devenir concessionnaire
             </a>
@@ -114,11 +148,18 @@ function Concessionnaires() {
           <div className="concessProduits-grid">
             {CONCESS_PRODUITS.map((prod) => (
               <article
-                className={`concessProduit-card${prod.badge ? ' concessProduit-card--soon' : ''}`}
+                className="concessProduit-card"
                 key={prod.name}
               >
                 <figure className="concessProduit-visual">
-                  <img className="concessProduit-image" src={prod.image} alt={prod.alt} />
+                  <img
+                    className="concessProduit-image"
+                    src={prod.image}
+                    alt={prod.alt}
+                    loading="lazy"
+                    width={300}
+                    height={300}
+                  />
                 </figure>
                 <div className="concessProduit-copy">
                   {prod.badge && (
@@ -137,6 +178,7 @@ function Concessionnaires() {
               href={CONCESS_WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
             >
               Devenir concessionnaire
             </a>
@@ -190,6 +232,85 @@ function Concessionnaires() {
         </div>
       </section>
 
+      {/* ── Vision Ndjoka ─────────────────────────────────────── */}
+      <section
+        className="concessVision-root section-padding"
+        aria-labelledby="concess-vision-title"
+        ref={visionRef}
+      >
+        <div className="concessVision-shell shell">
+
+          {/* En-tête vision */}
+          <div className="concessVision-header">
+            <span className="concessVision-badge concessVision-animate concessVision-animate--title">
+              {CONCESS_VISION.badge}
+            </span>
+            <h2
+              className="concessVision-title concessVision-animate concessVision-animate--title"
+              id="concess-vision-title"
+            >
+              {CONCESS_VISION.title}
+            </h2>
+            <div className="concessVision-paragraphes concessVision-animate concessVision-animate--text">
+              {CONCESS_VISION.paragraphes.map((p, i) => (
+                <p className="concessVision-para" key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Blocs croissance */}
+          <div className="concessVision-blocs" aria-label="Axes de développement Ndjoka">
+            {CONCESS_VISION.blocs.map((bloc, i) => (
+              <div
+                className="concessVision-bloc concessVision-animate concessVision-animate--bloc"
+                key={bloc.title}
+                style={{ transitionDelay: `${i * 120}ms` }}
+              >
+                <span className="concessVision-blocIcon" aria-hidden="true">
+                  <span className="material-symbols-outlined">{bloc.icon}</span>
+                </span>
+                <div className="concessVision-blocCopy">
+                  <h3 className="concessVision-blocTitle">{bloc.title}</h3>
+                  <p className="concessVision-blocText">{bloc.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Produits à venir */}
+          <div className="concessAvenir-root concessVision-animate concessVision-animate--text">
+            <header className="concessAvenir-header">
+              <h3 className="concessAvenir-title">{CONCESS_AVENIR.title}</h3>
+              <p className="concessAvenir-text">{CONCESS_AVENIR.text}</p>
+              <p className="concessAvenir-subtitle">{CONCESS_AVENIR.subtitle}</p>
+            </header>
+
+            <div className="concessAvenir-grid">
+              {CONCESS_AVENIR.produits.map((prod) => (
+                <article className="concessAvenir-item" key={prod.name}>
+                  <figure className="concessAvenir-visual">
+                    <img
+                      className="concessAvenir-image"
+                      src={prod.image}
+                      alt={prod.alt}
+                      loading="lazy"
+                      width={300}
+                      height={300}
+                    />
+                  </figure>
+                  <div className="concessAvenir-copy">
+                    <span className="concessAvenir-badge">{prod.badge}</span>
+                    <h4 className="concessAvenir-name">{prod.name}</h4>
+                    <p className="concessAvenir-description">{prod.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* ── Investissement ────────────────────────────────────── */}
       <section
         className="concessInvest-root section-padding"
@@ -221,6 +342,7 @@ function Concessionnaires() {
                 href={CONCESS_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
               >
                 Devenir concessionnaire
               </a>
@@ -230,6 +352,9 @@ function Concessionnaires() {
                 className="concessInvest-image"
                 src={CONCESS_INVEST.image.src}
                 alt={CONCESS_INVEST.image.alt}
+                loading="lazy"
+                width={560}
+                height={420}
               />
             </figure>
           </div>
@@ -258,6 +383,7 @@ function Concessionnaires() {
                   className="concessFaq-question"
                   onClick={() => toggleFaq(i)}
                   aria-expanded={openFaq === i}
+                  aria-controls={`concess-faq-answer-${i}`}
                 >
                   <span>{item.question}</span>
                   <span className="concessFaq-icon" aria-hidden="true">
@@ -266,7 +392,10 @@ function Concessionnaires() {
                     </span>
                   </span>
                 </button>
-                <div className="concessFaq-answer">
+                <div
+                  className="concessFaq-answer"
+                  id={`concess-faq-answer-${i}`}
+                >
                   <div className="concessFaq-answerInner">
                     <p>{item.answer}</p>
                   </div>
@@ -293,6 +422,7 @@ function Concessionnaires() {
               href={CONCESS_WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
             >
               Devenir concessionnaire
             </a>

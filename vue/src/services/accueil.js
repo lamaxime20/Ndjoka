@@ -1,11 +1,11 @@
 import chipsHeroImage from '../assets/images/accueil/hero/chips.webp';
-import drinkHeroImage from '../assets/images/accueil/hero/Boissons.webp';
-import chinChinHeroImage from '../assets/images/accueil/hero/chin_chin.webp';
+import epiceeHeroImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
+import kilichiHeroImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
 import aboutImage from '../assets/images/accueil/about/equipe_ndjoka.webp';
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import chinChinProductImage from '../assets/images/accueil/hero/chin_chin.webp';
+import kilichiImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import {
   CONCESSIONNAIRES,
   INVESTISSEURS,
@@ -34,21 +34,21 @@ export const HERO_CONTENT = {
       height: 780,
     },
     {
-      key: 'drink',
-      src: drinkHeroImage,
-      alt: 'Boisson Ndjoka rafraîchissante',
+      key: 'epicee',
+      src: epiceeHeroImage,
+      alt: 'Chips plantain épicées Ndjoka',
       className: 'accueilHero-media accueilHero-media--drink',
-      width: 774,
-      height: 780,
+      width: 768,
+      height: 911,
       priority: true,
     },
     {
-      key: 'chin-chin',
-      src: chinChinHeroImage,
-      alt: 'Croquettes chin chin Ndjoka',
+      key: 'kilichi',
+      src: kilichiHeroImage,
+      alt: 'Kilichi Ndjoka — viande séchée épicée',
       className: 'accueilHero-media accueilHero-media--chinChin',
-      width: 774,
-      height: 780,
+      width: 768,
+      height: 911,
     },
   ],
 };
@@ -56,7 +56,7 @@ export const HERO_CONTENT = {
 export const ABOUT_CONTENT = {
   title: 'Une marque agroalimentaire africaine en pleine expansion',
   description:
-    "Ndjoka transforme et distribue des produits africains pensés pour le marché d’aujourd’hui. Au-delà des chips de plantain, nous développons un véritable réseau de distribution avec une vision de croissance locale et internationale.",
+    "Ndjoka transforme et distribue des produits africains pensés pour le marché d'aujourd'hui. Au-delà des chips de plantain, nous développons un véritable réseau de distribution avec une vision de croissance locale et internationale.",
   cta: {
     label: 'Découvrir Ndjoka',
     path: '/contact',
@@ -83,23 +83,23 @@ export const PRODUCT_INTRO = {
 
 export const PRODUCT_ITEMS = [
   {
-    name: 'Chips Plantain Nature',
+    name: 'Chips Plantain Mûres',
     description:
       'Croustillantes et légères, parfaites pour les petites faims, les voyages, les soirées et les apéritifs.',
     badge: 'Format 250g',
     image: natureImage,
-    alt: 'Sachet Ndjoka de chips plantain nature',
+    alt: 'Sachet Ndjoka de chips plantain mûres',
     tone: 'nature',
     width: 768,
     height: 911,
   },
   {
-    name: 'Chips Plantain Sucrées',
+    name: 'Chips Plantain Non Mûres',
     description:
       'Une texture croustillante avec une saveur douce qui plaît immédiatement aux consommateurs.',
     badge: 'Format 250g',
     image: sucreeImage,
-    alt: 'Sachet Ndjoka de chips plantain sucrées',
+    alt: 'Sachet Ndjoka de chips plantain non mûres',
     tone: 'sucree',
     width: 768,
     height: 911,
@@ -116,15 +116,15 @@ export const PRODUCT_ITEMS = [
     height: 911,
   },
   {
-    name: 'Croquettes Chin Chin',
+    name: 'Kilichi Ndjoka',
     description:
-      'Des croquettes sucrées, légères et très croustillantes à découvrir bientôt.',
-    badge: 'Bientôt disponible',
-    image: chinChinProductImage,
-    alt: 'Produit Ndjoka chin chin bientôt disponible',
+      'Préparé à partir de viande soigneusement sélectionnée et assaisonnée avec un mélange d\'épices inspiré des traditions sahéliennes.',
+    badge: 'Nouveau produit',
+    image: kilichiImage,
+    alt: 'Kilichi Ndjoka — viande séchée épicée aux saveurs sahéliennes',
     tone: 'chinChin',
-    width: 774,
-    height: 780,
+    width: 768,
+    height: 911,
   },
 ];
 
@@ -143,7 +143,7 @@ export const BENEFITS_CONTENT = {
     },
     {
       title: 'Formation gratuite',
-      description: 'Profitez d’un accompagnement régulier pour mieux vendre les produits Ndjoka.',
+      description: "Profitez d'un accompagnement régulier pour mieux vendre les produits Ndjoka.",
     },
     {
       title: 'Support commercial',
@@ -185,7 +185,7 @@ export const PRESENCE_CONTENT = {
   testimonials: [
     'Les produits se vendent facilement et les clients reviennent souvent.',
     'Le packaging inspire confiance dès le premier regard.',
-    'L’accompagnement Ndjoka nous aide réellement à évoluer.',
+    "L'accompagnement Ndjoka nous aide réellement à évoluer.",
   ],
 };
 
@@ -201,7 +201,7 @@ export const INVESTOR_CONTENT = {
 
 export const FAQ_CONTENT = {
   title: 'Questions fréquentes',
-  description: 'Tout ce qu’il faut savoir avant de rejoindre Ndjoka.',
+  description: "Tout ce qu'il faut savoir avant de rejoindre Ndjoka.",
   groups: [
     {
       title: 'FAQ Concessionnaires',
@@ -242,7 +242,7 @@ export const FAQ_CONTENT = {
 };
 
 export const FINAL_CTA_CONTENT = {
-  title: 'Rejoignez dès aujourd’hui le réseau Ndjoka',
+  title: "Rejoignez dès aujourd'hui le réseau Ndjoka",
   description:
     'Développez votre activité avec des produits déjà appréciés du marché et un accompagnement pensé pour votre réussite.',
   cta: {

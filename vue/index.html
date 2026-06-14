@@ -4,41 +4,93 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/Logo_Ndjoka_avec_background.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ndjoka | Marque agroalimentaire africaine — Chips de plantain &amp; Distribution</title>
-    <meta name="description" content="Des produits agroalimentaires africains déjà appréciés du marché. Rejoignez un réseau de distribution en pleine croissance et développez votre activité avec une marque présente dans plus de 15 villes." />
+
+    <!-- Titre et description SEO -->
+    <title>Ndjoka | Produits agroalimentaires africains et réseau de distribution</title>
+    <meta name="description" content="Découvrez Ndjoka, une marque agroalimentaire africaine qui développe des produits appréciés et un réseau de distribution en pleine expansion." />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://ndjoka.vercel.app/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ndjoka" />
     <meta property="og:url" content="https://ndjoka.vercel.app/" />
-    <meta property="og:title" content="Ndjoka | Marque agroalimentaire africaine — Chips de plantain &amp; Distribution" />
-    <meta property="og:description" content="Des produits agroalimentaires africains déjà appréciés du marché. Rejoignez un réseau de distribution en pleine croissance et développez votre activité avec une marque présente dans plus de 15 villes." />
+    <meta property="og:title" content="Ndjoka | Produits agroalimentaires africains et réseau de distribution" />
+    <meta property="og:description" content="Découvrez Ndjoka, une marque agroalimentaire africaine qui développe des produits appréciés et un réseau de distribution en pleine expansion." />
     <meta property="og:image" content="https://ndjoka.vercel.app/Logo_Ndjoka_avec_background.png" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ndjoka | Marque agroalimentaire africaine — Chips de plantain &amp; Distribution" />
-    <meta name="twitter:description" content="Des produits agroalimentaires africains déjà appréciés du marché. Rejoignez un réseau de distribution en pleine croissance et développez votre activité avec une marque présente dans plus de 15 villes." />
+    <meta name="twitter:title" content="Ndjoka | Produits agroalimentaires africains et réseau de distribution" />
+    <meta name="twitter:description" content="Découvrez Ndjoka, une marque agroalimentaire africaine qui développe des produits appréciés et un réseau de distribution en pleine expansion." />
     <meta name="twitter:image" content="https://ndjoka.vercel.app/Logo_Ndjoka_avec_background.png" />
 
     <!-- Preconnect pour réduire la latence Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Poppins + Inter déplacé depuis @import CSS — découvert plus tôt par le navigateur -->
+    <!-- Poppins + Inter uniquement -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
     />
 
-    <!-- Material Symbols avec axes fixes (réduit ~3.8 MB à ~200 KB) -->
+    <!-- Material Symbols avec axes fixes -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block"
     />
 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Kaushan+Script&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Schema.org — Organisation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ndjoka",
+      "url": "https://ndjoka.vercel.app",
+      "logo": "https://ndjoka.vercel.app/Logo_Ndjoka_avec_background.png",
+      "description": "Ndjoka est une marque agroalimentaire africaine spécialisée dans la transformation et la distribution de produits alimentaires africains, notamment les chips de plantain et le Kilichi.",
+      "sameAs": [
+        "https://www.instagram.com/",
+        "https://www.facebook.com/",
+        "https://www.linkedin.com/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+237683184360",
+        "contactType": "customer service",
+        "availableLanguage": ["French"]
+      }
+    }
+    </script>
+
+    <!-- Schema.org — Marque -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Brand",
+      "name": "Ndjoka",
+      "description": "Marque agroalimentaire africaine spécialisée dans la distribution et la commercialisation de produits alimentaires.",
+      "logo": "https://ndjoka.vercel.app/Logo_Ndjoka_avec_background.png",
+      "url": "https://ndjoka.vercel.app"
+    }
+    </script>
+
+    <!-- Schema.org — Site Web -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ndjoka",
+      "url": "https://ndjoka.vercel.app",
+      "description": "Site officiel de Ndjoka, marque agroalimentaire africaine en croissance.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ndjoka.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

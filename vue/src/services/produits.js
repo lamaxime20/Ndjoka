@@ -1,7 +1,7 @@
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import chinChinImage from '../assets/images/Produits/chins_chins.webp';
+import kilichiImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import heroGroupImage from '../assets/images/Produits/Produits_Ndjoka.webp';
 import { CONCESSIONNAIRES, CONTACT } from './navigation.js';
 
@@ -22,7 +22,7 @@ export const PRODUITS_ITEMS = [
   {
     id: 'nature',
     saveur: 'Nature',
-    name: 'Chips Plantain Nature',
+    name: 'Chips Plantain Mûres',
     description:
       'Croustillantes et légères, parfaites pour les petites faims, les voyages, les soirées et les apéritifs.',
     format: '250g',
@@ -34,20 +34,20 @@ export const PRODUITS_ITEMS = [
   },
   {
     id: 'sucree',
-    saveur: 'Sucrée',
-    name: 'Chips Plantain Sucrées',
+    saveur: 'Non mûres',
+    name: 'Chips Plantain Non Mûres',
     description:
       'Une texture légère et croustillante avec une saveur douce qui plaît immédiatement.',
     format: '250g',
     prix: '1 500 FCFA',
     benefice: 'Une saveur réconfortante qui attire facilement les consommateurs.',
     image: sucreeImage,
-    alt: 'Sachet de chips plantain sucrées Ndjoka',
+    alt: 'Sachet de chips plantain non mûres Ndjoka',
     cta: { label: 'Devenir concessionnaire', path: `/${CONCESSIONNAIRES}` },
   },
   {
     id: 'epicee',
-    saveur: 'Épicée',
+    saveur: 'Épicées',
     name: 'Chips Plantain Épicées',
     description:
       'Une saveur plus intense pour les amateurs de snacks relevés et savoureux.',
@@ -60,19 +60,18 @@ export const PRODUITS_ITEMS = [
     glow: true,
   },
   {
-    id: 'chinChin',
-    saveur: 'Sucrée',
-    name: 'Croquettes Chin Chin',
+    id: 'kilichi',
+    saveur: 'Viande séchée',
+    name: 'Kilichi Ndjoka',
     description:
-      'Des croquettes rondes, croustillantes et gourmandes pensées pour les petites faims et les moments de partage.',
-    format: '75g',
-    prix: '500 FCFA',
-    benefice: "Un produit gourmand qui donne envie d'en reprendre encore.",
-    badge: 'Bientôt disponible',
-    image: chinChinImage,
-    alt: 'Croquettes Chin Chin Ndjoka',
-    cta: { label: 'Devenir concessionnaire', path: `/${CONCESSIONNAIRES}` },
-    warm: true,
+      'Préparé à partir de viande soigneusement sélectionnée et assaisonnée avec un mélange d\'épices inspiré des traditions sahéliennes, le Kilichi Ndjoka offre une expérience riche en goût, intense et authentique.',
+    format: 'Nouveau produit',
+    prix: null,
+    benefice: 'La puissance des saveurs africaines dans un format pratique et gourmand.',
+    badge: 'Nouveau produit',
+    image: kilichiImage,
+    alt: 'Kilichi Ndjoka — viande séchée épicée aux saveurs sahéliennes',
+    cta: { label: 'Découvrir le produit', path: '#commande' },
   },
 ];
 
@@ -138,10 +137,10 @@ export const PRODUITS_COMMANDE = {
   cta: 'Commander maintenant',
   notice: 'Notre équipe vous recontacte rapidement pour confirmer votre commande.',
   produitsOptions: [
-    'Chips Plantain Nature',
-    'Chips Plantain Sucrées',
+    'Chips Plantain Mûres',
+    'Chips Plantain Non Mûres',
     'Chips Plantain Épicées',
-    'Croquettes Chin Chin',
+    'Kilichi Ndjoka',
     'Mix — plusieurs produits',
   ],
 };

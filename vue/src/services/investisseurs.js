@@ -2,7 +2,7 @@ import heroImage from '../assets/images/investisseurs/hero.webp';
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import chinChinImage from '../assets/images/Produits/chins_chins.webp';
+import kilichiImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 
 export const INVEST_WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +
@@ -86,17 +86,17 @@ export const INVEST_PRODUITS = {
   description: "Une entreprise réelle, des produits réels et un réseau déjà actif.",
   items: [
     {
-      name: 'Chips Plantain Nature',
+      name: 'Chips Plantain Mûres',
       description:
         "Des chips croustillantes et légères déjà appréciées pour les voyages, apéritifs et petites faims.",
       image: natureImage,
-      alt: 'Chips Plantain Nature Ndjoka',
+      alt: 'Chips Plantain Mûres Ndjoka',
     },
     {
-      name: 'Chips Plantain Sucrées',
+      name: 'Chips Plantain Non Mûres',
       description: "Une saveur douce et croustillante pensée pour une consommation régulière.",
       image: sucreeImage,
-      alt: 'Chips Plantain Sucrées Ndjoka',
+      alt: 'Chips Plantain Non Mûres Ndjoka',
     },
     {
       name: 'Chips Plantain Épicées',
@@ -106,11 +106,12 @@ export const INVEST_PRODUITS = {
       alt: 'Chips Plantain Épicées Ndjoka',
     },
     {
-      name: 'Croquettes Chin Chin',
+      name: 'Kilichi Ndjoka',
       description:
-        "Une nouvelle gamme prévue pour accompagner l'expansion future des produits Ndjoka.",
-      image: chinChinImage,
-      alt: 'Croquettes Chin Chin Ndjoka',
+        "Viande séchée assaisonnée aux épices sahéliennes — une nouvelle référence dans la gamme Ndjoka.",
+      image: kilichiImage,
+      alt: 'Kilichi Ndjoka — viande séchée épicée',
+      badge: 'Nouveau produit',
     },
   ],
 };

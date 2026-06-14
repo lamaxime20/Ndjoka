@@ -3,7 +3,9 @@ import pointDeVentesImage from '../assets/images/concessionnaires/point_de_vente
 import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
 import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import chinChinImage from '../assets/images/Produits/chins_chins.webp';
+import kilichiImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
+import chinChinPlaceholder from '../assets/images/accueil/produits/ndjoka_pimente.webp';
+import oseillePlaceholder from '../assets/images/accueil/produits/ndjoka_sucre.webp';
 
 const WHATSAPP_URL =
   'https://wa.me/237683184360?text=' +
@@ -59,19 +61,19 @@ export const CONCESS_AVANTAGES = [
 
 export const CONCESS_PRODUITS = [
   {
-    name: 'Chips Plantain Nature',
+    name: 'Chips Plantain Mûres',
     description:
       'Croustillantes et légères, parfaites pour les petites faims, les voyages, les soirées et les apéritifs.',
     format: 'Format 250g',
     image: natureImage,
-    alt: 'Sachet de chips plantain nature Ndjoka',
+    alt: 'Sachet de chips plantain mûres Ndjoka',
   },
   {
-    name: 'Chips Plantain Sucrées',
+    name: 'Chips Plantain Non Mûres',
     description: 'Une saveur douce et croustillante qui plaît immédiatement aux consommateurs.',
     format: 'Format 250g',
     image: sucreeImage,
-    alt: 'Sachet de chips plantain sucrées Ndjoka',
+    alt: 'Sachet de chips plantain non mûres Ndjoka',
   },
   {
     name: 'Chips Plantain Épicées',
@@ -81,12 +83,13 @@ export const CONCESS_PRODUITS = [
     alt: 'Sachet de chips plantain épicées Ndjoka',
   },
   {
-    name: 'Croquettes Chin Chin',
-    description: 'Des croquettes sucrées, légères et très croustillantes à découvrir bientôt.',
-    format: 'Bientôt disponible',
-    badge: 'Bientôt disponible',
-    image: chinChinImage,
-    alt: 'Croquettes Chin Chin Ndjoka',
+    name: 'Kilichi Ndjoka',
+    description:
+      'Préparé à partir de viande soigneusement sélectionnée et assaisonnée avec un mélange d\'épices inspiré des traditions sahéliennes.',
+    format: 'Nouveau produit',
+    badge: 'Nouveau produit',
+    image: kilichiImage,
+    alt: 'Kilichi Ndjoka — viande séchée épicée aux saveurs sahéliennes',
   },
 ];
 
@@ -110,6 +113,62 @@ export const CONCESS_TEMOIGNAGES = [
   { text: 'Les consommateurs reviennent souvent après le premier achat.' },
   { text: "L'accompagnement Ndjoka aide vraiment à mieux vendre." },
 ];
+
+export const CONCESS_VISION = {
+  badge: 'Notre vision',
+  title: "Construire l'une des références agroalimentaires africaines de demain",
+  paragraphes: [
+    'Ndjoka poursuit une ambition claire : valoriser les produits africains à travers une distribution moderne, accessible et durable.',
+    "Aujourd'hui, la marque est déjà présente dans plusieurs villes et pays grâce à son réseau de distributeurs, concessionnaires et partenaires.",
+    "Demain, cette dynamique se poursuivra avec l'élargissement de la gamme de produits, le renforcement du réseau de distribution et l'ouverture de nouvelles opportunités commerciales à travers l'Afrique et au-delà.",
+  ],
+  blocs: [
+    {
+      icon: 'hub',
+      title: 'Développement du réseau',
+      text: 'Renforcer la présence de Ndjoka dans de nouvelles villes et de nouveaux territoires.',
+    },
+    {
+      icon: 'inventory_2',
+      title: 'Diversification des produits',
+      text: 'Proposer progressivement de nouvelles références adaptées aux habitudes de consommation africaines.',
+    },
+    {
+      icon: 'flight_takeoff',
+      title: 'Expansion internationale',
+      text: 'Accompagner la croissance du réseau dans plusieurs pays déjà représentés et ouvrir de nouveaux marchés.',
+    },
+    {
+      icon: 'trending_up',
+      title: 'Opportunités économiques',
+      text: "Créer davantage d'opportunités pour les concessionnaires, distributeurs et partenaires.",
+    },
+  ],
+};
+
+export const CONCESS_AVENIR = {
+  title: "Les prochaines étapes de l'univers Ndjoka",
+  text: "L'innovation fait partie de la croissance de Ndjoka. Plusieurs produits sont actuellement en développement afin de répondre à de nouveaux besoins et d'accompagner l'expansion de la marque.",
+  subtitle: 'Produits en développement',
+  produits: [
+    {
+      name: 'Chin Chin Ndjoka',
+      description:
+        'Une gamme de croquettes sucrées et croustillantes actuellement en développement pour enrichir la gamme.',
+      badge: 'Prochainement',
+      image: chinChinPlaceholder,
+      alt: 'Chin Chin Ndjoka — produit en développement',
+    },
+    {
+      name: "Jus d'oseille Ndjoka",
+      description:
+        'Une boisson africaine naturelle et rafraîchissante en cours de développement pour accompagner nos snacks.',
+      badge: 'Prochainement',
+      image: oseillePlaceholder,
+      alt: "Jus d'oseille Ndjoka — produit en développement",
+    },
+  ],
+};
 
 export const CONCESS_INVEST = {
   title: 'Commencez votre activité avec Ndjoka à partir de 25.000 FCFA',

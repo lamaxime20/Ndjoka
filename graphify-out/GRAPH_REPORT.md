@@ -1,12 +1,12 @@
 # Graph Report - D:\Desktop\Lamaxime's Projects\Ndjoka  (2026-06-14)
 
 ## Corpus Check
-- 20 files · ~3,369,901 words
+- 20 files · ~3,371,392 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 37 nodes · 21 edges · 18 communities detected
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
+- 39 nodes · 25 edges · 18 communities detected
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -30,12 +30,14 @@
 - [[_COMMUNITY_Community 17|Community 17]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `applySeo()` - 3 edges
-2. `useCountUp()` - 3 edges
-3. `Concessionnaires()` - 2 edges
-4. `Investisseurs()` - 2 edges
-5. `setMeta()` - 2 edges
-6. `setCanonical()` - 2 edges
+1. `applySeo()` - 4 edges
+2. `applySchemaPage()` - 3 edges
+3. `useCountUp()` - 3 edges
+4. `Concessionnaires()` - 2 edges
+5. `Investisseurs()` - 2 edges
+6. `setMeta()` - 2 edges
+7. `setCanonical()` - 2 edges
+8. `setJsonLd()` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Concessionnaires()` --calls--> `useCountUp()`  [INFERRED]
@@ -46,12 +48,12 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.33
-Nodes (3): Concessionnaires(), Investisseurs(), useCountUp()
+Cohesion: 0.6
+Nodes (5): applySchemaPage(), applySeo(), setCanonical(), setJsonLd(), setMeta()
 
 ### Community 1 - "Community 1"
-Cohesion: 0.83
-Nodes (3): applySeo(), setCanonical(), setMeta()
+Cohesion: 0.33
+Nodes (3): Concessionnaires(), Investisseurs(), useCountUp()
 
 ### Community 2 - "Community 2"
 Cohesion: 0.67

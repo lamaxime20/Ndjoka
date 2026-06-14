@@ -110,7 +110,9 @@ function Produits() {
                   <p className="produitsItem-description">{item.description}</p>
                   <div className="produitsItem-meta">
                     <span className="produitsItem-format">{item.format}</span>
-                    <span className="produitsItem-prix">{item.prix}</span>
+                    {item.prix && (
+                      <span className="produitsItem-prix">{item.prix}</span>
+                    )}
                   </div>
                   <p className="produitsItem-benefice">{item.benefice}</p>
                   <Link className="produitsItem-cta" to={item.cta.path}>

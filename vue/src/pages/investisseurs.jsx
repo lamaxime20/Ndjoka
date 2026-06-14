@@ -197,8 +197,18 @@ function Investisseurs() {
                 key={prod.name}
               >
                 <figure className="investProduit-visual">
-                  <img className="investProduit-img" src={prod.image} alt={prod.alt} />
+                  <img
+                    className="investProduit-img"
+                    src={prod.image}
+                    alt={prod.alt}
+                    loading="lazy"
+                    width={300}
+                    height={300}
+                  />
                 </figure>
+                {prod.badge && (
+                  <span className="investProduit-badge">{prod.badge}</span>
+                )}
                 <h3 className="investProduit-name">{prod.name}</h3>
                 <p className="investProduit-desc">{prod.description}</p>
               </article>
