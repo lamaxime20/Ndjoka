@@ -284,3 +284,276 @@ La modularité est une règle cardinale.
 - La logique réutilisable n'est pas enfouie dans le JSX.
 - Les appels API sont encapsulés.
 - Le code reste modulaire.
+- Chaque `<img>` possède `width` et `height`.
+- L'image LCP (hero principal) porte `fetchPriority="high"`.
+- Les images hors viewport portent `loading="lazy"`.
+- Aucune police n'est chargée via `@import url()` dans le CSS.
+- Les pages sont chargées via `React.lazy()` + `Suspense`.
+- Le `<Suspense>` n'a pas `fallback={null}` : un placeholder avec `min-height` est fourni.
+
+---
+
+## 23. Performances — CLS (Cumulative Layout Shift)
+
+Le CLS doit rester sous 0.1. Il est causé par des éléments qui changent de taille ou de position après le premier rendu.
+
+### Images
+
+Toute balise `<img>` doit posséder `width` et `height` correspondant aux dimensions intrinsèques de l'image.
+
+```jsx
+<img src={image} alt="..." width={768} height={911} />
+```
+
+Ces valeurs permettent au navigateur de réserver l'espace avant que l'image soit chargée. Sans elles, le contenu se déplace au chargement.
+
+Les données `width` et `height` doivent être stockées dans le fichier de service correspondant (exemple : `accueil.js`), pas codées en dur dans le JSX.
+
+---
+
+### Suspense fallback
+
+Ne jamais mettre `fallback={null}` dans un `<Suspense>` qui encapsule une page entière.
+
+Mauvais :
+```jsx
+<Suspense fallback={null}>
+  <PageContent onglet={onglet} />
+</Suspense>
+```
+
+Bon :
+```jsx
+<Suspense fallback={<div className="principale-suspenseFallback" />}>
+  <PageContent onglet={onglet} />
+</Suspense>
+```
+
+Le placeholder doit avoir une `min-height` équivalente à la hauteur de l'écran :
+
+```css
+.principale-suspenseFallback {
+  min-height: 100svh;
+}
+```
+
+Sans cela, le footer remonte puis redescend au chargement de la page, provoquant un CLS massif.
+
+---
+
+### Animations
+
+Ne jamais utiliser `filter: blur()` dans une animation d'entrée. Ce filtre déclenche un recalcul de layout à chaque frame et provoque du CLS.
+
+Mauvais :
+```css
+@keyframes revealSoft {
+  from { opacity: 0; filter: blur(12px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+```
+
+Bon :
+```css
+@keyframes revealSoft {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+```
+
+`transform` et `opacity` sont composités par le GPU et ne modifient pas le flux du document.
+
+Ajouter `will-change: transform, opacity` sur les éléments qui portent ces animations d'entrée.
+
+---
+
+## 24. Performances — Polices
+
+### Ne jamais charger les polices via @import dans le CSS
+
+Le `@import url()` dans un fichier CSS est découvert tardivement par le navigateur et bloque le rendu.
+
+Mauvais (dans `index.css`) :
+```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins...');
+```
+
+### Ne pas dépendre de Google Fonts en production
+
+Les requêtes vers `fonts.googleapis.com` et `fonts.gstatic.com` ajoutent de la latence réseau et peuvent bloquer le rendu.
+
+Utiliser les packages npm `@fontsource` à la place :
+
+```bash
+npm install @fontsource/poppins @fontsource/inter
+```
+
+Importer uniquement les graisses réellement utilisées dans `main.jsx` :
+
+```js
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+```
+
+Ces imports sont bundlés par Vite et servis depuis le même domaine sans requête externe.
+
+---
+
+### Police de secours calibrée pour éviter le CLS
+
+Le navigateur affiche d'abord la police système, puis la remplace par la police finale. Si les métriques diffèrent, le texte se redimensionne et provoque un CLS.
+
+Déclarer une police de secours avec des métriques calquées sur la police cible :
+
+```css
+@font-face {
+  font-family: 'Poppins-Fallback';
+  src: local('Arial'), local('Helvetica Neue');
+  ascent-override: 93%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 112%;
+}
+
+@font-face {
+  font-family: 'Inter-Fallback';
+  src: local('Arial'), local('Helvetica Neue');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+```
+
+Puis référencer cette police de secours dans les variables CSS :
+
+```css
+--font-heading: 'Poppins', 'Poppins-Fallback', sans-serif;
+--font-body: 'Inter', 'Inter-Fallback', sans-serif;
+```
+
+---
+
+### Material Symbols : axes fixes obligatoires
+
+Material Symbols avec des axes variables charge jusqu'à 3.8 MB.
+
+Mauvais :
+```html
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+```
+
+Bon (axes fixes = environ 200 KB) :
+```html
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" />
+```
+
+Ou via le package npm `material-symbols` pour éliminer la dépendance externe :
+
+```bash
+npm install material-symbols
+```
+
+```js
+import 'material-symbols/outlined.css';
+```
+
+---
+
+## 25. Performances — JavaScript et bundle
+
+### Lazy loading des pages avec React.lazy
+
+Toutes les pages du site doivent être chargées avec `React.lazy()`. Cela découpe le bundle et évite de charger toutes les pages au premier rendu.
+
+Mauvais :
+```js
+import Accueil from './accueil.jsx';
+import Produits from './produits.jsx';
+```
+
+Bon :
+```js
+const Accueil = lazy(() => import('./accueil.jsx'));
+const Produits = lazy(() => import('./produits.jsx'));
+```
+
+Encapsuler le rendu conditionnel dans un composant dédié (`PageContent`) et l'entourer d'un `<Suspense>` avec un placeholder dimensionné.
+
+---
+
+### Découpage du bundle Vite avec manualChunks
+
+Les bibliothèques lourdes doivent être isolées dans des chunks dédiés pour ne pas bloquer le chargement de React.
+
+Dans `vite.config.js` :
+
+```js
+build: {
+  rollupOptions: {
+    output: {
+      manualChunks(id) {
+        if (id.includes('node_modules')) {
+          if (id.includes('/d3/') || id.includes('d3-') || id.includes('topojson-client')) {
+            return 'd3-vendor';
+          }
+          if (id.includes('react-dom') || id.includes('/react/')) {
+            return 'react-vendor';
+          }
+          if (id.includes('react-router-dom') || id.includes('react-router/')) {
+            return 'router';
+          }
+          return 'vendor';
+        }
+      },
+    },
+  },
+}
+```
+
+---
+
+### Priorité de chargement des images
+
+L'image principale de chaque page (candidate LCP) doit être marquée avec `fetchPriority="high"` pour que le navigateur la charge en priorité.
+
+```jsx
+<img
+  src={hero.src}
+  alt={hero.alt}
+  width={hero.width}
+  height={hero.height}
+  fetchPriority="high"
+/>
+```
+
+Toutes les images situées hors du viewport initial doivent recevoir `loading="lazy"` :
+
+```jsx
+<img
+  src={item.image}
+  alt={item.alt}
+  width={item.width}
+  height={item.height}
+  loading="lazy"
+/>
+```
+
+Ne pas mettre `loading="lazy"` sur une image LCP : cela retarderait son chargement.
+
+---
+
+## 26. Workflow recommandé pour une nouvelle image dans le projet
+
+1. Connaître les dimensions intrinsèques de l'image (largeur × hauteur en pixels).
+2. Stocker ces dimensions dans le fichier de service correspondant (`width`, `height`).
+3. Passer `width` et `height` à chaque balise `<img>` via les données du service.
+4. Ajouter `fetchPriority="high"` si l'image est la principale du viewport initial (LCP).
+5. Ajouter `loading="lazy"` si l'image est hors viewport au premier rendu.
+6. Ne jamais laisser une `<img>` sans `width` et `height`.
