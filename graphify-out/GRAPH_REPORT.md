@@ -1,13 +1,18 @@
-# Graph Report - D:\Desktop\Lamaxime's Projects\Ndjoka  (2026-06-14)
+# Graph Report - Ndjoka  (2026-09-08)
 
 ## Corpus Check
-- 23 files · ~3,392,815 words
+- 23 files · ~16,094 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 47 nodes · 31 edges · 20 communities detected
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
+- 111 nodes · 183 edges · 10 communities
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `e2686e91`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
@@ -18,152 +23,78 @@
 - [[_COMMUNITY_Community 5|Community 5]]
 - [[_COMMUNITY_Community 6|Community 6]]
 - [[_COMMUNITY_Community 7|Community 7]]
-- [[_COMMUNITY_Community 8|Community 8]]
-- [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 10|Community 10]]
-- [[_COMMUNITY_Community 11|Community 11]]
-- [[_COMMUNITY_Community 12|Community 12]]
-- [[_COMMUNITY_Community 13|Community 13]]
-- [[_COMMUNITY_Community 14|Community 14]]
-- [[_COMMUNITY_Community 15|Community 15]]
-- [[_COMMUNITY_Community 16|Community 16]]
-- [[_COMMUNITY_Community 17|Community 17]]
-- [[_COMMUNITY_Community 18|Community 18]]
-- [[_COMMUNITY_Community 19|Community 19]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `applySeo()` - 4 edges
-2. `useCountUp()` - 4 edges
-3. `applySchemaPage()` - 3 edges
-4. `Concessionnaires()` - 2 edges
-5. `Investisseurs()` - 2 edges
-6. `PointDistributions()` - 2 edges
-7. `setMeta()` - 2 edges
-8. `setCanonical()` - 2 edges
-9. `setJsonLd()` - 2 edges
+1. `applySeo()` - 7 edges
+2. `useCountUp()` - 7 edges
+3. `PointDistributions()` - 3 edges
+4. `Principale()` - 3 edges
+5. `NAV_ITEMS` - 3 edges
+6. `searchDistributeurs()` - 3 edges
+7. `buildCommandeWhatsAppUrl()` - 3 edges
+8. `setJsonLd()` - 3 edges
+9. `applySchemaPage()` - 3 edges
+10. `App()` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Concessionnaires()` --calls--> `useCountUp()`  [INFERRED]
-  D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\pages\concessionnaires.jsx → D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\utils\useCountUp.js
-- `Investisseurs()` --calls--> `useCountUp()`  [INFERRED]
-  D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\pages\investisseurs.jsx → D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\utils\useCountUp.js
-- `PointDistributions()` --calls--> `useCountUp()`  [INFERRED]
-  D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\pages\pointDistributions.jsx → D:\Desktop\Lamaxime's Projects\Ndjoka\vue\src\utils\useCountUp.js
+- `Concessionnaires()` --calls--> `useCountUp()`  [EXTRACTED]
+  vue/src/pages/concessionnaires.jsx → vue/src/utils/useCountUp.js
+- `Investisseurs()` --calls--> `useCountUp()`  [EXTRACTED]
+  vue/src/pages/investisseurs.jsx → vue/src/utils/useCountUp.js
+- `PointDistributions()` --calls--> `useCountUp()`  [EXTRACTED]
+  vue/src/pages/pointDistributions.jsx → vue/src/utils/useCountUp.js
+- `PointDistributions()` --calls--> `searchDistributeurs()`  [EXTRACTED]
+  vue/src/pages/pointDistributions.jsx → vue/src/services/pointDistributions.js
+- `Principale()` --calls--> `applySeo()`  [EXTRACTED]
+  vue/src/pages/principale.jsx → vue/src/services/seo.js
 
-## Communities
+## Import Cycles
+- None detected.
+
+## Communities (10 total, 0 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.25
-Nodes (4): Concessionnaires(), Investisseurs(), PointDistributions(), useCountUp()
+Cohesion: 0.17
+Nodes (12): Footer(), NavBar(), Accueil, APropos, Concessionnaires, Investisseurs, PointDistributions, Produits (+4 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.6
-Nodes (5): applySchemaPage(), applySeo(), setCanonical(), setJsonLd(), setMeta()
+Cohesion: 0.17
+Nodes (14): DISTRIBUTORS, NdjokaExpansionMap(), STATS, PointDistributions(), MAP_CONTINENTS, PD_AVANTAGES, PD_FINAL, PD_HERO (+6 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.25
+Nodes (11): Concessionnaires(), Investisseurs(), INVEST_FAQ, INVEST_FINAL, INVEST_HERO, INVEST_OPPORTUNITE, INVEST_PROCESS, INVEST_PRODUITS (+3 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.29
+Nodes (11): CONCESS_AVANTAGES, CONCESS_AVENIR, CONCESS_FAQ, CONCESS_FINAL, CONCESS_HERO, CONCESS_INVEST, CONCESS_PRODUITS, CONCESS_STAT_COUNT (+3 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.30
+Nodes (9): ABOUT_CONTENT, BENEFITS_CONTENT, FAQ_CONTENT, FINAL_CTA_CONTENT, HERO_CONTENT, INVESTOR_CONTENT, PRESENCE_CONTENT, PRODUCT_INTRO (+1 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.67
-Nodes (0): 
+Cohesion: 0.26
+Nodes (8): Principale(), applySchemaPage(), applySeo(), SEO_CONFIG, setCanonical(), setJsonLd(), setMeta(), App()
 
 ### Community 6 - "Community 6"
-Cohesion: 1.0
-Nodes (0): 
+Cohesion: 0.33
+Nodes (9): FORM_INITIAL, Produits(), buildCommandeWhatsAppUrl(), PRODUITS_COMMANDE, PRODUITS_FINAL, PRODUITS_HERO, PRODUITS_ITEMS, PRODUITS_QUALITE (+1 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 8 - "Community 8"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 9 - "Community 9"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 10 - "Community 10"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 11 - "Community 11"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 12 - "Community 12"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 13 - "Community 13"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 14 - "Community 14"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 15 - "Community 15"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 16 - "Community 16"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 17 - "Community 17"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 18 - "Community 18"
-Cohesion: 1.0
-Nodes (0): 
-
-### Community 19 - "Community 19"
-Cohesion: 1.0
-Nodes (0): 
+Cohesion: 0.36
+Nodes (7): APROPOS_CONTACT, APROPOS_DEFINITION, APROPOS_EQUIPE, APROPOS_EVOLUTION, APROPOS_HERO, APROPOS_NOM, APROPOS_PRESENCE
 
 ## Knowledge Gaps
-- **Thin community `Community 6`** (2 nodes): `vite.config.js`, `manualChunks()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 7`** (2 nodes): `navBar.jsx`, `NavBar()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 8`** (2 nodes): `Accueil()`, `accueil.jsx`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 9`** (2 nodes): `APropos()`, `apropos.jsx`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (2 nodes): `produits.jsx`, `Produits()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (2 nodes): `pointDistributions.js`, `searchDistributeurs()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 12`** (2 nodes): `produits.js`, `buildCommandeWhatsAppUrl()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 13`** (1 nodes): `eslint.config.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (1 nodes): `main.jsx`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (1 nodes): `accueil.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (1 nodes): `apropos.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (1 nodes): `concessionnaires.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (1 nodes): `investisseurs.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (1 nodes): `navigation.js`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **13 isolated node(s):** `DISTRIBUTORS`, `STATS`, `Accueil`, `Produits`, `Concessionnaires` (+8 more)
+  These have ≤1 connection - possible missing edges or undocumented components.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Are the 3 inferred relationships involving `useCountUp()` (e.g. with `Concessionnaires()` and `Investisseurs()`) actually correct?**
-  _`useCountUp()` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `useCountUp()` connect `Community 2` to `Community 1`, `Community 3`?**
+  _High betweenness centrality (0.058) - this node is a cross-community bridge._
+- **Why does `applySeo()` connect `Community 5` to `Community 0`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **What connects `DISTRIBUTORS`, `STATS`, `Accueil` to the rest of the system?**
+  _13 weakly-connected nodes found - possible documentation gaps or missing edges._
