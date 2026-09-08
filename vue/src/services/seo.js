@@ -84,6 +84,16 @@ function setJsonLd(id, data) {
   el.textContent = JSON.stringify(data);
 }
 
+function removeJsonLd(id) {
+  const el = document.querySelector(`script[data-schema="${id}"]`);
+  if (el) el.remove();
+}
+
+// Schémas propres à une seule page : retirés à chaque navigation pour éviter
+// qu'un schéma orphelin (ex. faq-home) ne reste dans le <head> après avoir
+// quitté la page qui l'a créé (SPA — le <head> n'est jamais réinitialisé).
+const PAGE_SPECIFIC_SCHEMA_IDS = ['products', 'faq-concess', 'faq-invest', 'faq-home'];
+
 export function applySeo(key) {
   const config = SEO_CONFIG[key] ?? SEO_CONFIG.home;
 
@@ -121,10 +131,17 @@ export function applySeo(key) {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+237683184360',
+      telephone: '+237656188416',
       contactType: 'customer service',
       availableLanguage: ['French'],
     },
+    award: [
+      'Prix « Meilleure Marque Régionale » — OAPI (2023)',
+      'Prix de l\'Innovation « Made in Cameroon » (2023)',
+      'Certification ANOR',
+      'Enregistrement et protection de marque OAPI',
+      "Lauréat du programme d'accompagnement de l'AFD",
+    ],
   });
 
   applySchemaPage(key, config);
@@ -140,6 +157,10 @@ function applySchemaPage(key, config) {
     isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
   });
 
+  // Retire les schémas propres aux autres pages avant de poser celui de la
+  // page courante, pour ne jamais laisser un FAQPage/ItemList orphelin.
+  PAGE_SPECIFIC_SCHEMA_IDS.forEach(removeJsonLd);
+
   if (key === 'produits') {
     setJsonLd('products', {
       '@context': 'https://schema.org',
@@ -154,7 +175,10 @@ function applySchemaPage(key, config) {
             name: 'Chips Plantain Mûres Ndjoka',
             description: "Chips de plantain mûres, croustillantes et légères. Parfaites pour les petites faims, voyages et apéritifs.",
             brand: { '@type': 'Brand', name: 'Ndjoka' },
-            offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '1500' },
+            offers: [
+              { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '500', name: '100g' },
+              { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '2500', name: '250g' },
+            ],
           },
         },
         {
@@ -165,7 +189,10 @@ function applySchemaPage(key, config) {
             name: 'Chips Plantain Non Mûres Ndjoka',
             description: "Chips de plantain non mûres, saveur douce et croustillante appréciée des consommateurs.",
             brand: { '@type': 'Brand', name: 'Ndjoka' },
-            offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '1500' },
+            offers: [
+              { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '500', name: '100g' },
+              { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '2500', name: '250g' },
+            ],
           },
         },
         {
@@ -176,7 +203,10 @@ function applySchemaPage(key, config) {
             name: 'Chips Plantain Épicées Ndjoka',
             description: "Chips de plantain épicées, saveur intense pour les amateurs de snacks relevés.",
             brand: { '@type': 'Brand', name: 'Ndjoka' },
-            offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '2000' },
+            offers: [
+              { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '500', name: '100g' },
+              { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '3000', name: '250g' },
+            ],
           },
         },
         {
@@ -187,7 +217,7 @@ function applySchemaPage(key, config) {
             name: 'Kilichi Ndjoka',
             description: "Préparé à partir de viande soigneusement sélectionnée et assaisonnée avec un mélange d'épices inspiré des traditions sahéliennes, le Kilichi Ndjoka offre une expérience riche en goût, intense et authentique.",
             brand: { '@type': 'Brand', name: 'Ndjoka' },
-            offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' },
+            offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', priceCurrency: 'XAF', price: '1000' },
           },
         },
       ],
@@ -207,7 +237,7 @@ function applySchemaPage(key, config) {
         {
           '@type': 'Question',
           name: 'Quel est le montant pour commencer ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Vous pouvez rejoindre le réseau Ndjoka à partir de 25.000 FCFA.' },
+          acceptedAnswer: { '@type': 'Answer', text: "Vous pouvez démarrer dès 25 000 FCFA avec le palier d'essai, rejoindre le réseau comme distributeur à partir de 500 paquets, ou devenir concessionnaire à partir de 1 000 paquets." },
         },
         {
           '@type': 'Question',
@@ -221,8 +251,8 @@ function applySchemaPage(key, config) {
         },
         {
           '@type': 'Question',
-          name: 'Quels avantages reçoit un concessionnaire ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Stock à prix réduit, visibilité, formation, branding et accompagnement commercial.' },
+          name: 'Quelle est la différence entre distributeur et concessionnaire ?',
+          acceptedAnswer: { '@type': 'Answer', text: "Le distributeur est le premier niveau du réseau (500 paquets minimum). Le concessionnaire est le palier supérieur (1 000 paquets minimum) : il bénéficie de tous les avantages du distributeur, plus l'exclusivité sur une ville, un prix usine plus avantageux et la gestion du réseau de distributeurs de sa ville." },
         },
         {
           '@type': 'Question',

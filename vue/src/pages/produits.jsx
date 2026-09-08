@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import {
   PRODUITS_HERO,
   PRODUITS_ITEMS,
+  PRODUITS_AVENIR,
   PRODUITS_QUALITE,
   PRODUITS_RESEAU,
   PRODUITS_COMMANDE,
   PRODUITS_FINAL,
   buildCommandeWhatsAppUrl,
 } from '../services/produits.js';
+import { formatPrixFCFA } from '../services/catalogueProduits.js';
 import '../assets/styles/pages/produits.css';
 
 const FORM_INITIAL = {
@@ -108,16 +110,61 @@ function Produits() {
                   </div>
                   <h3 className="produitsItem-name">{item.name}</h3>
                   <p className="produitsItem-description">{item.description}</p>
-                  <div className="produitsItem-meta">
-                    <span className="produitsItem-format">{item.format}</span>
-                    {item.prix && (
-                      <span className="produitsItem-prix">{item.prix}</span>
-                    )}
+                  <div className="produitsItem-formats">
+                    {item.formats.map((f) => (
+                      <span className="produitsItem-formatChip" key={f.poids ?? 'unique'}>
+                        {f.poids && <span className="produitsItem-formatWeight">{f.poids}</span>}
+                        <span className="produitsItem-formatPrice">{formatPrixFCFA(f.prix)}</span>
+                      </span>
+                    ))}
                   </div>
                   <p className="produitsItem-benefice">{item.benefice}</p>
                   <Link className="produitsItem-cta" to={item.cta.path}>
                     {item.cta.label}
                   </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="produitsAvenir-root section-padding"
+        aria-labelledby="produits-avenir-title"
+      >
+        <div className="produitsAvenir-shell shell">
+          <header className="produitsAvenir-heading">
+            <p className="produitsSection-eyebrow">{PRODUITS_AVENIR.eyebrow}</p>
+            <h2 className="produitsSection-title" id="produits-avenir-title">
+              {PRODUITS_AVENIR.title}
+            </h2>
+            <p className="produitsSection-description">{PRODUITS_AVENIR.description}</p>
+          </header>
+
+          <div className="produitsAvenir-grid">
+            {PRODUITS_AVENIR.produits.map((prod) => (
+              <article className="produitsAvenir-item" key={prod.name}>
+                <figure className="produitsAvenir-visual">
+                  {prod.image ? (
+                    <img
+                      className="produitsAvenir-image"
+                      src={prod.image}
+                      alt={prod.alt}
+                      loading="lazy"
+                      width={300}
+                      height={300}
+                    />
+                  ) : (
+                    <span className="produitsAvenir-placeholder" aria-hidden="true">
+                      <span className="material-symbols-outlined">{prod.icon || 'inventory_2'}</span>
+                    </span>
+                  )}
+                </figure>
+                <div className="produitsAvenir-copy">
+                  <span className="produitsAvenir-badge">{prod.badge}</span>
+                  <h3 className="produitsAvenir-name">{prod.name}</h3>
+                  <p className="produitsAvenir-description">{prod.description}</p>
                 </div>
               </article>
             ))}

@@ -2,18 +2,19 @@ import { useState, useEffect, useRef } from 'react';
 import {
   CONCESS_WHATSAPP_URL,
   CONCESS_HERO,
-  CONCESS_AVANTAGES,
+  CONCESS_TIERS,
   CONCESS_PRODUITS,
   CONCESS_STAT_COUNT,
   CONCESS_STATS,
   CONCESS_TEMOIGNAGES,
   CONCESS_VISION,
   CONCESS_AVENIR,
-  CONCESS_INVEST,
   CONCESS_FAQ,
   CONCESS_FINAL,
 } from '../services/concessionnaires.js';
+import { formatPrixFCFA } from '../services/catalogueProduits.js';
 import { useCountUp } from '../utils/useCountUp.js';
+import TierComparison from '../components/tierComparison.jsx';
 import '../assets/styles/pages/concessionnaires.css';
 
 function Concessionnaires() {
@@ -86,48 +87,26 @@ function Concessionnaires() {
               {CONCESS_HERO.title}
             </h1>
             <p className="concessHero-description">{CONCESS_HERO.description}</p>
-            <a
-              className="concessCta concessCta--primary"
-              href={CONCESS_WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
-            >
-              Devenir concessionnaire
-            </a>
+            <div className="concessHero-ctaWrap">
+              <a
+                className="concessCta concessCta--primary"
+                href={CONCESS_WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
+              >
+                Devenir concessionnaire
+              </a>
+              <a className="concessCta concessCta--ghost" href={CONCESS_HERO.ctaSecondary.anchor}>
+                {CONCESS_HERO.ctaSecondary.label}
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Pourquoi ──────────────────────────────────────────── */}
-      <section
-        className="concessPourquoi-root section-padding"
-        aria-labelledby="concess-pourquoi-title"
-      >
-        <div className="concessPourquoi-shell shell">
-          <header className="concessSection-heading">
-            <p className="concessSection-eyebrow">Pourquoi nous rejoindre</p>
-            <h2 className="concessSection-title" id="concess-pourquoi-title">
-              Pourquoi rejoindre le réseau Ndjoka ?
-            </h2>
-            <p className="concessSection-description">
-              Ndjoka accompagne ses concessionnaires pour leur permettre de vendre plus facilement
-              et développer leur activité avec sérénité.
-            </p>
-          </header>
-          <div className="concessPourquoi-grid">
-            {CONCESS_AVANTAGES.map((av) => (
-              <article className="concessPourquoi-card" key={av.title}>
-                <span className="concessPourquoi-icon" aria-hidden="true">
-                  <span className="material-symbols-outlined">{av.icon}</span>
-                </span>
-                <h3 className="concessPourquoi-cardTitle">{av.title}</h3>
-                <p className="concessPourquoi-cardText">{av.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── Paliers (Essai / Distributeur / Concessionnaire) ─────── */}
+      <TierComparison data={CONCESS_TIERS} />
 
       {/* ── Produits ──────────────────────────────────────────── */}
       <section
@@ -167,7 +146,14 @@ function Concessionnaires() {
                   )}
                   <h3 className="concessProduit-name">{prod.name}</h3>
                   <p className="concessProduit-description">{prod.description}</p>
-                  <span className="concessProduit-format">{prod.format}</span>
+                  <div className="concessProduit-formats">
+                    {prod.formats.map((f) => (
+                      <span className="concessProduit-format" key={f.poids ?? 'unique'}>
+                        {f.poids ? `${f.poids} · ` : ''}
+                        {formatPrixFCFA(f.prix)}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
@@ -289,14 +275,20 @@ function Concessionnaires() {
               {CONCESS_AVENIR.produits.map((prod) => (
                 <article className="concessAvenir-item" key={prod.name}>
                   <figure className="concessAvenir-visual">
-                    <img
-                      className="concessAvenir-image"
-                      src={prod.image}
-                      alt={prod.alt}
-                      loading="lazy"
-                      width={300}
-                      height={300}
-                    />
+                    {prod.image ? (
+                      <img
+                        className="concessAvenir-image"
+                        src={prod.image}
+                        alt={prod.alt}
+                        loading="lazy"
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <span className="concessAvenir-placeholder" aria-hidden="true">
+                        <span className="material-symbols-outlined">{prod.icon || 'inventory_2'}</span>
+                      </span>
+                    )}
                   </figure>
                   <div className="concessAvenir-copy">
                     <span className="concessAvenir-badge">{prod.badge}</span>
@@ -308,56 +300,6 @@ function Concessionnaires() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* ── Investissement ────────────────────────────────────── */}
-      <section
-        className="concessInvest-root section-padding"
-        aria-labelledby="concess-invest-title"
-      >
-        <div className="concessInvest-shell shell">
-          <div className="concessInvest-layout">
-            <div className="concessInvest-copy">
-              <p className="concessSection-eyebrow">Investissement</p>
-              <h2 className="concessSection-title" id="concess-invest-title">
-                {CONCESS_INVEST.title}
-              </h2>
-              <p className="concessSection-description">{CONCESS_INVEST.description}</p>
-              <div className="concessInvest-blocs">
-                {CONCESS_INVEST.inclus.map((b) => (
-                  <div className="concessInvest-bloc" key={b.title}>
-                    <span className="concessInvest-blocIcon" aria-hidden="true">
-                      <span className="material-symbols-outlined">{b.icon}</span>
-                    </span>
-                    <div className="concessInvest-blocCopy">
-                      <h3 className="concessInvest-blocTitle">{b.title}</h3>
-                      <p className="concessInvest-blocText">{b.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <a
-                className="concessCta concessCta--primary"
-                href={CONCESS_WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Devenir concessionnaire Ndjoka via WhatsApp"
-              >
-                Devenir concessionnaire
-              </a>
-            </div>
-            <figure className="concessInvest-visual">
-              <img
-                className="concessInvest-image"
-                src={CONCESS_INVEST.image.src}
-                alt={CONCESS_INVEST.image.alt}
-                loading="lazy"
-                width={560}
-                height={420}
-              />
-            </figure>
-          </div>
         </div>
       </section>
 

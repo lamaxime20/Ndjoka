@@ -20,7 +20,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app",
-      "community": 5,
+      "community": 0,
       "norm_label": "app.jsx"
     },
     {
@@ -30,7 +30,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_app_scrolltotop",
-      "community": 5,
+      "community": 0,
       "norm_label": "scrolltotop()"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_app_app",
-      "community": 5,
+      "community": 0,
       "norm_label": "app()"
     },
     {
@@ -94,6 +94,26 @@
       "norm_label": "ndjokaexpansionmap()"
     },
     {
+      "label": "distinctionsSection.jsx",
+      "file_type": "code",
+      "source_file": "vue/src/components/distinctionsSection.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_distinctionssection",
+      "community": 2,
+      "norm_label": "distinctionssection.jsx"
+    },
+    {
+      "label": "DistinctionsSection()",
+      "file_type": "code",
+      "source_file": "vue/src/components/distinctionsSection.jsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "components_distinctionssection_distinctionssection",
+      "community": 2,
+      "norm_label": "distinctionssection()"
+    },
+    {
       "label": "footer.jsx",
       "file_type": "code",
       "source_file": "vue/src/components/footer.jsx",
@@ -144,13 +164,43 @@
       "norm_label": "navbar()"
     },
     {
+      "label": "tierComparison.jsx",
+      "file_type": "code",
+      "source_file": "vue/src/components/tierComparison.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_tiercomparison",
+      "community": 3,
+      "norm_label": "tiercomparison.jsx"
+    },
+    {
+      "label": "TierCard()",
+      "file_type": "code",
+      "source_file": "vue/src/components/tierComparison.jsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "components_tiercomparison_tiercard",
+      "community": 3,
+      "norm_label": "tiercard()"
+    },
+    {
+      "label": "TierComparison()",
+      "file_type": "code",
+      "source_file": "vue/src/components/tierComparison.jsx",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "components_tiercomparison_tiercomparison",
+      "community": 3,
+      "norm_label": "tiercomparison()"
+    },
+    {
       "label": "main.jsx",
       "file_type": "code",
       "source_file": "vue/src/main.jsx",
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main",
-      "community": 5,
+      "community": 0,
       "norm_label": "main.jsx"
     },
     {
@@ -167,7 +217,7 @@
       "label": "Accueil()",
       "file_type": "code",
       "source_file": "vue/src/pages/accueil.jsx",
-      "source_location": "L16",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "pages_accueil_accueil",
       "community": 4,
@@ -207,10 +257,10 @@
       "label": "Concessionnaires()",
       "file_type": "code",
       "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "pages_concessionnaires_concessionnaires",
-      "community": 2,
+      "community": 1,
       "norm_label": "concessionnaires()"
     },
     {
@@ -227,10 +277,10 @@
       "label": "Investisseurs()",
       "file_type": "code",
       "source_file": "vue/src/pages/investisseurs.jsx",
-      "source_location": "L17",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "pages_investisseurs_investisseurs",
-      "community": 2,
+      "community": 1,
       "norm_label": "investisseurs()"
     },
     {
@@ -247,7 +297,7 @@
       "label": "PointDistributions()",
       "file_type": "code",
       "source_file": "vue/src/pages/pointDistributions.jsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "pages_pointdistributions_pointdistributions",
       "community": 1,
@@ -340,7 +390,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "pages_principale_principale",
-      "community": 5,
+      "community": 0,
       "norm_label": "principale()"
     },
     {
@@ -357,7 +407,7 @@
       "label": "FORM_INITIAL",
       "file_type": "code",
       "source_file": "vue/src/pages/produits.jsx",
-      "source_location": "L14",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "pages_produits_form_initial",
       "community": 6,
@@ -367,7 +417,7 @@
       "label": "Produits()",
       "file_type": "code",
       "source_file": "vue/src/pages/produits.jsx",
-      "source_location": "L23",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "pages_produits_produits",
       "community": 6,
@@ -554,6 +604,46 @@
       "norm_label": "apropos_contact"
     },
     {
+      "label": "catalogueProduits.js",
+      "file_type": "code",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_catalogueproduits",
+      "community": 6,
+      "norm_label": "catalogueproduits.js"
+    },
+    {
+      "label": "formatPrixFCFA()",
+      "file_type": "code",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "services_catalogueproduits_formatprixfcfa",
+      "community": 6,
+      "norm_label": "formatprixfcfa()"
+    },
+    {
+      "label": "PRODUITS_DISPONIBLES",
+      "file_type": "code",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "services_catalogueproduits_produits_disponibles",
+      "community": 6,
+      "norm_label": "produits_disponibles"
+    },
+    {
+      "label": "PRODUITS_EN_DEVELOPPEMENT",
+      "file_type": "code",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "services_catalogueproduits_produits_en_developpement",
+      "community": 6,
+      "norm_label": "produits_en_developpement"
+    },
+    {
       "label": "concessionnaires.js",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
@@ -567,27 +657,27 @@
       "label": "CONCESS_HERO",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L18",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_hero",
       "community": 3,
       "norm_label": "concess_hero"
     },
     {
-      "label": "CONCESS_AVANTAGES",
+      "label": "CONCESS_TIERS",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L29",
+      "source_location": "L41",
       "_origin": "ast",
-      "id": "services_concessionnaires_concess_avantages",
+      "id": "services_concessionnaires_concess_tiers",
       "community": 3,
-      "norm_label": "concess_avantages"
+      "norm_label": "concess_tiers"
     },
     {
       "label": "CONCESS_PRODUITS",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L62",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_produits",
       "community": 3,
@@ -597,7 +687,7 @@
       "label": "CONCESS_STAT_COUNT",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L96",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_stat_count",
       "community": 3,
@@ -607,7 +697,7 @@
       "label": "CONCESS_STATS",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L101",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_stats",
       "community": 3,
@@ -617,7 +707,7 @@
       "label": "CONCESS_TEMOIGNAGES",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L111",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_temoignages",
       "community": 3,
@@ -627,7 +717,7 @@
       "label": "CONCESS_VISION",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L117",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_vision",
       "community": 3,
@@ -637,27 +727,17 @@
       "label": "CONCESS_AVENIR",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L149",
+      "source_location": "L148",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_avenir",
       "community": 3,
       "norm_label": "concess_avenir"
     },
     {
-      "label": "CONCESS_INVEST",
-      "file_type": "code",
-      "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L173",
-      "_origin": "ast",
-      "id": "services_concessionnaires_concess_invest",
-      "community": 3,
-      "norm_label": "concess_invest"
-    },
-    {
       "label": "CONCESS_FAQ",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L200",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_faq",
       "community": 3,
@@ -667,11 +747,51 @@
       "label": "CONCESS_FINAL",
       "file_type": "code",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L228",
+      "source_location": "L192",
       "_origin": "ast",
       "id": "services_concessionnaires_concess_final",
       "community": 3,
       "norm_label": "concess_final"
+    },
+    {
+      "label": "distinctions.js",
+      "file_type": "code",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_distinctions",
+      "community": 2,
+      "norm_label": "distinctions.js"
+    },
+    {
+      "label": "DISTINCTIONS",
+      "file_type": "code",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "services_distinctions_distinctions",
+      "community": 2,
+      "norm_label": "distinctions"
+    },
+    {
+      "label": "DISTINCTIONS_FULL",
+      "file_type": "code",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "services_distinctions_distinctions_full",
+      "community": 2,
+      "norm_label": "distinctions_full"
+    },
+    {
+      "label": "DISTINCTIONS_COMPACT",
+      "file_type": "code",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "services_distinctions_distinctions_compact",
+      "community": 2,
+      "norm_label": "distinctions_compact"
     },
     {
       "label": "investisseurs.js",
@@ -827,7 +947,7 @@
       "label": "PD_HERO",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L18",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_hero",
       "community": 1,
@@ -837,7 +957,7 @@
       "label": "PD_RESEAU",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L31",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_reseau",
       "community": 1,
@@ -847,7 +967,7 @@
       "label": "PD_MAP_DATA",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L43",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_map_data",
       "community": 1,
@@ -857,7 +977,7 @@
       "label": "MAP_CONTINENTS",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L52",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "services_pointdistributions_map_continents",
       "community": 1,
@@ -867,7 +987,7 @@
       "label": "PD_PAYS",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L103",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_pays",
       "community": 1,
@@ -877,7 +997,7 @@
       "label": "PD_SEARCH",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L240",
+      "source_location": "L239",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_search",
       "community": 1,
@@ -887,7 +1007,7 @@
       "label": "PD_AVANTAGES",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L250",
+      "source_location": "L249",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_avantages",
       "community": 1,
@@ -897,7 +1017,7 @@
       "label": "PD_VISION",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L287",
+      "source_location": "L286",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_vision",
       "community": 1,
@@ -907,7 +1027,7 @@
       "label": "PD_FINAL",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L331",
+      "source_location": "L322",
       "_origin": "ast",
       "id": "services_pointdistributions_pd_final",
       "community": 1,
@@ -917,7 +1037,7 @@
       "label": "searchDistributeurs()",
       "file_type": "code",
       "source_file": "vue/src/services/pointDistributions.js",
-      "source_location": "L339",
+      "source_location": "L330",
       "_origin": "ast",
       "id": "services_pointdistributions_searchdistributeurs",
       "community": 1,
@@ -937,7 +1057,7 @@
       "label": "PRODUITS_HERO",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L8",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "services_produits_produits_hero",
       "community": 6,
@@ -947,17 +1067,27 @@
       "label": "PRODUITS_ITEMS",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L21",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "services_produits_produits_items",
       "community": 6,
       "norm_label": "produits_items"
     },
     {
+      "label": "PRODUITS_AVENIR",
+      "file_type": "code",
+      "source_file": "vue/src/services/produits.js",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "services_produits_produits_avenir",
+      "community": 6,
+      "norm_label": "produits_avenir"
+    },
+    {
       "label": "PRODUITS_QUALITE",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L78",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "services_produits_produits_qualite",
       "community": 6,
@@ -967,7 +1097,7 @@
       "label": "PRODUITS_RESEAU",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L102",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "services_produits_produits_reseau",
       "community": 6,
@@ -977,7 +1107,7 @@
       "label": "PRODUITS_COMMANDE",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L132",
+      "source_location": "L104",
       "_origin": "ast",
       "id": "services_produits_produits_commande",
       "community": 6,
@@ -987,7 +1117,7 @@
       "label": "PRODUITS_FINAL",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L148",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "services_produits_produits_final",
       "community": 6,
@@ -997,7 +1127,7 @@
       "label": "buildCommandeWhatsAppUrl()",
       "file_type": "code",
       "source_file": "vue/src/services/produits.js",
-      "source_location": "L156",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "services_produits_buildcommandewhatsappurl",
       "community": 6,
@@ -1054,10 +1184,30 @@
       "norm_label": "setjsonld()"
     },
     {
-      "label": "applySeo()",
+      "label": "removeJsonLd()",
       "file_type": "code",
       "source_file": "vue/src/services/seo.js",
       "source_location": "L87",
+      "_origin": "ast",
+      "id": "services_seo_removejsonld",
+      "community": 5,
+      "norm_label": "removejsonld()"
+    },
+    {
+      "label": "PAGE_SPECIFIC_SCHEMA_IDS",
+      "file_type": "code",
+      "source_file": "vue/src/services/seo.js",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "services_seo_page_specific_schema_ids",
+      "community": 5,
+      "norm_label": "page_specific_schema_ids"
+    },
+    {
+      "label": "applySeo()",
+      "file_type": "code",
+      "source_file": "vue/src/services/seo.js",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "services_seo_applyseo",
       "community": 5,
@@ -1067,7 +1217,7 @@
       "label": "applySchemaPage()",
       "file_type": "code",
       "source_file": "vue/src/services/seo.js",
-      "source_location": "L133",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "services_seo_applyschemapage",
       "community": 5,
@@ -1080,7 +1230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_usecountup",
-      "community": 2,
+      "community": 1,
       "norm_label": "usecountup.js"
     },
     {
@@ -1090,7 +1240,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "utils_usecountup_usecountup",
-      "community": 2,
+      "community": 1,
       "norm_label": "usecountup()"
     },
     {
@@ -1122,9 +1272,9 @@
       "source_file": "vue/src/App.jsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app",
-      "target": "pages_principale",
-      "confidence_score": 1.0
+      "target": "pages_principale"
     },
     {
       "relation": "imports",
@@ -1133,9 +1283,9 @@
       "source_file": "vue/src/App.jsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app",
-      "target": "pages_principale_principale",
-      "confidence_score": 1.0
+      "target": "pages_principale_principale"
     },
     {
       "relation": "imports_from",
@@ -1144,9 +1294,9 @@
       "source_file": "vue/src/App.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app",
-      "target": "services_navigation",
-      "confidence_score": 1.0
+      "target": "services_navigation"
     },
     {
       "relation": "contains",
@@ -1154,9 +1304,9 @@
       "source_file": "vue/src/App.jsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
     },
     {
       "relation": "contains",
@@ -1164,9 +1314,9 @@
       "source_file": "vue/src/App.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app",
-      "target": "src_app_scrolltotop",
-      "confidence_score": 1.0
+      "target": "src_app_scrolltotop"
     },
     {
       "relation": "imports_from",
@@ -1175,9 +1325,9 @@
       "source_file": "vue/src/main.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_app",
-      "confidence_score": 1.0
+      "target": "src_app"
     },
     {
       "relation": "imports",
@@ -1186,9 +1336,9 @@
       "source_file": "vue/src/main.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
     },
     {
       "relation": "contains",
@@ -1196,9 +1346,9 @@
       "source_file": "vue/src/components/NdjokaExpansionMap.jsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ndjokaexpansionmap",
-      "target": "components_ndjokaexpansionmap_distributors",
-      "confidence_score": 1.0
+      "target": "components_ndjokaexpansionmap_distributors"
     },
     {
       "relation": "contains",
@@ -1206,9 +1356,9 @@
       "source_file": "vue/src/components/NdjokaExpansionMap.jsx",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ndjokaexpansionmap",
-      "target": "components_ndjokaexpansionmap_ndjokaexpansionmap",
-      "confidence_score": 1.0
+      "target": "components_ndjokaexpansionmap_ndjokaexpansionmap"
     },
     {
       "relation": "contains",
@@ -1216,9 +1366,9 @@
       "source_file": "vue/src/components/NdjokaExpansionMap.jsx",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ndjokaexpansionmap",
-      "target": "components_ndjokaexpansionmap_stats",
-      "confidence_score": 1.0
+      "target": "components_ndjokaexpansionmap_stats"
     },
     {
       "relation": "contains",
@@ -1226,9 +1376,9 @@
       "source_file": "vue/src/components/NdjokaExpansionMap.jsx",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_ndjokaexpansionmap",
-      "target": "components_ndjokaexpansionmap_tooltipcontent",
-      "confidence_score": 1.0
+      "target": "components_ndjokaexpansionmap_tooltipcontent"
     },
     {
       "relation": "imports_from",
@@ -1237,9 +1387,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "components_ndjokaexpansionmap",
-      "confidence_score": 1.0
+      "target": "components_ndjokaexpansionmap"
     },
     {
       "relation": "imports",
@@ -1248,8 +1398,84 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "components_ndjokaexpansionmap_ndjokaexpansionmap",
+      "target": "components_ndjokaexpansionmap_ndjokaexpansionmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/components/distinctionsSection.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_distinctionssection",
+      "target": "components_distinctionssection_distinctionssection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/components/distinctionsSection.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_distinctionssection",
+      "target": "services_distinctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/components/distinctionsSection.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_distinctionssection",
+      "target": "services_distinctions_distinctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/accueil.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "pages_accueil",
+      "target": "components_distinctionssection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/investisseurs.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "pages_investisseurs",
+      "target": "components_distinctionssection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/accueil.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "pages_accueil",
+      "target": "components_distinctionssection_distinctionssection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/investisseurs.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "pages_investisseurs",
+      "target": "components_distinctionssection_distinctionssection",
       "confidence_score": 1.0
     },
     {
@@ -1258,9 +1484,9 @@
       "source_file": "vue/src/components/footer.jsx",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "components_footer_footer",
-      "confidence_score": 1.0
+      "target": "components_footer_footer"
     },
     {
       "relation": "contains",
@@ -1268,9 +1494,9 @@
       "source_file": "vue/src/components/footer.jsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "components_footer_socialicon",
-      "confidence_score": 1.0
+      "target": "components_footer_socialicon"
     },
     {
       "relation": "imports_from",
@@ -1279,9 +1505,9 @@
       "source_file": "vue/src/components/footer.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "services_navigation",
-      "confidence_score": 1.0
+      "target": "services_navigation"
     },
     {
       "relation": "imports",
@@ -1290,9 +1516,9 @@
       "source_file": "vue/src/components/footer.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "services_navigation_footer_contacts",
-      "confidence_score": 1.0
+      "target": "services_navigation_footer_contacts"
     },
     {
       "relation": "imports",
@@ -1301,9 +1527,9 @@
       "source_file": "vue/src/components/footer.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "services_navigation_footer_socials",
-      "confidence_score": 1.0
+      "target": "services_navigation_footer_socials"
     },
     {
       "relation": "imports",
@@ -1312,9 +1538,9 @@
       "source_file": "vue/src/components/footer.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "services_navigation_nav_items",
-      "confidence_score": 1.0
+      "target": "services_navigation_nav_items"
     },
     {
       "relation": "imports_from",
@@ -1323,9 +1549,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "components_footer",
-      "confidence_score": 1.0
+      "target": "components_footer"
     },
     {
       "relation": "imports",
@@ -1334,9 +1560,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "components_footer_footer",
-      "confidence_score": 1.0
+      "target": "components_footer_footer"
     },
     {
       "relation": "contains",
@@ -1344,9 +1570,9 @@
       "source_file": "vue/src/components/navBar.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_navbar",
-      "target": "components_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar_navbar"
     },
     {
       "relation": "imports_from",
@@ -1355,9 +1581,9 @@
       "source_file": "vue/src/components/navBar.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_navbar",
-      "target": "services_navigation",
-      "confidence_score": 1.0
+      "target": "services_navigation"
     },
     {
       "relation": "imports",
@@ -1366,9 +1592,9 @@
       "source_file": "vue/src/components/navBar.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_navbar",
-      "target": "services_navigation_nav_items",
-      "confidence_score": 1.0
+      "target": "services_navigation_nav_items"
     },
     {
       "relation": "imports",
@@ -1377,9 +1603,9 @@
       "source_file": "vue/src/components/navBar.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_navbar",
-      "target": "services_navigation_navbar_cta",
-      "confidence_score": 1.0
+      "target": "services_navigation_navbar_cta"
     },
     {
       "relation": "imports_from",
@@ -1388,9 +1614,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "components_navbar",
-      "confidence_score": 1.0
+      "target": "components_navbar"
     },
     {
       "relation": "imports",
@@ -1399,8 +1625,50 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "components_navbar_navbar",
+      "target": "components_navbar_navbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/components/tierComparison.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_tiercomparison",
+      "target": "components_tiercomparison_tiercard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/components/tierComparison.jsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "components_tiercomparison",
+      "target": "components_tiercomparison_tiercomparison",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "components_tiercomparison",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "components_tiercomparison_tiercomparison",
       "confidence_score": 1.0
     },
     {
@@ -1409,9 +1677,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "pages_accueil_accueil",
-      "confidence_score": 1.0
+      "target": "pages_accueil_accueil"
     },
     {
       "relation": "imports_from",
@@ -1420,9 +1688,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil",
-      "confidence_score": 1.0
+      "target": "services_accueil"
     },
     {
       "relation": "imports",
@@ -1431,9 +1699,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_about_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_about_content"
     },
     {
       "relation": "imports",
@@ -1442,9 +1710,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_benefits_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_benefits_content"
     },
     {
       "relation": "imports",
@@ -1453,9 +1721,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_faq_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_faq_content"
     },
     {
       "relation": "imports",
@@ -1464,9 +1732,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_final_cta_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_final_cta_content"
     },
     {
       "relation": "imports",
@@ -1475,9 +1743,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_hero_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_hero_content"
     },
     {
       "relation": "imports",
@@ -1486,9 +1754,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_investor_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_investor_content"
     },
     {
       "relation": "imports",
@@ -1497,9 +1765,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_presence_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_presence_content"
     },
     {
       "relation": "imports",
@@ -1508,9 +1776,9 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_product_intro",
-      "confidence_score": 1.0
+      "target": "services_accueil_product_intro"
     },
     {
       "relation": "imports",
@@ -1519,8 +1787,30 @@
       "source_file": "vue/src/pages/accueil.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_accueil",
-      "target": "services_accueil_product_items",
+      "target": "services_accueil_product_items"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/accueil.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "pages_accueil",
+      "target": "services_distinctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/accueil.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "pages_accueil",
+      "target": "services_distinctions_distinctions_compact",
       "confidence_score": 1.0
     },
     {
@@ -1529,9 +1819,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "pages_apropos_apropos",
-      "confidence_score": 1.0
+      "target": "pages_apropos_apropos"
     },
     {
       "relation": "imports_from",
@@ -1540,9 +1830,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos",
-      "confidence_score": 1.0
+      "target": "services_apropos"
     },
     {
       "relation": "imports",
@@ -1551,9 +1841,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_contact",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_contact"
     },
     {
       "relation": "imports",
@@ -1562,9 +1852,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_definition",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_definition"
     },
     {
       "relation": "imports",
@@ -1573,9 +1863,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_equipe",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_equipe"
     },
     {
       "relation": "imports",
@@ -1584,9 +1874,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_evolution",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_evolution"
     },
     {
       "relation": "imports",
@@ -1595,9 +1885,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_hero",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_hero"
     },
     {
       "relation": "imports",
@@ -1606,9 +1896,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_nom",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_nom"
     },
     {
       "relation": "imports",
@@ -1617,9 +1907,9 @@
       "source_file": "vue/src/pages/apropos.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_apropos",
-      "target": "services_apropos_apropos_presence",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_presence"
     },
     {
       "relation": "contains",
@@ -1627,8 +1917,30 @@
       "source_file": "vue/src/pages/concessionnaires.jsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_concessionnaires",
-      "target": "pages_concessionnaires_concessionnaires",
+      "target": "pages_concessionnaires_concessionnaires"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_catalogueproduits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_catalogueproduits_formatprixfcfa",
       "confidence_score": 1.0
     },
     {
@@ -1638,9 +1950,97 @@
       "source_file": "vue/src/pages/concessionnaires.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_concessionnaires",
-      "target": "services_concessionnaires",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_avenir"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_faq"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_final"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_hero"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_produits"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_stat_count"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_stats"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires",
+      "target": "services_concessionnaires_concess_temoignages"
     },
     {
       "relation": "imports",
@@ -1650,7 +2050,7 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_avantages",
+      "target": "services_concessionnaires_concess_tiers",
       "confidence_score": 1.0
     },
     {
@@ -1660,108 +2060,9 @@
       "source_file": "vue/src/pages/concessionnaires.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_avenir",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_faq",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_final",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_hero",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_invest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_produits",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_stat_count",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_stats",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_temoignages",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "pages_concessionnaires",
-      "target": "services_concessionnaires_concess_vision",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_vision"
     },
     {
       "relation": "imports_from",
@@ -1770,9 +2071,9 @@
       "source_file": "vue/src/pages/concessionnaires.jsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_concessionnaires",
-      "target": "utils_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup"
     },
     {
       "relation": "imports",
@@ -1781,20 +2082,31 @@
       "source_file": "vue/src/pages/concessionnaires.jsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_concessionnaires",
-      "target": "utils_usecountup_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "vue/src/pages/concessionnaires.jsx",
-      "source_location": "L23",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "pages_concessionnaires_concessionnaires",
-      "target": "utils_usecountup_usecountup",
+      "target": "services_catalogueproduits_formatprixfcfa",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/concessionnaires.jsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_concessionnaires_concessionnaires",
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "contains",
@@ -1802,8 +2114,30 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "pages_investisseurs_investisseurs",
+      "target": "pages_investisseurs_investisseurs"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/investisseurs.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "pages_investisseurs",
+      "target": "services_distinctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/investisseurs.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "pages_investisseurs",
+      "target": "services_distinctions_distinctions_full",
       "confidence_score": 1.0
     },
     {
@@ -1813,9 +2147,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs",
-      "confidence_score": 1.0
+      "target": "services_investisseurs"
     },
     {
       "relation": "imports",
@@ -1824,9 +2158,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_faq",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_faq"
     },
     {
       "relation": "imports",
@@ -1835,9 +2169,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_final",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_final"
     },
     {
       "relation": "imports",
@@ -1846,9 +2180,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_hero",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_hero"
     },
     {
       "relation": "imports",
@@ -1857,9 +2191,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_opportunite",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_opportunite"
     },
     {
       "relation": "imports",
@@ -1868,9 +2202,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_process",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_process"
     },
     {
       "relation": "imports",
@@ -1879,9 +2213,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_produits",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_produits"
     },
     {
       "relation": "imports",
@@ -1890,9 +2224,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_stats",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_stats"
     },
     {
       "relation": "imports",
@@ -1901,9 +2235,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "services_investisseurs_invest_vision",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_vision"
     },
     {
       "relation": "imports_from",
@@ -1912,9 +2246,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "utils_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup"
     },
     {
       "relation": "imports",
@@ -1923,9 +2257,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs",
-      "target": "utils_usecountup_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "calls",
@@ -1934,9 +2268,9 @@
       "source_file": "vue/src/pages/investisseurs.jsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_investisseurs_investisseurs",
-      "target": "utils_usecountup_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "contains",
@@ -1944,9 +2278,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "pages_pointdistributions_pointdistributions",
-      "confidence_score": 1.0
+      "target": "pages_pointdistributions_pointdistributions"
     },
     {
       "relation": "imports_from",
@@ -1955,9 +2289,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions"
     },
     {
       "relation": "imports",
@@ -1966,9 +2300,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_pd_avantages",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_avantages"
     },
     {
       "relation": "imports",
@@ -1977,9 +2311,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_pd_final",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_final"
     },
     {
       "relation": "imports",
@@ -1988,9 +2322,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_pd_hero",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_hero"
     },
     {
       "relation": "imports",
@@ -1999,9 +2333,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_pd_reseau",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_reseau"
     },
     {
       "relation": "imports",
@@ -2010,9 +2344,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_pd_search",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_search"
     },
     {
       "relation": "imports",
@@ -2021,9 +2355,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_pd_vision",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_vision"
     },
     {
       "relation": "imports",
@@ -2032,9 +2366,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "services_pointdistributions_searchdistributeurs",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_searchdistributeurs"
     },
     {
       "relation": "imports_from",
@@ -2043,9 +2377,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "utils_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup"
     },
     {
       "relation": "imports",
@@ -2054,9 +2388,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions",
-      "target": "utils_usecountup_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "calls",
@@ -2065,9 +2399,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions_pointdistributions",
-      "target": "services_pointdistributions_searchdistributeurs",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_searchdistributeurs"
     },
     {
       "relation": "calls",
@@ -2076,9 +2410,9 @@
       "source_file": "vue/src/pages/pointDistributions.jsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_pointdistributions_pointdistributions",
-      "target": "utils_usecountup_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "contains",
@@ -2086,9 +2420,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_accueil",
-      "confidence_score": 1.0
+      "target": "pages_principale_accueil"
     },
     {
       "relation": "contains",
@@ -2096,9 +2430,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_apropos",
-      "confidence_score": 1.0
+      "target": "pages_principale_apropos"
     },
     {
       "relation": "contains",
@@ -2106,9 +2440,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_concessionnaires",
-      "confidence_score": 1.0
+      "target": "pages_principale_concessionnaires"
     },
     {
       "relation": "contains",
@@ -2116,9 +2450,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_investisseurs",
-      "confidence_score": 1.0
+      "target": "pages_principale_investisseurs"
     },
     {
       "relation": "contains",
@@ -2126,9 +2460,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_pagecontent",
-      "confidence_score": 1.0
+      "target": "pages_principale_pagecontent"
     },
     {
       "relation": "contains",
@@ -2136,9 +2470,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_pointdistributions",
-      "confidence_score": 1.0
+      "target": "pages_principale_pointdistributions"
     },
     {
       "relation": "contains",
@@ -2146,9 +2480,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_principale",
-      "confidence_score": 1.0
+      "target": "pages_principale_principale"
     },
     {
       "relation": "contains",
@@ -2156,9 +2490,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "pages_principale_produits",
-      "confidence_score": 1.0
+      "target": "pages_principale_produits"
     },
     {
       "relation": "re_exports",
@@ -2167,9 +2501,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "services_navigation",
-      "confidence_score": 1.0
+      "target": "services_navigation"
     },
     {
       "relation": "imports_from",
@@ -2178,9 +2512,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "services_seo",
-      "confidence_score": 1.0
+      "target": "services_seo"
     },
     {
       "relation": "imports",
@@ -2189,9 +2523,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale",
-      "target": "services_seo_applyseo",
-      "confidence_score": 1.0
+      "target": "services_seo_applyseo"
     },
     {
       "relation": "calls",
@@ -2200,9 +2534,9 @@
       "source_file": "vue/src/pages/principale.jsx",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_principale_principale",
-      "target": "services_seo_applyseo",
-      "confidence_score": 1.0
+      "target": "services_seo_applyseo"
     },
     {
       "relation": "contains",
@@ -2210,9 +2544,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "pages_produits_form_initial",
-      "confidence_score": 1.0
+      "target": "pages_produits_form_initial"
     },
     {
       "relation": "contains",
@@ -2220,8 +2554,30 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "pages_produits_produits",
+      "target": "pages_produits_produits"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/produits.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "pages_produits",
+      "target": "services_catalogueproduits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/produits.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "pages_produits",
+      "target": "services_catalogueproduits_formatprixfcfa",
       "confidence_score": 1.0
     },
     {
@@ -2231,9 +2587,20 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits",
-      "confidence_score": 1.0
+      "target": "services_produits"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/produits.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_produits",
+      "target": "services_produits_buildcommandewhatsappurl"
     },
     {
       "relation": "imports",
@@ -2243,7 +2610,7 @@
       "source_location": "L3",
       "weight": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_buildcommandewhatsappurl",
+      "target": "services_produits_produits_avenir",
       "confidence_score": 1.0
     },
     {
@@ -2253,9 +2620,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_produits_commande",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_commande"
     },
     {
       "relation": "imports",
@@ -2264,9 +2631,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_produits_final",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_final"
     },
     {
       "relation": "imports",
@@ -2275,9 +2642,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_produits_hero",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_hero"
     },
     {
       "relation": "imports",
@@ -2286,9 +2653,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_produits_items",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_items"
     },
     {
       "relation": "imports",
@@ -2297,9 +2664,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_produits_qualite",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_qualite"
     },
     {
       "relation": "imports",
@@ -2308,8 +2675,19 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits",
-      "target": "services_produits_produits_reseau",
+      "target": "services_produits_produits_reseau"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/pages/produits.jsx",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "pages_produits_produits",
+      "target": "services_catalogueproduits_formatprixfcfa",
       "confidence_score": 1.0
     },
     {
@@ -2319,9 +2697,9 @@
       "source_file": "vue/src/pages/produits.jsx",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_produits_produits",
-      "target": "services_produits_buildcommandewhatsappurl",
-      "confidence_score": 1.0
+      "target": "services_produits_buildcommandewhatsappurl"
     },
     {
       "relation": "contains",
@@ -2329,9 +2707,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_about_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_about_content"
     },
     {
       "relation": "contains",
@@ -2339,9 +2717,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L131",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_benefits_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_benefits_content"
     },
     {
       "relation": "contains",
@@ -2349,9 +2727,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_faq_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_faq_content"
     },
     {
       "relation": "contains",
@@ -2359,9 +2737,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_final_cta_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_final_cta_content"
     },
     {
       "relation": "contains",
@@ -2369,9 +2747,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_hero_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_hero_content"
     },
     {
       "relation": "contains",
@@ -2379,9 +2757,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_investor_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_investor_content"
     },
     {
       "relation": "contains",
@@ -2389,9 +2767,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_presence_content",
-      "confidence_score": 1.0
+      "target": "services_accueil_presence_content"
     },
     {
       "relation": "contains",
@@ -2399,9 +2777,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_product_intro",
-      "confidence_score": 1.0
+      "target": "services_accueil_product_intro"
     },
     {
       "relation": "contains",
@@ -2409,9 +2787,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_accueil_product_items",
-      "confidence_score": 1.0
+      "target": "services_accueil_product_items"
     },
     {
       "relation": "imports_from",
@@ -2420,9 +2798,9 @@
       "source_file": "vue/src/services/accueil.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_accueil",
-      "target": "services_navigation",
-      "confidence_score": 1.0
+      "target": "services_navigation"
     },
     {
       "relation": "contains",
@@ -2430,9 +2808,9 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_contact",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_contact"
     },
     {
       "relation": "contains",
@@ -2440,9 +2818,9 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_definition",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_definition"
     },
     {
       "relation": "contains",
@@ -2450,9 +2828,9 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_equipe",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_equipe"
     },
     {
       "relation": "contains",
@@ -2460,9 +2838,9 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_evolution",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_evolution"
     },
     {
       "relation": "contains",
@@ -2470,9 +2848,9 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_hero",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_hero"
     },
     {
       "relation": "contains",
@@ -2480,9 +2858,9 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_nom",
-      "confidence_score": 1.0
+      "target": "services_apropos_apropos_nom"
     },
     {
       "relation": "contains",
@@ -2490,18 +2868,126 @@
       "source_file": "vue/src/services/apropos.js",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_apropos",
-      "target": "services_apropos_apropos_presence",
+      "target": "services_apropos_apropos_presence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "services_catalogueproduits",
+      "target": "services_catalogueproduits_formatprixfcfa",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "services_catalogueproduits",
+      "target": "services_catalogueproduits_produits_disponibles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/catalogueProduits.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "services_catalogueproduits",
+      "target": "services_catalogueproduits_produits_en_developpement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L29",
+      "source_location": "L3",
       "weight": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_avantages",
+      "target": "services_catalogueproduits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/pointDistributions.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_pointdistributions",
+      "target": "services_catalogueproduits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/produits.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_produits",
+      "target": "services_catalogueproduits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/concessionnaires.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_concessionnaires",
+      "target": "services_catalogueproduits_produits_disponibles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/produits.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_produits",
+      "target": "services_catalogueproduits_produits_disponibles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/concessionnaires.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_concessionnaires",
+      "target": "services_catalogueproduits_produits_en_developpement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/pointDistributions.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_pointdistributions",
+      "target": "services_catalogueproduits_produits_en_developpement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/produits.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_produits",
+      "target": "services_catalogueproduits_produits_en_developpement",
       "confidence_score": 1.0
     },
     {
@@ -2510,9 +2996,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L149",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_avenir",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_avenir"
     },
     {
       "relation": "contains",
@@ -2520,9 +3006,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L200",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_faq",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_faq"
     },
     {
       "relation": "contains",
@@ -2530,9 +3016,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L228",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_final",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_final"
     },
     {
       "relation": "contains",
@@ -2540,19 +3026,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_hero",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "vue/src/services/concessionnaires.js",
-      "source_location": "L173",
-      "weight": 1.0,
-      "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_invest",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_hero"
     },
     {
       "relation": "contains",
@@ -2560,9 +3036,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_produits",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_produits"
     },
     {
       "relation": "contains",
@@ -2570,9 +3046,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_stat_count",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_stat_count"
     },
     {
       "relation": "contains",
@@ -2580,9 +3056,9 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_stats",
-      "confidence_score": 1.0
+      "target": "services_concessionnaires_concess_stats"
     },
     {
       "relation": "contains",
@@ -2590,8 +3066,18 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_temoignages",
+      "target": "services_concessionnaires_concess_temoignages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/concessionnaires.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "services_concessionnaires",
+      "target": "services_concessionnaires_concess_tiers",
       "confidence_score": 1.0
     },
     {
@@ -2600,8 +3086,38 @@
       "source_file": "vue/src/services/concessionnaires.js",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_concessionnaires",
-      "target": "services_concessionnaires_concess_vision",
+      "target": "services_concessionnaires_concess_vision"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "services_distinctions",
+      "target": "services_distinctions_distinctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "services_distinctions",
+      "target": "services_distinctions_distinctions_compact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/distinctions.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "services_distinctions",
+      "target": "services_distinctions_distinctions_full",
       "confidence_score": 1.0
     },
     {
@@ -2610,9 +3126,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_faq",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_faq"
     },
     {
       "relation": "contains",
@@ -2620,9 +3136,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_final",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_final"
     },
     {
       "relation": "contains",
@@ -2630,9 +3146,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_hero",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_hero"
     },
     {
       "relation": "contains",
@@ -2640,9 +3156,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_opportunite",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_opportunite"
     },
     {
       "relation": "contains",
@@ -2650,9 +3166,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_process",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_process"
     },
     {
       "relation": "contains",
@@ -2660,9 +3176,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_produits",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_produits"
     },
     {
       "relation": "contains",
@@ -2670,9 +3186,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_stats",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_stats"
     },
     {
       "relation": "contains",
@@ -2680,9 +3196,9 @@
       "source_file": "vue/src/services/investisseurs.js",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_investisseurs",
-      "target": "services_investisseurs_invest_vision",
-      "confidence_score": 1.0
+      "target": "services_investisseurs_invest_vision"
     },
     {
       "relation": "contains",
@@ -2690,9 +3206,9 @@
       "source_file": "vue/src/services/navigation.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_navigation",
-      "target": "services_navigation_footer_contacts",
-      "confidence_score": 1.0
+      "target": "services_navigation_footer_contacts"
     },
     {
       "relation": "contains",
@@ -2700,9 +3216,9 @@
       "source_file": "vue/src/services/navigation.js",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_navigation",
-      "target": "services_navigation_footer_socials",
-      "confidence_score": 1.0
+      "target": "services_navigation_footer_socials"
     },
     {
       "relation": "contains",
@@ -2710,9 +3226,9 @@
       "source_file": "vue/src/services/navigation.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_navigation",
-      "target": "services_navigation_nav_items",
-      "confidence_score": 1.0
+      "target": "services_navigation_nav_items"
     },
     {
       "relation": "contains",
@@ -2720,9 +3236,9 @@
       "source_file": "vue/src/services/navigation.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_navigation",
-      "target": "services_navigation_navbar_cta",
-      "confidence_score": 1.0
+      "target": "services_navigation_navbar_cta"
     },
     {
       "relation": "imports_from",
@@ -2731,9 +3247,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_navigation",
-      "confidence_score": 1.0
+      "target": "services_navigation"
     },
     {
       "relation": "contains",
@@ -2741,9 +3257,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_map_continents",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_map_continents"
     },
     {
       "relation": "contains",
@@ -2751,9 +3267,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L250",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_avantages",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_avantages"
     },
     {
       "relation": "contains",
@@ -2761,9 +3277,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L331",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_final",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_final"
     },
     {
       "relation": "contains",
@@ -2771,9 +3287,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_hero",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_hero"
     },
     {
       "relation": "contains",
@@ -2781,9 +3297,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_map_data",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_map_data"
     },
     {
       "relation": "contains",
@@ -2791,9 +3307,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_pays",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_pays"
     },
     {
       "relation": "contains",
@@ -2801,9 +3317,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_reseau",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_reseau"
     },
     {
       "relation": "contains",
@@ -2811,9 +3327,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L240",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_search",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_search"
     },
     {
       "relation": "contains",
@@ -2821,9 +3337,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L287",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_pd_vision",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_pd_vision"
     },
     {
       "relation": "contains",
@@ -2831,9 +3347,9 @@
       "source_file": "vue/src/services/pointDistributions.js",
       "source_location": "L339",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pointdistributions",
-      "target": "services_pointdistributions_searchdistributeurs",
-      "confidence_score": 1.0
+      "target": "services_pointdistributions_searchdistributeurs"
     },
     {
       "relation": "contains",
@@ -2841,8 +3357,18 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_buildcommandewhatsappurl",
+      "target": "services_produits_buildcommandewhatsappurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/produits.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "services_produits",
+      "target": "services_produits_produits_avenir",
       "confidence_score": 1.0
     },
     {
@@ -2851,9 +3377,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_produits_commande",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_commande"
     },
     {
       "relation": "contains",
@@ -2861,9 +3387,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_produits_final",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_final"
     },
     {
       "relation": "contains",
@@ -2871,9 +3397,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_produits_hero",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_hero"
     },
     {
       "relation": "contains",
@@ -2881,9 +3407,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_produits_items",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_items"
     },
     {
       "relation": "contains",
@@ -2891,9 +3417,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_produits_qualite",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_qualite"
     },
     {
       "relation": "contains",
@@ -2901,9 +3427,9 @@
       "source_file": "vue/src/services/produits.js",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_produits",
-      "target": "services_produits_produits_reseau",
-      "confidence_score": 1.0
+      "target": "services_produits_produits_reseau"
     },
     {
       "relation": "contains",
@@ -2911,8 +3437,28 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo",
-      "target": "services_seo_applyschemapage",
+      "target": "services_seo_applyschemapage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/seo.js",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_seo",
+      "target": "services_seo_applyseo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vue/src/services/seo.js",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "services_seo",
+      "target": "services_seo_page_specific_schema_ids",
       "confidence_score": 1.0
     },
     {
@@ -2922,7 +3468,7 @@
       "source_location": "L87",
       "weight": 1.0,
       "source": "services_seo",
-      "target": "services_seo_applyseo",
+      "target": "services_seo_removejsonld",
       "confidence_score": 1.0
     },
     {
@@ -2931,9 +3477,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo",
-      "target": "services_seo_seo_config",
-      "confidence_score": 1.0
+      "target": "services_seo_seo_config"
     },
     {
       "relation": "contains",
@@ -2941,9 +3487,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo",
-      "target": "services_seo_setcanonical",
-      "confidence_score": 1.0
+      "target": "services_seo_setcanonical"
     },
     {
       "relation": "contains",
@@ -2951,9 +3497,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo",
-      "target": "services_seo_setjsonld",
-      "confidence_score": 1.0
+      "target": "services_seo_setjsonld"
     },
     {
       "relation": "contains",
@@ -2961,9 +3507,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo",
-      "target": "services_seo_setmeta",
-      "confidence_score": 1.0
+      "target": "services_seo_setmeta"
     },
     {
       "relation": "calls",
@@ -2972,9 +3518,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo_applyseo",
-      "target": "services_seo_setmeta",
-      "confidence_score": 1.0
+      "target": "services_seo_setmeta"
     },
     {
       "relation": "calls",
@@ -2983,9 +3529,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo_applyseo",
-      "target": "services_seo_setcanonical",
-      "confidence_score": 1.0
+      "target": "services_seo_setcanonical"
     },
     {
       "relation": "calls",
@@ -2994,9 +3540,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L134",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo_applyschemapage",
-      "target": "services_seo_setjsonld",
-      "confidence_score": 1.0
+      "target": "services_seo_setjsonld"
     },
     {
       "relation": "calls",
@@ -3005,9 +3551,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo_applyseo",
-      "target": "services_seo_setjsonld",
-      "confidence_score": 1.0
+      "target": "services_seo_setjsonld"
     },
     {
       "relation": "calls",
@@ -3016,9 +3562,9 @@
       "source_file": "vue/src/services/seo.js",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_seo_applyseo",
-      "target": "services_seo_applyschemapage",
-      "confidence_score": 1.0
+      "target": "services_seo_applyschemapage"
     },
     {
       "relation": "contains",
@@ -3026,9 +3572,9 @@
       "source_file": "vue/src/utils/useCountUp.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "utils_usecountup",
-      "target": "utils_usecountup_usecountup",
-      "confidence_score": 1.0
+      "target": "utils_usecountup_usecountup"
     },
     {
       "relation": "contains",
@@ -3036,11 +3582,11 @@
       "source_file": "vue/vite.config.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "vue_vite_config",
-      "target": "vue_vite_config_manualchunks",
-      "confidence_score": 1.0
+      "target": "vue_vite_config_manualchunks"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e2686e91230614639d030d1bccb7e4eb78ed0bc0"
+  "built_at_commit": "efaf098526e60736c241e6746f65ee56ac0c186d"
 }

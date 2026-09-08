@@ -1,3 +1,9 @@
+> **Mise à jour post-refonte (voir `REFONTE_NDJOKA.md`, sections 11 et 22)** : ce document est le brief de contenu d'origine, bâti autour d'une offre unique « à partir de 25 000 FCFA ». Cette offre unique a été remplacée par une comparaison à trois paliers, désormais en ligne :
+> - **Palier d'essai** — à partir de 25 000 FCFA (reprend les avantages « Produits à prix concessionnaire / Accompagnement continu / Communication et visibilité » ci-dessous, section « Investissement de départ »).
+> - **Distributeur** — 500 paquets minimum (Prix réduits, Communication et visibilité, Accompagnement, Branding, Formations).
+> - **Concessionnaire** — 1 000 paquets minimum, palier supérieur (tous les avantages du distributeur + Exclusivité sur une ville, Prix usine plus avantageux, Meilleure rentabilité, Gestion du réseau de distributeurs de la ville).
+> Voir `vue/src/services/concessionnaires.js` (export `CONCESS_TIERS`) pour la donnée réellement utilisée par le site, et `vue/src/components/tierComparison.jsx` pour le composant d'affichage.
+
 Section Hero
 H1
 

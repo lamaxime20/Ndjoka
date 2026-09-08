@@ -1,3 +1,5 @@
+> **Mise à jour post-refonte (voir `REFONTE_NDJOKA.md`, section 10)** : la section 6 « Produits en développement » ci-dessous ne listait que Chin Chin Ndjoka et Jus d'oseille Ndjoka. La liste confirmée compte désormais 5 produits : Chips de patate, Caramels, Jus d'oseille, Biscuits, Chin chin. Voir `vue/src/services/catalogueProduits.js` (`PRODUITS_EN_DEVELOPPEMENT`) pour la donnée réellement utilisée par le site.
+
 # PAGE TROUVER UN DISTRIBUTEUR
 
 ## SECTION 1 — HERO

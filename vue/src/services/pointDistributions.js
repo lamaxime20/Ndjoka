@@ -1,16 +1,15 @@
 import heroImage from '../assets/images/points_distributions/hero.webp';
 import concessImage from '../assets/images/points_distributions/concessionnaire_ndjoka.webp';
-import chinChinPlaceholder from '../assets/images/Produits/chins_chins.webp';
-import oseillePlaceholder from '../assets/images/Produits/canette_oseille.webp';
+import { PRODUITS_EN_DEVELOPPEMENT } from './catalogueProduits.js';
 
 export const PD_WHATSAPP_URL =
-  'https://wa.me/237683184360?text=' +
+  'https://wa.me/237656188416?text=' +
   encodeURIComponent(
     'Bonjour, je souhaite rejoindre le réseau Ndjoka en tant que concessionnaire. Pouvez-vous me contacter ?'
   );
 
 export const PD_CONTACT_URL =
-  'https://wa.me/237683184360?text=' +
+  'https://wa.me/237656188416?text=' +
   encodeURIComponent(
     "Bonjour, je souhaite contacter l'équipe Ndjoka. Pouvez-vous me répondre ?"
   );
@@ -309,22 +308,14 @@ export const PD_VISION = {
     text:
       "L'innovation fait partie de la croissance de Ndjoka. Plusieurs produits sont actuellement en développement afin d'accompagner l'expansion de la marque.",
     subtitle: 'Produits en développement',
-    produits: [
-      {
-        nom: 'Chin Chin Ndjoka',
-        badge: 'Prochainement',
-        image: chinChinPlaceholder,
-        alt: 'Chin Chin Ndjoka — produit en développement',
-        description: 'Une gamme de croquantes sucrées et croustillantes actuellement en développement.',
-      },
-      {
-        nom: "Jus d'oseille Ndjoka",
-        badge: 'Prochainement',
-        image: oseillePlaceholder,
-        alt: "Jus d'oseille Ndjoka — produit en développement",
-        description: 'Une boisson africaine naturelle et rafraîchissante en cours de développement.',
-      },
-    ],
+    produits: PRODUITS_EN_DEVELOPPEMENT.map((p) => ({
+      nom: p.nom,
+      badge: p.badge,
+      image: p.image,
+      alt: p.alt,
+      icon: p.icon,
+      description: p.description,
+    })),
   },
 };
 

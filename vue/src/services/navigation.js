@@ -6,7 +6,7 @@ export const POINTS_VENTE = 'nos-points-de-vente';
 export const CONTACT = 'contact';
 
 export const NAV_ITEMS = [
-  { key: HOME, label: 'Home', path: '/' },
+  { key: HOME, label: 'Accueil', path: '/' },
   { key: PRODUITS, label: 'Produits', path: '/produits' },
   { key: CONCESSIONNAIRES, label: 'Concessionnaires', path: '/concessionnaires' },
   { key: INVESTISSEURS, label: 'Investisseurs', path: '/investisseurs' },
@@ -16,7 +16,7 @@ export const NAV_ITEMS = [
 
 export const NAVBAR_CTA = {
   label: 'Nous contacter',
-  href: 'https://wa.me/237683184360',
+  href: 'https://wa.me/237656188416',
 };
 
 export const FOOTER_DESCRIPTION =
@@ -25,13 +25,13 @@ export const FOOTER_DESCRIPTION =
 export const FOOTER_CONTACTS = [
   {
     label: 'Email',
-    value: 'contact@ndjoka.com',
-    href: 'mailto:contact@ndjoka.com',
+    value: 'contact@ndjoka237.com',
+    href: 'mailto:contact@ndjoka237.com',
   },
   {
     label: 'WhatsApp',
-    value: '+237 683 18 43 60',
-    href: 'https://wa.me/237683184360',
+    value: '+237 656 18 84 16',
+    href: 'https://wa.me/237656188416',
   },
 ];
 

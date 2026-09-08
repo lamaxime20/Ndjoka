@@ -12,6 +12,8 @@ import {
   INVEST_FINAL,
 } from '../services/investisseurs.js';
 import { useCountUp } from '../utils/useCountUp.js';
+import DistinctionsSection from '../components/distinctionsSection.jsx';
+import { DISTINCTIONS_FULL } from '../services/distinctions.js';
 import '../assets/styles/pages/investisseurs.css';
 
 function Investisseurs() {
@@ -154,6 +156,15 @@ function Investisseurs() {
           </div>
         </div>
       </section>
+
+      {/* ── Distinctions & récompenses ────────────────────────── */}
+      <DistinctionsSection
+        eyebrow={DISTINCTIONS_FULL.eyebrow}
+        title={DISTINCTIONS_FULL.title}
+        description={DISTINCTIONS_FULL.description}
+        variant="full"
+        id="invest-distinctions"
+      />
 
       {/* ── Process ───────────────────────────────────────────── */}
       <section className="investProcess-root" aria-labelledby="invest-process-title">

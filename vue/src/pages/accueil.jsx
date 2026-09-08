@@ -11,6 +11,8 @@ import {
   PRODUCT_INTRO,
   PRODUCT_ITEMS,
 } from '../services/accueil.js';
+import DistinctionsSection from '../components/distinctionsSection.jsx';
+import { DISTINCTIONS_COMPACT } from '../services/distinctions.js';
 import '../assets/styles/pages/accueil.css';
 
 function Accueil() {
@@ -84,6 +86,14 @@ function Accueil() {
           </figure>
         </div>
       </section>
+
+      <DistinctionsSection
+        eyebrow={DISTINCTIONS_COMPACT.eyebrow}
+        title={DISTINCTIONS_COMPACT.title}
+        description={DISTINCTIONS_COMPACT.description}
+        variant="compact"
+        id="accueil-distinctions"
+      />
 
       <section className="accueilProducts-root section-padding" aria-labelledby="accueil-products-title">
         <div className="accueilProducts-shell shell">

@@ -1,3 +1,10 @@
+> **Mise à jour post-refonte (voir `REFONTE_NDJOKA.md`)** : ce document est le brief de contenu d'origine et reste une référence pour le ton et la structure des sections. Les formats, prix et le statut « disponible / en développement » ci-dessous sont obsolètes depuis la refonte ciblée. L'état réellement implémenté est :
+> - Chips Plantain Mûres / Non Mûres : 100g à 500 FCFA, 250g à 2 500 FCFA.
+> - Chips Plantain Épicées : 100g à 500 FCFA, 250g à 3 000 FCFA.
+> - Kilichi Ndjoka : 1 000 FCFA (format du sachet non précisé, à confirmer).
+> - Croquettes Chin Chin : retirées des produits disponibles, déplacées en « produits en développement » (elle n'a pas de prix, comme les 4 autres produits en développement : Chips de patate, Caramels, Jus d'oseille, Biscuits).
+> - Voir sections 9 et 10 de `REFONTE_NDJOKA.md` pour le détail confirmé, et `vue/src/services/catalogueProduits.js` pour la source de données réellement utilisée par le site.
+
 Section Hero
 
 H1

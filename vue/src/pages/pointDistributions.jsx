@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { useCountUp } from '../utils/useCountUp.js';
 import {
   PD_WHATSAPP_URL,
-  PD_CONTACT_URL,
   PD_HERO,
   PD_RESEAU,
   PD_SEARCH,
@@ -87,7 +86,7 @@ function PointDistributions() {
             alt={PD_HERO.image.alt}
             width={900}
             height={1100}
-            fetchpriority="high"
+            fetchPriority="high"
           />
         </figure>
 
@@ -381,14 +380,20 @@ function PointDistributions() {
               {PD_VISION.avenir.produits.map((prod) => (
                 <article key={prod.nom} className="pdVision-avenirItem">
                   <figure className="pdVision-avenirVisual">
-                    <img
-                      className="pdVision-avenirImage"
-                      src={prod.image}
-                      alt={prod.alt}
-                      loading="lazy"
-                      width={300}
-                      height={300}
-                    />
+                    {prod.image ? (
+                      <img
+                        className="pdVision-avenirImage"
+                        src={prod.image}
+                        alt={prod.alt}
+                        loading="lazy"
+                        width={300}
+                        height={300}
+                      />
+                    ) : (
+                      <span className="pdVision-avenirPlaceholder" aria-hidden="true">
+                        <span className="material-symbols-outlined">{prod.icon || 'inventory_2'}</span>
+                      </span>
+                    )}
                   </figure>
                   <div className="pdVision-avenirCopy">
                     <span className="pdVision-avenirBadge">{prod.badge}</span>

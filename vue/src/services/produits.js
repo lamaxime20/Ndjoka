@@ -1,9 +1,6 @@
-import natureImage from '../assets/images/accueil/produits/ndjoka_nature.webp';
-import sucreeImage from '../assets/images/accueil/produits/ndjoka_sucre.webp';
-import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
-import kilichiImage from '../assets/images/Produits/kilichi.webp';
 import heroGroupImage from '../assets/images/Produits/Produits_Ndjoka.webp';
 import { CONCESSIONNAIRES, CONTACT } from './navigation.js';
+import { PRODUITS_DISPONIBLES, PRODUITS_EN_DEVELOPPEMENT } from './catalogueProduits.js';
 
 export const PRODUITS_HERO = {
   eyebrow: 'Gamme Ndjoka',
@@ -18,62 +15,37 @@ export const PRODUITS_HERO = {
   },
 };
 
-export const PRODUITS_ITEMS = [
-  {
-    id: 'nature',
-    saveur: 'Nature',
-    name: 'Chips Plantain Mûres',
-    description:
-      'Croustillantes et légères, parfaites pour les petites faims, les voyages, les soirées et les apéritifs.',
-    format: '250g',
-    prix: '1 500 FCFA',
-    benefice: 'Le snack simple et efficace que les clients rachètent facilement.',
-    image: natureImage,
-    alt: 'Sachet de chips plantain nature Ndjoka',
-    cta: { label: 'Devenir concessionnaire', path: `/${CONCESSIONNAIRES}` },
-  },
-  {
-    id: 'sucree',
-    saveur: 'Non mûres',
-    name: 'Chips Plantain Non Mûres',
-    description:
-      'Une texture légère et croustillante avec une saveur douce qui plaît immédiatement.',
-    format: '250g',
-    prix: '1 500 FCFA',
-    benefice: 'Une saveur réconfortante qui attire facilement les consommateurs.',
-    image: sucreeImage,
-    alt: 'Sachet de chips plantain non mûres Ndjoka',
-    cta: { label: 'Devenir concessionnaire', path: `/${CONCESSIONNAIRES}` },
-  },
-  {
-    id: 'epicee',
-    saveur: 'Épicées',
-    name: 'Chips Plantain Épicées',
-    description:
-      'Une saveur plus intense pour les amateurs de snacks relevés et savoureux.',
-    format: '250g',
-    prix: '2 000 FCFA',
-    benefice: 'Le produit qui attire les consommateurs à la recherche de sensations plus fortes.',
-    image: epiceeImage,
-    alt: 'Sachet de chips plantain épicées Ndjoka',
-    cta: { label: 'Devenir concessionnaire', path: `/${CONCESSIONNAIRES}` },
-    glow: true,
-  },
-  {
-    id: 'kilichi',
-    saveur: 'Viande séchée',
-    name: 'Kilichi Ndjoka',
-    description:
-      'Préparé à partir de viande soigneusement sélectionnée et assaisonnée avec un mélange d\'épices inspiré des traditions sahéliennes, le Kilichi Ndjoka offre une expérience riche en goût, intense et authentique.',
-    format: 'Nouveau produit',
-    prix: null,
-    benefice: 'La puissance des saveurs africaines dans un format pratique et gourmand.',
-    badge: 'Nouveau produit',
-    image: kilichiImage,
-    alt: 'Kilichi Ndjoka — viande séchée épicée aux saveurs sahéliennes',
-    cta: { label: 'Découvrir le produit', path: '#commande' },
-  },
-];
+export const PRODUITS_ITEMS = PRODUITS_DISPONIBLES.map((p) => ({
+  id: p.id,
+  saveur: p.saveur,
+  name: p.nom,
+  description: p.description,
+  formats: p.formats,
+  benefice: p.benefice,
+  badge: p.badge,
+  image: p.image,
+  alt: p.alt,
+  cta:
+    p.id === 'kilichi'
+      ? { label: 'Découvrir le produit', path: '#commande' }
+      : { label: 'Devenir concessionnaire', path: `/${CONCESSIONNAIRES}` },
+  glow: p.glow,
+}));
+
+export const PRODUITS_AVENIR = {
+  eyebrow: 'À venir',
+  title: "Les prochaines étapes de l'univers Ndjoka",
+  description:
+    "L'innovation fait partie de la croissance de Ndjoka. Plusieurs produits sont actuellement en développement afin d'accompagner l'expansion de la marque.",
+  produits: PRODUITS_EN_DEVELOPPEMENT.map((p) => ({
+    name: p.nom,
+    description: p.description,
+    badge: p.badge,
+    image: p.image,
+    alt: p.alt,
+    icon: p.icon,
+  })),
+};
 
 export const PRODUITS_QUALITE = {
   eyebrow: 'Qualité',
@@ -136,13 +108,7 @@ export const PRODUITS_COMMANDE = {
     "Vous souhaitez consommer les produits Ndjoka pour vous-même ou pour un événement ? Passez votre commande directement auprès de notre équipe.",
   cta: 'Commander maintenant',
   notice: 'Notre équipe vous recontacte rapidement pour confirmer votre commande.',
-  produitsOptions: [
-    'Chips Plantain Mûres',
-    'Chips Plantain Non Mûres',
-    'Chips Plantain Épicées',
-    'Kilichi Ndjoka',
-    'Mix — plusieurs produits',
-  ],
+  produitsOptions: [...PRODUITS_DISPONIBLES.map((p) => p.nom), 'Mix — plusieurs produits'],
 };
 
 export const PRODUITS_FINAL = {
@@ -163,5 +129,5 @@ export function buildCommandeWhatsAppUrl(data) {
     `Quantité : ${data.quantite}`,
     data.message ? `Message : ${data.message}` : '',
   ].filter(Boolean);
-  return `https://wa.me/237683184360?text=${encodeURIComponent(lines.join('\n'))}`;
+  return `https://wa.me/237656188416?text=${encodeURIComponent(lines.join('\n'))}`;
 }
