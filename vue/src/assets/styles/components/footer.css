@@ -154,8 +154,20 @@
 }
 
 .lamaxime {
-  font-family: 'Great Vibes', cursive;
+  display: inline-block;
+  font-family: 'Kaushan Script', cursive;
   font-size: 35px;
+  color: inherit;
+  transition:
+    color 320ms ease,
+    transform 320ms ease,
+    text-shadow 320ms ease;
+}
+
+.lamaxime:hover,
+.lamaxime:focus-visible {
+  color: var(--color-accent-500);
+  text-shadow: 0 0 18px var(--color-footer-accent-glow);
 }
 
 @media (max-width: 480px) {

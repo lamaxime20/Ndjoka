@@ -154,6 +154,15 @@
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* ─── Kaushan Script (signature "Lamaxime" du footer) ──────── */
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/kaushan-script-latin-400.woff2') format('woff2');
+}
+
 /* ─── Fallback metrics (réduit le CLS du font-swap) ────────── */
 @font-face {
   font-family: 'Poppins-Fallback';
