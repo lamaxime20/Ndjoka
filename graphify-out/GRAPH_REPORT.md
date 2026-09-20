@@ -1,7 +1,7 @@
-# Graph Report - Ndjoka  (2026-09-08)
+# Graph Report - Ndjoka  (2026-09-19)
 
 ## Corpus Check
-- 27 files · ~17,104 words
+- 27 files · ~16,930 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `efaf0985`
+- Built from commit: `67a6237f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -83,7 +83,7 @@ Nodes (13): FORM_INITIAL, Produits(), formatPrixFCFA(), PRODUITS_DISPONIBLES, PR
 
 ### Community 7 - "Community 7"
 Cohesion: 0.36
-Nodes (7): APROPOS_CONTACT, APROPOS_DEFINITION, APROPOS_EQUIPE, APROPOS_EVOLUTION, APROPOS_HERO, APROPOS_NOM, APROPOS_PRESENCE
+Nodes (7): APROPOS_CONTACT, APROPOS_DEFINITION, APROPOS_EVOLUTION, APROPOS_HERO, APROPOS_NOM, APROPOS_ORIGINES, APROPOS_PRESENCE
 
 ## Knowledge Gaps
 - **14 isolated node(s):** `DISTRIBUTORS`, `STATS`, `Accueil`, `Produits`, `Concessionnaires` (+9 more)

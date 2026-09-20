@@ -4,6 +4,7 @@ import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
 import kilichiImage from '../assets/images/Produits/kilichi.webp';
 import chinChinImage from '../assets/images/Produits/chins_chins.webp';
 import oseilleImage from '../assets/images/Produits/canette_oseille.webp';
+import caramelImage from '../assets/images/Produits/ndjoka-caramel.webp';
 
 // ─────────────────────────────────────────────────────────────
 // Source de vérité unique pour le catalogue produits Ndjoka.
@@ -80,6 +81,7 @@ export const PRODUITS_EN_DEVELOPPEMENT = [
     nom: 'Chips de patate',
     description: 'Une nouvelle référence actuellement en développement pour enrichir la gamme Ndjoka.',
     badge: 'Bientôt disponible',
+    // TODO: remplacer par la vraie photo packaging fournie par le client.
     image: null,
     icon: 'nutrition',
   },
@@ -88,8 +90,8 @@ export const PRODUITS_EN_DEVELOPPEMENT = [
     nom: 'Caramels',
     description: 'Une gamme sucrée actuellement en développement pour accompagner l’expansion de Ndjoka.',
     badge: 'Bientôt disponible',
-    image: null,
-    icon: 'cookie',
+    image: caramelImage,
+    alt: 'Caramels Ndjoka — produit en développement',
   },
   {
     id: 'jus-oseille',
@@ -105,6 +107,7 @@ export const PRODUITS_EN_DEVELOPPEMENT = [
     nom: 'Biscuits',
     description: 'Une nouvelle gamme actuellement en développement pour enrichir la gamme Ndjoka.',
     badge: 'Bientôt disponible',
+    // TODO: remplacer par la vraie photo packaging fournie par le client.
     image: null,
     icon: 'bakery_dining',
   },

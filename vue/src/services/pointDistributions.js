@@ -3,13 +3,13 @@ import concessImage from '../assets/images/points_distributions/concessionnaire_
 import { PRODUITS_EN_DEVELOPPEMENT } from './catalogueProduits.js';
 
 export const PD_WHATSAPP_URL =
-  'https://wa.me/237656188416?text=' +
+  'https://wa.me/237672529478?text=' +
   encodeURIComponent(
     'Bonjour, je souhaite rejoindre le réseau Ndjoka en tant que concessionnaire. Pouvez-vous me contacter ?'
   );
 
 export const PD_CONTACT_URL =
-  'https://wa.me/237656188416?text=' +
+  'https://wa.me/237672529478?text=' +
   encodeURIComponent(
     "Bonjour, je souhaite contacter l'équipe Ndjoka. Pouvez-vous me répondre ?"
   );

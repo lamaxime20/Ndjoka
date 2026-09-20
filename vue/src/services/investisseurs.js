@@ -5,7 +5,7 @@ import epiceeImage from '../assets/images/accueil/produits/ndjoka_pimente.webp';
 import kilichiImage from '../assets/images/Produits/kilichi.webp';
 
 export const INVEST_WHATSAPP_URL =
-  'https://wa.me/237656188416?text=' +
+  'https://wa.me/237672529478?text=' +
   encodeURIComponent(
     "Bonjour, je souhaite en savoir plus sur les opportunités d'investissement chez Ndjoka. Pouvez-vous me contacter ?"
   );

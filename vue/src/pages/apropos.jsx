@@ -5,7 +5,7 @@ import {
   APROPOS_DEFINITION,
   APROPOS_NOM,
   APROPOS_EVOLUTION,
-  APROPOS_EQUIPE,
+  APROPOS_ORIGINES,
   APROPOS_PRESENCE,
   APROPOS_CONTACT,
 } from '../services/apropos.js';
@@ -195,46 +195,32 @@ function APropos() {
         </div>
       </section>
 
-      {/* ── Équipe ────────────────────────────────────────────── */}
-      <section className="apEquipe-root" aria-labelledby="ap-equipe-title">
-        <div className="apEquipe-shell shell">
-          <header className="apSection-heading ap-animate">
-            <p className="apSection-eyebrow">{APROPOS_EQUIPE.eyebrow}</p>
-            <h2 className="apSection-title" id="ap-equipe-title">
-              {APROPOS_EQUIPE.title}
-            </h2>
-            <p className="apSection-desc">{APROPOS_EQUIPE.description}</p>
-          </header>
-          <div className="apEquipe-grid">
-            {APROPOS_EQUIPE.members.map((member, i) => (
-              <article
-                className={`apMember ap-animate ap-animate--d${(i % 3) + 1}`}
-                key={member.name}
-              >
-                <div className="apMember-visual">
-                  <img
-                    className="apMember-img"
-                    src={member.image}
-                    alt={`${member.name} — ${member.role}`}
-                  />
-                  <div className="apMember-overlay" aria-hidden="true" />
-                </div>
-                <div className="apMember-info">
-                  <h3 className="apMember-name">{member.name}</h3>
-                  <p className="apMember-role">{member.role}</p>
-                  <p className="apMember-desc">{member.description}</p>
-                  <a
-                    className="apMember-fb"
-                    href={member.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Page Facebook de ${member.name}`}
-                  >
-                    Facebook
-                  </a>
-                </div>
-              </article>
-            ))}
+      {/* ── Nos origines ──────────────────────────────────────── */}
+      <section className="apOrigines-root" aria-labelledby="ap-origines-title">
+        <div className="apOrigines-shell shell">
+          <div className="apOrigines-split">
+            <div className="apOrigines-text ap-animate">
+              <p className="apOrigines-eyebrow">{APROPOS_ORIGINES.eyebrow}</p>
+              <h2 className="apOrigines-title" id="ap-origines-title">
+                {APROPOS_ORIGINES.title}
+              </h2>
+              <p className="apOrigines-subtitle">{APROPOS_ORIGINES.subtitle}</p>
+              <p className="apOrigines-body">{APROPOS_ORIGINES.text}</p>
+              <blockquote className="apOrigines-quote">
+                <span className="apOrigines-quoteLine" aria-hidden="true" />
+                <p className="apOrigines-quoteText">{APROPOS_ORIGINES.quote}</p>
+              </blockquote>
+            </div>
+            <figure className="apOrigines-visual ap-animate ap-animate--d2">
+              <img
+                className="apOrigines-img"
+                src={APROPOS_ORIGINES.image}
+                alt={APROPOS_ORIGINES.imageAlt}
+                width={APROPOS_ORIGINES.imageWidth}
+                height={APROPOS_ORIGINES.imageHeight}
+                loading="lazy"
+              />
+            </figure>
           </div>
         </div>
       </section>

@@ -131,7 +131,7 @@ export function applySeo(key) {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+237656188416',
+      telephone: '+237672529478',
       contactType: 'customer service',
       availableLanguage: ['French'],
     },

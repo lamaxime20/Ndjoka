@@ -1,18 +1,9 @@
 import heroImage from '../assets/images/contacts/hero.webp';
 import supermarcheImage from '../assets/images/contacts/produits_ndjoka_supermarche.webp';
-import dgImage from '../assets/images/contacts/equipe_ndjoka/Directeur_general.webp';
-import dgaImage from '../assets/images/contacts/equipe_ndjoka/Directeur_General_Adjoint.webp';
-import productionImage from '../assets/images/contacts/equipe_ndjoka/Directeur_de_production.webp';
-import financierImage from '../assets/images/contacts/equipe_ndjoka/Directeur_Financier.webp';
-import marketingImage from '../assets/images/contacts/equipe_ndjoka/Directrice_Marketing_et_Com.webp';
-import juridiqueImage from '../assets/images/contacts/equipe_ndjoka/Directeur_Juridique_et_Fiscale.webp';
-import ventesImage from '../assets/images/contacts/equipe_ndjoka/Responsable_des_ventes.webp';
-import financieresImage from '../assets/images/contacts/equipe_ndjoka/Directrice_des_affaires_financieres.webp';
-import assistanteImage from '../assets/images/contacts/equipe_ndjoka/Assistante_de_direction.webp';
+import groupeImage from '../assets/images/accueil/about/equipe_ndjoka.webp';
 
 export const APROPOS_WHATSAPP_URL =
-  'https://wa.me/237656188416?text=' +
-  encodeURIComponent("Bonjour, je souhaite contacter l'équipe Ndjoka.");
+  'https://wa.me/237672529478?text=Bonjour%2C%20je%20souhaite%20contacter%20l%27%C3%A9quipe%20Ndjoka.';
 
 export const APROPOS_HERO = {
   eyebrow: 'À propos de Ndjoka',
@@ -104,83 +95,18 @@ export const APROPOS_EVOLUTION = {
   ],
 };
 
-export const APROPOS_EQUIPE = {
-  eyebrow: "L'équipe",
-  title: 'Les personnes derrière Ndjoka',
-  description: 'Une équipe réelle, proche du terrain et engagée dans le développement de la marque.',
-  members: [
-    {
-      name: 'Daryl Kandeu',
-      role: 'Directeur Général',
-      description:
-        "Pilote la vision globale de Ndjoka, le développement stratégique de la marque et son expansion progressive.",
-      image: dgImage,
-      facebook: 'https://www.facebook.com/daril.kandeu.3',
-    },
-    {
-      name: 'Ruther Ford TSIMENE',
-      role: 'Directeur Général Adjoint',
-      description:
-        "Accompagne le développement opérationnel de Ndjoka et la coordination des activités de croissance.",
-      image: dgaImage,
-      facebook: 'https://www.facebook.com/rutherfordtsimene77',
-    },
-    {
-      name: 'Gamaliel FEHANG',
-      role: 'Directeur de Production',
-      description: "Supervise la production et veille à la qualité des produits Ndjoka.",
-      image: productionImage,
-      facebook: 'https://www.facebook.com/gamaliel.fehang',
-    },
-    {
-      name: 'Roger LONLA',
-      role: 'Directeur Financier',
-      description:
-        "Assure le suivi financier et accompagne la structuration du développement de l'entreprise.",
-      image: financierImage,
-      facebook: 'https://www.facebook.com/Rogerlonla237',
-    },
-    {
-      name: 'Saurelle NYOMA',
-      role: 'Directrice Marketing et Communication',
-      description:
-        "Développe l'image de marque, la communication et la visibilité de Ndjoka.",
-      image: marketingImage,
-      facebook: 'https://www.facebook.com/saurellenyoma',
-    },
-    {
-      name: 'William KEMETIA',
-      role: 'Directeur Juridique et Fiscal',
-      description:
-        "Supervise les aspects juridiques, administratifs et fiscaux liés au développement de Ndjoka.",
-      image: juridiqueImage,
-      facebook: 'https://www.facebook.com/william.weston.904',
-    },
-    {
-      name: 'Christian BILO',
-      role: 'Responsable des Ventes',
-      description:
-        "Accompagne le réseau de distribution et le développement commercial des produits Ndjoka.",
-      image: ventesImage,
-      facebook: 'https://www.facebook.com/daubege.bilo',
-    },
-    {
-      name: 'Anne Marie AKUDA',
-      role: 'Directrice des Affaires Financières',
-      description:
-        "Participe à la gestion financière et au suivi administratif des activités de la marque.",
-      image: financieresImage,
-      facebook: 'https://www.facebook.com/annemarie.akuda',
-    },
-    {
-      name: 'Emilie MBARGA',
-      role: 'Assistante de Direction',
-      description:
-        "Assure le suivi organisationnel et la coordination administrative des activités Ndjoka.",
-      image: assistanteImage,
-      facebook: 'https://www.facebook.com/emilie.mbarga.98',
-    },
-  ],
+export const APROPOS_ORIGINES = {
+  eyebrow: 'Nos origines',
+  title: 'Une histoire portée par une communauté',
+  subtitle:
+    "Ndjoka n'est pas né dans un bureau. C'est un projet porté par une communauté, une tontine, et la volonté de plusieurs personnes de faire grandir ensemble une marque africaine.",
+  text:
+    "À l'origine de Ndjoka, il y a une conviction simple : les produits africains méritent une distribution moderne et accessible. Le Docteur Claudel a réuni autour de cette idée une communauté entière, une tontine prête à y croire et à la porter. C'est cette énergie collective qui fait encore avancer Ndjoka aujourd'hui, produit après produit, ville après ville.",
+  quote: 'Un projet porté par une tontine, une communauté.',
+  image: groupeImage,
+  imageAlt: 'Groupe de personnes réunies autour des produits Ndjoka',
+  imageWidth: 1000,
+  imageHeight: 700,
 };
 
 export const APROPOS_PRESENCE = {
@@ -209,14 +135,14 @@ export const APROPOS_CONTACT = {
     {
       icon: 'chat',
       label: 'WhatsApp',
-      value: '(+237) 6 56 18 84 16',
+      value: '+237 6 72 52 94 78',
       href: APROPOS_WHATSAPP_URL,
     },
     {
       icon: 'mail',
       label: 'Email',
-      value: 'contact@ndjoka237.com',
-      href: 'mailto:contact@ndjoka237.com',
+      value: 'info@claudel-noubissie.com',
+      href: 'mailto:info@claudel-noubissie.com',
     },
     {
       icon: 'groups',

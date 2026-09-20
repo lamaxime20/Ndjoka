@@ -16,7 +16,7 @@ export const NAV_ITEMS = [
 
 export const NAVBAR_CTA = {
   label: 'Nous contacter',
-  href: 'https://wa.me/237656188416',
+  href: 'https://wa.me/237672529478',
 };
 
 export const FOOTER_DESCRIPTION =
@@ -25,13 +25,13 @@ export const FOOTER_DESCRIPTION =
 export const FOOTER_CONTACTS = [
   {
     label: 'Email',
-    value: 'contact@ndjoka237.com',
-    href: 'mailto:contact@ndjoka237.com',
+    value: 'info@claudel-noubissie.com',
+    href: 'mailto:info@claudel-noubissie.com',
   },
   {
     label: 'WhatsApp',
-    value: '+237 656 18 84 16',
-    href: 'https://wa.me/237656188416',
+    value: '+237 6 72 52 94 78',
+    href: 'https://wa.me/237672529478',
   },
 ];
 

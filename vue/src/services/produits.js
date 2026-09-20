@@ -129,5 +129,5 @@ export function buildCommandeWhatsAppUrl(data) {
     `Quantité : ${data.quantite}`,
     data.message ? `Message : ${data.message}` : '',
   ].filter(Boolean);
-  return `https://wa.me/237656188416?text=${encodeURIComponent(lines.join('\n'))}`;
+  return `https://wa.me/237672529478?text=${encodeURIComponent(lines.join('\n'))}`;
 }

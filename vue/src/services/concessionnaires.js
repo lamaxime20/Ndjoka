@@ -3,19 +3,19 @@ import pointDeVentesImage from '../assets/images/concessionnaires/point_de_vente
 import { PRODUITS_DISPONIBLES, PRODUITS_EN_DEVELOPPEMENT } from './catalogueProduits.js';
 
 const WHATSAPP_URL =
-  'https://wa.me/237656188416?text=' +
+  'https://wa.me/237672529478?text=' +
   encodeURIComponent(
     "Bonjour, je souhaite devenir concessionnaire Ndjoka. Pouvez-vous me contacter pour plus d'informations ?"
   );
 
 const DISTRIBUTEUR_WHATSAPP_URL =
-  'https://wa.me/237656188416?text=' +
+  'https://wa.me/237672529478?text=' +
   encodeURIComponent(
     "Bonjour, je souhaite devenir distributeur Ndjoka. Pouvez-vous me contacter pour plus d'informations ?"
   );
 
 const STARTER_WHATSAPP_URL =
-  'https://wa.me/237656188416?text=' +
+  'https://wa.me/237672529478?text=' +
   encodeURIComponent(
     "Bonjour, je souhaite démarrer avec le palier d'essai Ndjoka à 25 000 FCFA. Pouvez-vous me contacter ?"
   );
